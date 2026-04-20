@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>站名牌產生器</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+    <h1>站名牌產生器</h1>
+    <p>Ekimehyo Generator</p>
+    <nav class="lang-switch" aria-label="Language switcher">
+      <a href="./ja.html" lang="ja">日本語版</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <!-- 左側 Sidebar：設定 -->
+    <aside class="sidebar">
+
+      <section class="panel">
+        <h2>站名牌風格</h2>
+          <select id="type"></select>
+      </section>
+
+      <section class="panel">
+        <h2>內容</h2>
+        <div class="field-groups">
+          <section class="field-group">
+            <h3 class="field-group-title">站名</h3>
+            <div class="field-grid">
+              <div class="field-wrapper" data-field-id="cname"><label for="cname">中文名</label><input id="cname" value="站名牌產生器" /></div>
+              <div class="field-wrapper" data-field-id="ename"><label for="ename">英文名</label><input id="ename" value="Ekimehyo Generator" /></div>
+              <div class="field-wrapper" data-field-id="jname"><label for="jname">日文名</label><input id="jname" value="駅名標ジェネレータ" /></div>
+              <div class="field-wrapper" data-field-id="kana"><label for="kana">日文讀音</label><input id="kana" value="えきめいひょうじぇねれえた" /></div>
+              <div class="field-wrapper" data-field-id="kname"><label for="kname">韓文名</label><input id="kname" value="역명판 제너레이터" /></div>
+            </div>
+          </section>
+
+          <section class="field-group">
+            <h3 class="field-group-title">識別資訊</h3>
+            <div class="field-grid field-grid-2">
+              <div class="field-wrapper" data-field-id="no"><label for="no">車站編號</label><input id="no" /></div>
+              <div class="field-wrapper" data-field-id="rgb"><label for="rgb">路線色</label><input id="rgb" type="color" value="#c80000" /></div>
+              <div class="field-wrapper" data-field-id="area"><label for="area">行政區</label><input id="area" /></div>
+            </div>
+          </section>
+
+          <section class="field-group">
+            <h3 class="field-group-title">副站名</h3>
+            <div class="field-grid field-grid-2">
+              <div class="field-wrapper" data-field-id="s_cname"><label for="s_cname">中日文副站名</label><input id="s_cname" /></div>
+              <div class="field-wrapper" data-field-id="s_ename"><label for="s_ename">英文副站名</label><input id="s_ename" /></div>
+            </div>
+          </section>
+
+          <section class="field-group">
+            <h3 class="field-group-title">前一站</h3>
+            <div class="field-grid">
+              <div class="field-wrapper" data-field-id="p_cname"><label for="p_cname">中文名</label><input id="p_cname" /></div>
+              <div class="field-wrapper" data-field-id="p_ename"><label for="p_ename">英文名</label><input id="p_ename" /></div>
+              <div class="field-wrapper" data-field-id="p_jname"><label for="p_jname">日文名</label><input id="p_jname" /></div>
+              <div class="field-wrapper" data-field-id="p_kana"><label for="p_kana">日文讀音</label><input id="p_kana" /></div>
+              <div class="field-wrapper" data-field-id="p_kname"><label for="p_kname">韓文名</label><input id="p_kname" /></div>
+              <div class="field-wrapper" data-field-id="p_no"><label for="p_no">車站編號</label><input id="p_no" /></div>
+              <div class="field-wrapper" data-field-id="p_dis"><label for="p_dis">與前站距離（km）</label><input id="p_dis" /></div>
+            </div>
+          </section>
+
+          <section class="field-group">
+            <h3 class="field-group-title">後一站</h3>
+            <div class="field-grid">
+              <div class="field-wrapper" data-field-id="n_cname"><label for="n_cname">中文名</label><input id="n_cname" /></div>
+              <div class="field-wrapper" data-field-id="n_ename"><label for="n_ename">英文名</label><input id="n_ename" /></div>
+              <div class="field-wrapper" data-field-id="n_jname"><label for="n_jname">日文名</label><input id="n_jname" /></div>
+              <div class="field-wrapper" data-field-id="n_kana"><label for="n_kana">日文讀音</label><input id="n_kana" /></div>
+              <div class="field-wrapper" data-field-id="n_kname"><label for="n_kname">韓文名</label><input id="n_kname" /></div>
+              <div class="field-wrapper" data-field-id="n_no"><label for="n_no">車站編號</label><input id="n_no" /></div>
+              <div class="field-wrapper" data-field-id="n_dis"><label for="n_dis">與後站距離（km）</label><input id="n_dis" /></div>
+            </div>
+          </section>
+
+          <section class="field-group">
+            <div class="convert-actions">
+              <button type="button" id="convert-t2s">中文繁→簡</button>
+              <button type="button" id="convert-s2t">中文簡→繁</button>
+			        <button type="button" id="swap-prev-next">前後站對調</button>
+			        <button type="button" id="clear-fields">清空欄位</button>
+            </div>
+          </section>
+        </div>
+        <button id="render" class="btn-render">以上述資料繪製</button>
+      </section>
+
+      <section class="panel source-panel">
+        <details>
+          <summary>帶入參考資料</summary>
+          <div class="source-body">
+            <div class="grid2">
+              <label>系統
+                <select id="sys"></select>
+              </label>
+              <label>路線
+                <select id="route"></select>
+              </label>
+            </div>
+            <label>車站
+              <select id="station"></select>
+            </label>
+            <button id="use-station">帶入車站資料</button>
+          </div>
+        </details>
+      </section>
+
+    </aside>
+
+    <!-- 右側主區：預覽 -->
+    <main class="preview-area">
+      <div class="preview-toolbar">
+        <span class="toolbar-label">下載尺寸</span>
+        <div class="size-buttons">
+          <button type="button" class="size-btn active" data-size="3">XL</button>
+          <button type="button" class="size-btn" data-size="2.2">X</button>
+          <button type="button" class="size-btn" data-size="1.5">M</button>
+          <button type="button" class="size-btn" data-size="1">S</button>
+          <button type="button" class="size-btn" data-size="0.7">XS</button>
+        </div>
+        <button id="download" class="btn-download">↓ 下載 PNG</button>
+      </div>
+      <div class="canvas-wrap">
+        <canvas id="preview" width="600" height="200"></canvas>
+      </div>
+      <div id="status"></div>
+    </main>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

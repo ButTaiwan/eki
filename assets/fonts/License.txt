@@ -1,0 +1,119 @@
+================================================================================
+FONTS LICENSE INFORMATION
+================================================================================
+
+開源授權（OFL - Open Font License）
+================================================================================
+
+1. AntonSC-Regular.ttf
+   來源: Google Fonts
+   授權: OFL 1.1
+   網址: https://fonts.google.com/specimen/Anton
+
+2. HammersmithOne-Regular.ttf
+   來源: Google Fonts
+   授權: OFL 1.1
+   網址: https://fonts.google.com/specimen/Hammersmith+One
+
+3. Hind-Bold.ttf
+   Hind-Medium.ttf
+   來源: Google Fonts
+   授權: OFL 1.1
+   網址: https://fonts.google.com/specimen/Hind
+
+4. Inter_24pt-Bold.ttf
+   Inter_24pt-Medium.ttf
+   來源: Rsalabs (Inter)
+   授權: OFL 1.1
+   網址: https://rsms.me/inter/
+
+5. LeagueSpartan-Bold.otf
+   來源: Google Fonts
+   授權: OFL 1.1
+   網址: https://fonts.google.com/specimen/League+Spartan
+
+6. Marcellus-Regular.ttf
+   來源: Google Fonts
+   授權: OFL 1.1
+   網址: https://fonts.google.com/specimen/Marcellus
+
+7. rounded-mgenplus-1cp-medium.ttf
+   來源: M+ Fonts (M+ 1cp variant)
+   授權: OFL 1.1
+   網址: https://mplus-fonts.osdn.jp/
+
+8. SourceHanSansKR-Medium.otf
+   來源: Adobe (Source Han Sans Korean)
+   授權: OFL 1.1
+   網址: https://github.com/adobe-fonts/source-han-sans
+
+9. Staatliches-Regular.ttf
+   來源: Google Fonts
+   授權: OFL 1.1
+   網址: https://fonts.google.com/specimen/Staatliches
+
+10. GenRyuMin2TW-SB.otf
+    改造: ButTaiwan
+    授權: OFL 1.1
+    網址: https://github.com/ButTaiwan/genryu/
+
+11. GenSekiGothic2PJP-M.otf
+    改造: ButTaiwan
+    授權: OFL 1.1
+    網址: https://github.com/ButTaiwan/genseki/
+
+12. GenSenRounded2JP-M.otf
+    改造: ButTaiwan
+    授權: OFL 1.1
+    網址: https://github.com/ButTaiwan/gensen/
+
+13. GenYoGothic2JP-M.otf
+    GenYoGothic2TW-M.otf
+    GenYoGothic2TW-R.otf
+    改造: ButTaiwan
+    授權: OFL 1.1
+    網址: https://github.com/ButTaiwan/genyog/
+
+14. fude-goshirae.otf
+		作者: 絵に描いた虹
+    來源: https://infiniterainbow.booth.pm/items/7797956
+    授權: OFL 1.1
+
+
+非 OFL 1.1 的免費授權
+================================================================================
+
+1. FangZhengHeiTi_GBK.ttf
+   來源: 方正字體
+   授權: 商業授權，但「方正黑體」屬基本免費字型（字体属性：免费字）
+   網址: https://www.foundertype.com/index.php/FontInfo/index/id/131
+
+2. 08SeoulNamsanEB.ttf
+   來源: 首爾市政府
+   授權: 公開提供（韓國開放政府授權（KOGL）授權）
+	      Seoul Typeface is free for anyone to download and use.
+   網址: https://english.seoul.go.kr/seoul-views/seoul-symbols/5-fonts/
+
+3. JNRfont.ttf
+   JNRfont_n.ttf
+   來源: 国鉄っぽいフォント（旅と鉄の盲腸）
+   授權: http://tabi-mo.travel.coocan.jp/
+   備註: 免費可商用授權，但原網站已消失
+
+4. KORAIL.ttf
+   來源: https://www.sandollcloud.com/free-font/17909/KORAILCondensed
+   備註: 任何人都可以免費下載和使用 Korail 字體。但是，禁止出售、有償轉讓字體。
+         原為AsiaSoft公司製造，現在由Sandoll提供免費下載。
+
+5. LTAIdentity-Medium.woff2
+   網址: https://github.com/jglim/IdentityFont
+
+6. Jihacheol-che.ttf
+   NewJihacheol-che.ttf
+   說明: 網友自行製作的仿韓國「地下鐵體」，原始作者已不可考
+   來源: https://blog.naver.com/sendei333/222195624371
+
+7. Fudeekimeihyo1.2.ttf
+   說明: 模仿日本戰前站名牌毛筆書寫的文字
+   來源: https://note.com/kan3kur3chann3l/n/nee541f1a4d21
+   授權: 此為免費版本，只有平假名（授權不明）

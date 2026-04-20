@@ -1,0 +1,1675 @@
+id	color	no	cname	ename	jname	kana	kname	s_cname	s_ename	area	p_id	p_dis	n_id	n_dis												
+sys			台北捷運	Taipei Metro	台北MRT																					
+route	D12D33		淡水信義線	Tamsui-Xinyi Line	淡水信義線																					
+trtc-R01		R01	廣慈/奉天宮	Guangci / Fengtian Temple	広慈/奉天宮	こうじ/ほうてんぐう				台北市信義區			trtc-R02													
+trtc-R02		R02	象山	Elephant Mountain	象山	しょうざん	샹산			台北市信義區	trtc-R01		trtc-R03	0.86												
+trtc-R03		R03	台北101/世貿	Taipei 101 / World Trade Center	台北101/世界貿易センター	たいぺいいちまるいち/せいぼうせんたー	타이베이 101/세계무역센터			台北市信義區	trtc-R02	0.86	trtc-R04	1.08												
+trtc-R04		R04	信義安和	Xinyi Anhe	信義安和	しんぎあんわ	신이 안허			台北市大安區	trtc-R03	1.08	trtc-R05	0.79												
+trtc-R05		R05	大安	Daan	大安	だいあん	다안			台北市大安區	trtc-R04	0.79	trtc-R06	0.80												
+trtc-R06		R06	大安森林公園	Daan Park	大安森林公園	だいあんしんりんこうえん	다안 삼림 공원			台北市大安區	trtc-R05	0.80	trtc-R07	0.66												
+trtc-R07		R07	東門	Dongmen	東門	とうもん	둥먼			台北市中正區	trtc-R06	0.66	trtc-R08	1.20												
+trtc-R08		R08	中正紀念堂	Chiang Kai-Shek Memorial Hall	中正紀念堂	ちゅうせいきねんどう	중정 기념당	南門	Nanmen	台北市中正區	trtc-R07	1.20	trtc-R09	0.95												
+trtc-R09		R09	台大醫院	NTU Hospital	台湾大学病院	たいわんだいがくびょういん	대만 대학 병원			台北市中正區	trtc-R08	0.95	trtc-R10	0.63												
+trtc-R10		R10	台北車站	Taipei Main Station	台北駅	たいぺいえき	타이베이 역			台北市中正區	trtc-R09	0.63	trtc-R11	0.63												
+trtc-R11		R11	中山	Zhongshan	中山	なかやま	중산			台北市中山區	trtc-R10	0.63	trtc-R12	0.54												
+trtc-R12		R12	雙連	Shuanglian	双連	そうれん	솽롄	馬偕紀念醫院	Mackay Memorial Hospital	台北市大同區	trtc-R11	0.54	trtc-R13	0.55												
+trtc-R13		R13	民權西路	Minquan W. Rd.	民権西路	みんけんせいろ	민취안시루			台北市中山區	trtc-R12	0.55	trtc-R14	1.02												
+trtc-R14		R14	圓山	Yuanshan	円山	まるやま	위안산			台北市大同區	trtc-R13	1.02	trtc-R15	1.52												
+trtc-R15		R15	劍潭	Jiantan	剣潭	けんたん	젠탄	北藝中心	Taipei Performing Arts Center	台北市士林區	trtc-R14	1.52	trtc-R16	1.19												
+trtc-R16		R16	士林	Shilin	士林	しりん	스린			台北市士林區	trtc-R15	1.19	trtc-R17	0.98												
+trtc-R17		R17	芝山	Zhishan	芝山	しざん	즈산			台北市士林區	trtc-R16	0.98	trtc-R18	0.89												
+trtc-R18		R18	明德	Mingde	明徳	めいとく	밍더			台北市北投區	trtc-R17	0.89	trtc-R19	0.61												
+trtc-R19		R19	石牌	Shipai	石牌	せきはい	스파이	榮總	Veterans General Hospital	台北市北投區	trtc-R18	0.61	trtc-R20	1.24												
+trtc-R20		R20	唭哩岸	Qilian	唭哩岸	きりがん	치리안			台北市北投區	trtc-R19	1.24	trtc-R21	0.85												
+trtc-R21		R21	奇岩	Qiyan	奇岩	きがん	치옌			台北市北投區	trtc-R20	0.85	trtc-R22	0.76												
+trtc-R22		R22	北投	Beitou	北投	ぺいとう	베이터우			台北市北投區	trtc-R21	0.76	trtc-R23	1.62												
+trtc-R23		R23	復興崗	Fuxinggang	復興崗	ふっこうこう	푸싱강			台北市北投區	trtc-R22	1.62	trtc-R24	1.44												
+trtc-R24		R24	忠義	Zhongyi	忠義	ちゅうぎ	중이			台北市北投區	trtc-R23	1.44	trtc-R25	0.88												
+trtc-R25		R25	關渡	Guandu	関渡	かんと	관두			台北市北投區	trtc-R24	0.88	trtc-R26	2.05												
+trtc-R26		R26	竹圍	Zhuwei	竹囲	ちくい	주웨이			新北市淡水區	trtc-R25	2.05	trtc-R27	1.94												
+trtc-R27		R27	紅樹林	Hongshulin	紅樹林	こうじゅりん	훙수린			新北市淡水區	trtc-R26	1.94	trtc-R28	2.06												
+trtc-R28		R28	淡水	Danshui	淡水	たんすい	단수이			新北市淡水區	trtc-R27	2.06														
+route	FD92A3		新北投支線	Xinbeitou Line	新北投支線																					
+trtc-Rx22		R22	北投	Beitou	北投	ぺいとう	베이터우				trtc-Rx22A	1.03														
+trtc-Rx22A		R22A	新北投	Xinbeitou	新北投	しんぺいとう	신베이터우			台北市北投區			trtc-Rx22	1.03												
+route	0072C6		板南線	Bannan Line	板南線																					
+trtc-BL01		BL01	頂埔	Dingpu	頂埔	ちょうほ	딩푸			新北市土城區			trtc-BL02	1.95												
+trtc-BL02		BL02	永寧	Yongning	永寧	えいねい	융닝			新北市土城區	trtc-BL01	1.95	trtc-BL03	1.11												
+trtc-BL03		BL03	土城	Tucheng	土城	どじょう	투청			新北市土城區	trtc-BL02	1.11	trtc-BL04	1.47												
+trtc-BL04		BL04	海山	Haishan	海山	かいさん	하이산			新北市土城區	trtc-BL03	1.47	trtc-BL05	1.64												
+trtc-BL05		BL05	亞東醫院	Far Eastern Hospital	亜東病院	あとうびょういん	야둥 병원			新北市板橋區	trtc-BL04	1.64	trtc-BL06	1.45												
+trtc-BL06		BL06	府中	Fuzhong	府中	ふちゅう	푸중	林家花園	The Lin's Family Mansion and Garden	新北市板橋區	trtc-BL05	1.45	trtc-BL07	0.65												
+trtc-BL07		BL07	板橋	Banqiao	板橋	ばんきょう	반차오			新北市板橋區	trtc-BL06	0.65	trtc-BL08	1.28												
+trtc-BL08		BL08	新埔	Xinpu	新埔	しんほ	신푸			新北市板橋區	trtc-BL07	1.28	trtc-BL09	0.87												
+trtc-BL09		BL09	江子翠	Jiangzicui	江子翠	こうしずい	장쯔추이			新北市板橋區	trtc-BL08	0.87	trtc-BL10	3.08												
+trtc-BL10		BL10	龍山寺	Longshan Temple	龍山寺	りゅうざんじ	용산사	艋舺商圈	Bangka Commercial Zone	台北市萬華區	trtc-BL09	3.08	trtc-BL11	1.31												
+trtc-BL11		BL11	西門	Ximen	西門	せいもん	시먼			台北市中正區	trtc-BL10	1.31	trtc-BL12	1.35												
+trtc-BL12		BL12	台北車站	Taipei Main Station	台北駅	たいぺいえき	타이베이 역			台北市中正區	trtc-BL11	1.35	trtc-BL13	0.68												
+trtc-BL13		BL13	善導寺	Shandao Temple	善導寺	ぜんどうじ	산다오사	華山	Huashan	台北市中正區	trtc-BL12	0.68	trtc-BL14	0.94												
+trtc-BL14		BL14	忠孝新生	Zhongxiao Xinsheng	忠孝新生	ちゅうこうしんせい	중샤오 신성	台北科大	National Taipei University of Technology	台北市大安區	trtc-BL13	0.94	trtc-BL15	1.12												
+trtc-BL15		BL15	忠孝復興	Zhongxiao Fuxing	忠孝復興	ちゅうこうふっこう	중샤오 푸싱			台北市大安區	trtc-BL14	1.12	trtc-BL16	0.67												
+trtc-BL16		BL16	忠孝敦化	Zhongxiao Dunhua	忠孝敦化	ちゅうこうとんか	중샤오 둔화			台北市大安區	trtc-BL15	0.67	trtc-BL17	0.73												
+trtc-BL17		BL17	國父紀念館	Sun Yat-Sen Memorial Hall	国父紀念館	こくふきねんかん	국부 기념관			台北市信義區	trtc-BL16	0.73	trtc-BL18	0.84												
+trtc-BL18		BL18	市政府	Taipei City Hall	台北市政府	たいぺいしせいふ	타이베이 시청			台北市信義區	trtc-BL17	0.84	trtc-BL19	0.99												
+trtc-BL19		BL19	永春	Yongchun	永春	えいしゅん	융춘			台北市信義區	trtc-BL18	0.99	trtc-BL20	0.82												
+trtc-BL20		BL20	後山埤	Houshanpi	後山埤	こうさんひ	허우산피	五分埔商圈	Wufenpu Commercial Zone	台北市南港區	trtc-BL19	0.82	trtc-BL21	1.36												
+trtc-BL21		BL21	昆陽	Kunyang	昆陽	こんよう	쿤양			台北市南港區	trtc-BL20	1.36	trtc-BL22	1.42												
+trtc-BL22		BL22	南港	Nangang	南港	なんこう	난강			台北市南港區	trtc-BL21	1.42	trtc-BL23	1.09												
+trtc-BL23		BL23	南港展覽館	Taipei Nangang Exhibition Center	南港展覧館	なんこうてんらんかん	난강 전람관			台北市南港區	trtc-BL22	1.09														
+route	FCA311		中和新蘆線	Zhonghe-Xinlu Line	中和新蘆線																					
+trtc-O01		O01	南勢角	Nanshijiao	南勢角	なんせいかく	난스자오			新北市中和區			trtc-O02	0.69												
+trtc-O02		O02	景安	Jingan	景安	けいあん	징안			新北市中和區	trtc-O01	0.69	trtc-O03	1.15												
+trtc-O03		O03	永安市場	Yongan Market	永安市場	ながやすいちば	융안 시장			新北市中和區	trtc-O02	1.15	trtc-O04	1.30												
+trtc-O04		O04	頂溪	Dingxi	頂渓	ちょうけい	딩시			新北市永和區	trtc-O03	1.30	trtc-O05	2.16												
+trtc-O05		O05	古亭	Guting	古亭	こてい	구팅			台北市中正區	trtc-O04	2.16	trtc-O06	1.25												
+trtc-O06		O06	東門	Dongmen	東門	とうもん	둥먼			台北市中正區	trtc-O05	1.25	trtc-O07	1.18												
+trtc-O07		O07	忠孝新生	Zhongxiao Xinsheng	忠孝新生	ちゅうこうしんせい	중샤오 신성	台北科大	National Taipei University of Technology	台北市大安區	trtc-O06	1.18	trtc-O08	1.15												
+trtc-O08		O08	松江南京	Songjiang Nanjing	松江南京	しょうこうなんきん	송장 난징			台北市中山區	trtc-O07	1.15	trtc-O09	0.82												
+trtc-O09		O09	行天宮	Xingtian Temple	行天宮	ぎょうてんぐう	싱톈궁			台北市中山區	trtc-O08	0.82	trtc-O10	0.92												
+trtc-O10		O10	中山國小	Zhongshan Elementary School	中山小学校	なかやましょうがっこう	중산 초등학교	晴光商圈	Qingguang Commercial Zone	台北市中山區	trtc-O09	0.92	trtc-O11	0.66												
+trtc-O11		O11	民權西路	Minquan W. Rd.	民権西路	みんけんせいろ	민취안시루			台北市中山區	trtc-O10	0.66	trtc-O12	0.68												
+trtc-O12		O12	大橋頭	Daqiaotou	大橋頭	おおはしかしら	다차오터우	大橋國小	Daqiao Elementary School	台北市大同區	trtc-O11	0.68	trtc-O13	1.34												
+trtc-O13		O13	台北橋	Taipei Bridge	台北橋	たいぺいきょう	타이베이 대교			新北市三重區	trtc-O12	1.34	trtc-O14	1.01												
+trtc-O14		O14	菜寮	Cailiao	菜寮	さいりょう	차이랴오	新北市立醫院	New Taipei City Hospital	新北市三重區	trtc-O13	1.01	trtc-O15	0.89												
+trtc-O15		O15	三重	Sanchong	三重	さんじゅう	싼충			新北市三重區	trtc-O14	0.89	trtc-O16	1.68												
+trtc-O16		O16	先嗇宮	Xianse Temple	先嗇宮	せんしょうぐう	셴써궁			新北市三重區	trtc-O15	1.68	trtc-O17	1.29												
+trtc-O17		O17	頭前庄	Touqianzhuang	頭前庄	とうぜんしょう	터우첸좡	臺北醫院	Taipei Hospital	新北市新莊區	trtc-O16	1.29	trtc-O18	1.01												
+trtc-O18		O18	新莊	Xinzhuang	新荘	しんそう	신좡	新莊廟街	Xinzhuang Temple St.	新北市新莊區	trtc-O17	1.01	trtc-O19	1.83												
+trtc-O19		O19	輔大	Fu Jen University	輔仁大学	ほじんだいがく	푸런 대학교			新北市新莊區	trtc-O18	1.83	trtc-O20	1.25												
+trtc-O20		O20	丹鳳	Danfeng	丹鳳	たんほう	단펑			新北市新莊區	trtc-O19	1.25	trtc-O21	1.30												
+trtc-O21		O21	迴龍	Huilong	廻龍	かいりゅう	후이룽	樂生	Lo-sheng	新北市新莊區	trtc-O20	1.30														
+trtc-O49		O12	大橋頭	Daqiaotou	大橋頭	おおはしかしら	다차오터우	大橋國小	Daqiao Elementary School	台北市大同區	trtc-O11	0.68	trtc-O50	1.88												
+trtc-O50		O50	三重國小	Sanchong Elementary School	三重小学校	みえしょうがっこう	싼충 초등학교			新北市三重區	trtc-O49	1.88	trtc-O51	1.20												
+trtc-O51		O51	三和國中	Sanhe Junior High School	三和中学校	さんわちゅうがっこう	싼허 중학교			新北市三重區	trtc-O50	1.20	trtc-O52	1.01												
+trtc-O52		O52	徐匯中學	St. Ignatius High School	徐匯高校	じょかいこうこう	쉬후이 고등학교			新北市蘆洲區	trtc-O51	1.01	trtc-O53	1.10												
+trtc-O53		O53	三民高中	Sanmin Senior High School	三民高校	さんみんこうこう	싼민 고등학교			新北市蘆洲區	trtc-O52	1.10	trtc-O54	0.95												
+trtc-O54		O54	蘆洲	Luzhou	芦洲	ろしゅう	루저우			新北市蘆洲區	trtc-O53	0.95														
+route	007C59		松山新店線	Songshan-Xindian Line	松山新店線																					
+trtc-G01		G01	新店	Xindian	新店	しんてん	신뎬	碧潭	Bitan	新北市新店區			trtc-G02	1.12												
+trtc-G02		G02	新店區公所	Xindian District Office	新店区役所	しんてんくやくしょ	신뎬 구청			新北市新店區	trtc-G01	1.12	trtc-G03	0.90												
+trtc-G03		G03	七張	Qizhang	七張	しちちょう	치장			新北市新店區	trtc-G02	0.90	trtc-G04	0.85												
+trtc-G04		G04	大坪林	Dapinglin	大坪林	だいへいりん	다핑린			新北市新店區	trtc-G03	0.85	trtc-G05	1.15												
+trtc-G05		G05	景美	Jingmei	景美	けいび	징메이			台北市文山區	trtc-G04	1.15	trtc-G06	1.07												
+trtc-G06		G06	萬隆	Wanlong	万隆	まんりゅう	완룽			台北市文山區	trtc-G05	1.07	trtc-G07	1.56												
+trtc-G07		G07	公館	Gongguan	公館	こうかん	궁관	台灣大學	National Taiwan University	台北市中正區	trtc-G06	1.56	trtc-G08	0.90												
+trtc-G08		G08	台電大樓	Taipower Building	台湾電力ビル	たいわんでんりょくびる	대만 전력공사 빌딩			台北市中正區	trtc-G07	0.90	trtc-G09	0.64												
+trtc-G09		G09	古亭	Guting	古亭	こてい	구팅			台北市中正區	trtc-G08	0.64	trtc-G10	1.17												
+trtc-G10		G10	中正紀念堂	Chiang Kai-Shek Memorial Hall	中正紀念堂	ちゅうせいきねんどう	중정 기념당	南門	Nanmen	台北市中正區	trtc-G09	1.17	trtc-G11	0.82												
+trtc-G11		G11	小南門	Xiaonanmen	小南門	しょうなんもん	샤오난먼			台北市中正區	trtc-G10	0.82	trtc-G12	0.76												
+trtc-G12		G12	西門	Ximen	西門	せいもん	시먼			台北市中正區	trtc-G11	0.76	trtc-G13	0.84												
+trtc-G13		G13	北門	Beimen	北門	ほくもん	베이먼	大稻埕南	Dadaocheng South	台北市大同區	trtc-G12	0.84	trtc-G14	1.20												
+trtc-G14		G14	中山	Zhongshan	中山	なかやま	중산			台北市中山區	trtc-G13	1.20	trtc-G15	1.32												
+trtc-G15		G15	松江南京	Songjiang Nanjing	松江南京	しょうこうなんきん	송장 난징			台北市中山區	trtc-G14	1.32	trtc-G16	1.07												
+trtc-G16		G16	南京復興	Nanjing Fuxing	南京復興	なんきんふっこう	난징 푸싱			台北市松山區	trtc-G15	1.07	trtc-G17	1.01												
+trtc-G17		G17	台北小巨蛋	Taipei Arena	台北アリーナ	たいぺいありーな	타이베이 아레나			台北市松山區	trtc-G16	1.01	trtc-G18	1.05												
+trtc-G18		G18	南京三民	Nanjing Sanmin	南京三民	なんきんさんみん	난징 싼민			台北市松山區	trtc-G17	1.05	trtc-G19	1.34												
+trtc-G19		G19	松山	Songshan	松山	まつやま	송산			台北市松山區	trtc-G18	1.34														
+route	CFDB00		小碧潭支線	Xiaobitan Line	小碧潭支線																					
+trtc-Gx03		G03	七張	Qizhang	七張	しちちょう	치장			新北市新店區	trtc-Gx03A	2.50														
+trtc-Gx03A		G03A	小碧潭	Xiaobitan	小碧潭	しょうへきたん	샤오비탄	新店高中	Xindian High School	新北市新店區			trtc-Gx03	2.50												
+route	AA753F		文湖線	Wenhu Line	文湖線																					
+trtc-BR01		BR01	動物園	Taipei Zoo	動物園	どうぶつえん	동물원			台北市文山區			trtc-BR01	0.68												
+trtc-BR02		BR02	木柵	Muzha	木柵	もくさく	무자			台北市文山區	trtc-BR01	0.68	trtc-BR02	0.51												
+trtc-BR03		BR03	萬芳社區	Wanfang Community	万芳コミュニティ	まんほうこみゅにてぃ	완팡 단지			台北市文山區	trtc-BR02	0.51	trtc-BR03	1.14												
+trtc-BR04		BR04	萬芳醫院	Wanfang Hospital	万芳病院	まんほうびょういん	완팡 병원			台北市文山區	trtc-BR03	1.14	trtc-BR04	0.76												
+trtc-BR05		BR05	辛亥	Xinhai	辛亥	しんがい	신하이			台北市文山區	trtc-BR04	0.76	trtc-BR05	1.60												
+trtc-BR06		BR06	麟光	Linguang	麟光	りんこう	린광			台北市大安區	trtc-BR05	1.60	trtc-BR06	0.82												
+trtc-BR07		BR07	六張犁	Liuzhangli	六張犁	ろくちょうり	류장리			台北市大安區	trtc-BR06	0.82	trtc-BR07	1.14												
+trtc-BR08		BR08	科技大樓	Technology Building	テクノロジービル	てくのろじーびる	테크놀로지 빌딩			台北市大安區	trtc-BR07	1.14	trtc-BR08	0.75												
+trtc-BR09		BR09	大安	Daan	大安	だいあん	다안			台北市大安區	trtc-BR08	0.75	trtc-BR09	0.89												
+trtc-BR10		BR10	忠孝復興	Zhongxiao Fuxing	忠孝復興	ちゅうこうふっこう	중샤오 푸싱			台北市大安區	trtc-BR09	0.89	trtc-BR10	1.27												
+trtc-BR11		BR11	南京復興	Nanjing Fuxing	南京復興	なんきんふっこう	난징 푸싱			台北市松山區	trtc-BR10	1.27	trtc-BR11	0.93												
+trtc-BR12		BR12	中山國中	Zhongshan Junior High School	中山中学校	なかやまちゅうがっこう	중산 중학교			台北市中山區	trtc-BR11	0.93	trtc-BR12	1.48												
+trtc-BR13		BR13	松山機場	Songshan Airport	松山空港	まつやまくうこう	송산 공항			台北市松山區	trtc-BR12	1.48	trtc-BR13	2.59												
+trtc-BR14		BR14	大直	Dazhi	大直	だいちょく	다즈	實踐大學	Shih Chien University	台北市中山區	trtc-BR13	2.59	trtc-BR14	1.33												
+trtc-BR15		BR15	劍南路	Jiannan Road	剣南路	けんなんろ	젠난루	美麗華	Miramar	台北市中山區	trtc-BR14	1.33	trtc-BR15	1.28												
+trtc-BR16		BR16	西湖	Xihu	西湖	さいこ	시후	德明科技大學	Takming Univ.	台北市內湖區	trtc-BR15	1.28	trtc-BR16	0.83												
+trtc-BR17		BR17	港墘	Gangqian	港墘	こうけん	강첸			台北市內湖區	trtc-BR16	0.83	trtc-BR17	1.01												
+trtc-BR18		BR18	文德	Wende	文徳	ぶんとく	원더	碧湖公園	Bihu Park	台北市內湖區	trtc-BR17	1.01	trtc-BR18	1.13												
+trtc-BR19		BR19	內湖	Neihu	内湖	ないこ	네이후			台北市內湖區	trtc-BR18	1.13	trtc-BR19	0.87												
+trtc-BR20		BR20	大湖公園	Dahu Park	大湖公園	だいここうえん	다후 공원			台北市內湖區	trtc-BR19	0.87	trtc-BR20	1.63												
+trtc-BR21		BR21	葫洲	Huzhou	葫洲	こしゅう	후저우			台北市內湖區	trtc-BR20	1.63	trtc-BR21	0.85												
+trtc-BR22		BR22	東湖	Donghu	東湖	とうこ	둥후			台北市內湖區	trtc-BR21	0.85	trtc-BR22	1.01												
+trtc-BR23		BR23	南港軟體園區	Nangang Software Park	南港ソフトウェアパーク	なんこうそふとうぇあぱーく	난강 소프트웨어 단지			台北市南港區	trtc-BR22	1.01	trtc-BR23	0.65												
+trtc-BR24		BR24	南港展覽館	Taipei Nangang Exhibition Center	南港展覧館	なんこうてんらんかん	난강 전람관			台北市南港區	trtc-BR23	0.65														
+route	F7DB17		環狀線	Circle Line	環狀線																					
+trtc-Y07		Y07	大坪林	Dapinglin	大坪林	だいへいりん	다핑린			新北市新店區			trtc-Y08	1.56												
+trtc-Y08		Y08	十四張	Shisizhang	十四張	じゅうよんちょう	스쓰장	莊敬高職	Juang Jing Vocational High School	新北市新店區	trtc-Y07	1.56	trtc-Y09	1.12												
+trtc-Y09		Y09	秀朗橋	Xiulang Bridge	秀朗橋	しゅうろうきょう	시우랑챠오			新北市中和區	trtc-Y08	1.12	trtc-Y10	0.85												
+trtc-Y10		Y10	景平	Jingping	景平	けいへい	징핑			新北市中和區	trtc-Y09	0.85	trtc-Y11	1.16												
+trtc-Y11		Y11	景安	Jingan	景安	けいあん	징안			新北市中和區	trtc-Y10	1.16	trtc-Y12	1.44												
+trtc-Y12		Y12	中和	Zhonghe	中和	ちゅうわ	중허			新北市中和區	trtc-Y11	1.44	trtc-Y13	0.64												
+trtc-Y13		Y13	橋和	Qiaohe	橋和	はしわ	챠오허			新北市中和區	trtc-Y12	0.64	trtc-Y14	0.73												
+trtc-Y14		Y14	中原	Zhongyuan	中原	なかはら	중위엔			新北市中和區	trtc-Y13	0.73	trtc-Y15	1.39												
+trtc-Y15		Y15	板新	Banxin	板新	ばんしん	반신			新北市板橋區	trtc-Y14	1.39	trtc-Y16	0.95												
+trtc-Y16		Y16	板橋	Banqiao	板橋	ばんきょう	반차오			新北市板橋區	trtc-Y15	0.95	trtc-Y17	1.42												
+trtc-Y17		Y17	新埔民生	Xinpu Minsheng	新埔民生	しんほみんせい	신푸민셩			新北市板橋區	trtc-Y16	1.42	trtc-Y18	1.80												
+trtc-Y18		Y18	頭前庄	Touqianzhuang	頭前庄	とうぜんしょう	터우첸좡			新北市新莊區	trtc-Y17	1.80	trtc-Y19	0.62												
+trtc-Y19		Y19	幸福	Xingfu	幸福	こうふく	씽푸			新北市新莊區	trtc-Y18	0.62	trtc-Y20	1.56												
+trtc-Y20		Y20	新北產業園區	New Taipei Industrial Park	新北産業園区	しんほくさんぎょうえんく	뉴 타이베이 산업 단지			新北市新莊區	trtc-Y19	1.56														
+sys			桃園捷運	Taoyuan Metro	桃園MRT																					
+route	7A68AE		機場捷運	Airport Line	空港線																					
+ty-A01		A01	台北車站	Taipei Main Station	台北駅	たいぺいえき	타이베이 역			台北市中正區			ty-A02	4.30												
+ty-A02		A02	三重	Sanchong	三重	さんちょう	싼충			新北市三重區	ty-A01	4.30	ty-A03													
+ty-A03		A03	新北產業園區	New Taipei Industrial Park	新北産業園区	しんほくさんぎょうえんく	뉴 타이베이 산업 단지			新北市新莊區	ty-A02		ty-A04	1.36												
+ty-A04		A04	新莊副都心	Xinzhuang Fuduxin	新荘副都心	しんそうふくとしん	신좡 부도심			新北市新莊區	ty-A03	1.36	ty-A05	0.95												
+ty-A05		A05	泰山	Taishan	泰山	たいざん	타이산			新北市泰山區	ty-A04	0.95	ty-A06	2.78												
+ty-A06		A06	泰山貴和	Taishan Guihe	泰山貴和	たいざんきわ	타이산 구이허	明志科大	Ming Chi University of Technology	新北市泰山區	ty-A05	2.78	ty-A07	4.53												
+ty-A07		A07	體育大學	National Taiwan Sport University	体育大学	たいいくだいがく	국립 체육대학교	龜山樂善	Guishan Leshan	桃園市龜山區	ty-A06	4.53	ty-A08	2.74												
+ty-A08		A08	長庚醫院	Chang Gung Memorial Hospital	長庚病院	ちょうこうびょういん	창컹병원			桃園市龜山區	ty-A07	2.74	ty-A09	1.29												
+ty-A09		A09	林口	Linkou	林口	りんこう	린커우			新北市林口區	ty-A08	1.29	ty-A10	8.27												
+ty-A10		A10	山鼻	Shanbi	山鼻	さんび	샨비			桃園市蘆竹區	ty-A09	8.27	ty-A11	1.87												
+ty-A11		A11	坑口	Kengkou	坑口	こうこう	컹커우			桃園市大園區	ty-A10	1.87	ty-A12	3.33												
+ty-A12		A12	機場第一航廈	Airport Terminal 1	空港第1ターミナル	くうこうだいいちたーみなる	공항 터미널 1			桃園市大園區	ty-A11	3.33	ty-A13	1.00												
+ty-A13		A13	機場第二航廈	Airport Terminal 2	空港第2ターミナル	くうこうだいにたーみなる	공항 터미널 2			桃園市大園區	ty-A12	1.00	ty-A14	0.65												
+ty-A14		A14	機場第三航廈	Airport Terminal 3	空港第3ターミナル	くうこうだいさんたーみなる	공항 터미널 3			桃園市大園區	ty-A13		ty-A14a													
+ty-A14a		A14a	機場旅館	Airport Hotel	空港ホテル	くうこうほてる	공항호텔			桃園市大園區	ty-A14		ty-A15													
+ty-A15		A15	大園	Dayuan	大園	だいえん	다위안			桃園市大園區	ty-A14a		ty-A16	2.09												
+ty-A16		A16	橫山	Hengshan	横山	こうざん	항산			桃園市大園區	ty-A15	2.09	ty-A17	1.53												
+ty-A17		A17	領航	Linghang	領航	りょうこう	링항	大園國際高中	Dayuan International Senior High School	桃園市大園區	ty-A16	1.53	ty-A18	1.66												
+ty-A18		A18	高鐵桃園站	Taoyuan HSR Station	高鉄桃園駅	こうてつとうえんえき	타오위안 고속철도 역			桃園市中壢區	ty-A17	1.66	ty-A19	1.73												
+ty-A19		A19	桃園體育園區	Taoyuan Sports Park	桃園体育園区	とうえんたいいくえんく	타오위안 체육 공원			桃園市中壢區	ty-A18	1.73	ty-A20	2.95												
+ty-A20		A20	興南	Xingnan	興南	きょうなん	싱난			桃園市中壢區	ty-A19	2.95	ty-A21	1.59												
+ty-A21		A21	環北	Huanbei	環北	かんほく	환베이			桃園市中壢區	ty-A20	1.59	ty-A22													
+ty-A22		A22	老街溪	Laojie River	老街渓	ろうがいけい	라오지에시			桃園市中壢區	ty-A21		ty-A23													
+ty-A23		A23	中壢	Zhongli	中壢	ちゅうれき	중리			桃園市中壢區	ty-A22															
+																										
+																										
+sys			高雄捷運	Kaohsiung Metro	高雄MRT																					
+route	DD711F		橘線	Orange Line	オレンジライン																					
+krt-O1		O1	哈瑪星	Hamasen	哈瑪星	はません	하마센			高雄市鼓山區			krt-O2													
+krt-O2		O2	鹽埕埔	Yanchengpu	塩埕埔	えんていほ	이엔전푸			高雄市塩埕區	krt-O1		krt-O3													
+krt-O3		O4	前金	Cianjin	前金	ぜんきん	첸진			高雄市前金區	krt-O2		krt-O4													
+krt-O4		O5	美麗島	Formosa Boulevard	美麗島	びれいとう	메리다오			高雄市新興區	krt-O3		krt-O5													
+krt-O5		O6	信義國小	Sinyi Elementary School	信義小学校	しんぎしょうがっこう	신이 초등학교			高雄市新興區	krt-O4		krt-O6													
+krt-O6		O7	文化中心	Cultural Center	文化センター	ぶんかせんたー	문화센터			高雄市新興區	krt-O5		krt-O7													
+krt-O7		O8	五塊厝	Wukuaicuo	五塊厝	ごかいせき	우과이춰			高雄市苓雅區	krt-O6		krt-O8													
+krt-O8		O9	苓雅運動園區	Lingya Sports Park	苓雅運動園区	れいがうんどうえんく	링야스포츠 파크			高雄市苓雅區	krt-O7		krt-O9													
+krt-O9		O10	衛武營	Weiwuying	衛武営	えいぶえい	웨우잉			高雄市鳳山區	krt-O8		krt-O10													
+krt-O10		O11	鳳山西站	Fongshan West	鳳山西駅	ほうざんにしえき	펑샨시역			高雄市鳳山區	krt-O9		krt-O11													
+krt-O11		O12	鳳山	Fongshan	鳳山	ほうざんにし	펑샨			高雄市鳳山區	krt-O10		krt-O12													
+krt-O12		O13	大東	Dadong	大東	だいとう	다동			高雄市鳳山區	krt-O11		krt-O13													
+krt-O13		O14	鳳山國中	Fongshan Junior High School	鳳山中学校	ほうざんちゅうがっこう	펑샨 중학교			高雄市鳳山區	krt-O12		krt-OT1													
+krt-OT1		OT1	大寮	Daliao	大寮	だいりょう	다랴오			高雄市大寮區	krt-O13															
+route	DC0905		紅線	Red Line	レッドライン																					
+krt-R3		R3	小港	Siaogang	小港	こみなと	샤오강			高雄市小港區			krt-R4													
+krt-R4		R4	高雄國際機場	Kaohsiung International Airport	高雄国際空港	たかおこくさいくうこう	가오슝국제공항			高雄市小港區	krt-R3		krt-R4A													
+krt-R4A		R4A	草衙	Caoya	草衙	そうが	차오야	高雄捷運公司	KRTC	高雄市前鎮區	krt-R4		krt-R5													
+krt-R5		R5	前鎮高中	Cianjhen Senior High School	前鎮高校	ぜんちんこうこう	치엔젠	五甲	Wujia	高雄市前鎮區	krt-R4A		krt-R6													
+krt-R6		R6	凱旋	Kaisyuan	凱旋	がいせん	가이쉬엔			高雄市前鎮區	krt-R5		krt-R7													
+krt-R7		R7	獅甲	Shihjia	獅甲	しこう	시쟈	勞工公園	Labor Park	高雄市前鎮區	krt-R6		krt-R8													
+krt-R8		R8	三多商圈	Sanduo Shopping District	三多商圏	さんたしょうけん	싼둬샹취엔			高雄市苓雅區	krt-R7		krt-R9													
+krt-R9		R9	中央公園	Central Park	中央公園	ちゅうおうこうえん	중앙공원			高雄市新興區	krt-R8		krt-R10													
+krt-R10		R10	美麗島	Formosa Boulevard	美麗島	びれいとう	메리다오			高雄市新興區	krt-R9		krt-R11													
+krt-R11		R11	高雄車站	Kaohsiung Main Station	高雄駅	たかおえき	가오슝역			高雄市三民區	krt-R10		krt-R12													
+krt-R12		R12	後驛	Houyi	後駅	ごえき	호우이			高雄市三民區	krt-R11		krt-R13													
+krt-R13		R13	凹子底	Aozihdi	凹子底	おうしてい	아오즈디			高雄市鼓山區	krt-R12		krt-R14													
+krt-R14		R14	巨蛋	Kaohsiung Arena	巨蛋	きょたん	쥐단	三民家商	Sanmin Home Economics & Commerce Vocational High School	高雄市左營區	krt-R13		krt-R15													
+krt-R15		R15	生態園區	Ecological District	生態園区	せいたいえんく	셍다이위엔취			高雄市左營區	krt-R14		krt-R16													
+krt-R16		R16	左營	Zuoying	左営	ざえい	쭤잉			高雄市左營區	krt-R15		krt-R17													
+krt-R17		R17	世運	World Games	世運	せうん	스윈			高雄市楠梓區	krt-R16		krt-R18													
+krt-R18		R18	油廠國小	Oil Refinery Elementary School	油廠小学校	ゆしょうしょうがっこう	요우쟝 초등학교			高雄市楠梓區	krt-R17		krt-R19													
+krt-R19		R19	楠梓科技園區	Nanzih Technology Industrial Park	楠梓加工区	なんしかぎえんく	난쯔 과학기술산업단지			高雄市楠梓區	krt-R18		krt-R20													
+krt-R20		R20	後勁	Houjing	後勁	ごけい	호우징	海科大	NKMU	高雄市楠梓區	krt-R19		krt-R21													
+krt-R21		R21	都會公園	Metropolitan Park	都会公園	とかいこうえん	두회공원			高雄市楠梓區	krt-R20		krt-R22													
+krt-R22		R22	青埔	Cingpu	青埔	せいほ	칭푸	高科大	NKFUST	高雄市橋頭區	krt-R21		krt-R23													
+krt-R23		R23	橋頭火車站	Ciaotou Station	橋頭糖廠	きょうとうえき	차오도우당쟝			高雄市橋頭區	krt-R22		krt-R23A													
+krt-R23A		R22A	橋頭糖廠	Ciaotou Sugar Refinery	橋頭駅	きょうとうとうしょう	차오도우역			高雄市橋頭區	krt-R23		krt-R24													
+krt-R24		R24	岡山高醫	Kaohsiung Medical University Gangshan Hospital	岡山高医	おかやまこうい				高雄市岡山區	krt-R23A		krt-RK1													
+krt-RK1		RK1	岡山車站	Gangshan Station	岡山駅	おかやまえき	강샨역			高雄市岡山區	krt-R24															
+																										
+																										
+sys			台鐵	Taiwan Railway	台湾鉄道																					
+route	272D75		西部幹線	West Main Line	西部幹線																					
+TR092		92	基隆	Keelung	基隆	きーるん	지롱			基隆市仁愛區			TR224	1.3												
+TR224		224	三坑	Sankeng	三坑	さんこう	산건			基隆市仁愛區	TR092	1.30	TR093	2.4												
+TR093		93	八堵	Badu	八堵	はっと	바두			基隆市暖暖區	TR224	2.40	TR094	2.3												
+TR094		94	七堵	Qidu	七堵	しちと	치두			基隆市七堵區	TR093	2.30	TR261	2.7												
+TR261		261	百福	Baifu	百福	ひゃくふく	바이푸			基隆市七堵區	TR094	2.70	TR095	3												
+TR095		95	五堵	Wudu	五堵	ごと	우두			新北市汐止區	TR261	3.00	TR096	1.4												
+TR096		96	汐止	Xizhi	汐止	しおどめ	시즈			新北市汐止區	TR095	1.40	TR262	1.5												
+TR262		262	汐科	Xike	汐科	せきか	시거			新北市汐止區	TR096	1.50	TR097	4.5												
+TR097		97	南港	Nangang	南港	なんこう	난강			臺北市南港區	TR262	4.50	TR098	2.8												
+TR098		98	松山	Songshan	松山	まつやま	송샨			臺北市信義區	TR097	2.80	TR100	6.4												
+TR100		100	台北	Taipei	台北	たいぺい	타이베이			臺北市中正區	TR098	6.40	TR101	2.8												
+TR101		101	萬華	Wanhua	万華	まんか	완화			臺北市萬華區	TR100	2.80	TR102	4.4												
+TR102		102	板橋	Banqiao	板橋	いたばし	반치아오			新北市板橋區	TR101	4.40	TR103	5.4												
+TR103		103	樹林	Shulin	樹林	じゅりん	주린			新北市樹林區	TR102	5.40	TR104	3.9												
+TR104		104	山佳	Shanjia	山佳	さんか	샨쟈			新北市樹林區	TR103	3.90	TR105	4.4												
+TR105		105	鶯歌	Yingge	鶯歌	おうか	잉거			新北市鶯歌區	TR104	4.40	TR106	8.2												
+TR106		106	桃園	Taoyuan	桃園	とうえん	타오위엔			桃園市桃園區	TR105	8.20	TR107	5.9												
+TR107		107	內壢	Neili	內壢	ないれき	네이리			桃園市中壢區	TR106	5.90	TR108	4												
+TR108		108	中壢	Zhongli	中壢	ちゅうれき	중리			桃園市中壢區	TR107	4.00	TR109	5.8												
+TR109		109	埔心	Puxin	埔心	ほしん	푸신			桃園市楊梅區	TR108	5.80	TR110	4												
+TR110		110	楊梅	Yangmei	楊梅	ようまい	양메이			桃園市楊梅區	TR109	4.00	TR111	6.8												
+TR111		111	富岡	Fugang	富岡	ふこう	푸강			桃園市楊梅區	TR110	6.80	TR112	5.7												
+TR112		112	湖口	Hukou	湖口	ここう	후고우			新竹縣湖口鄉	TR111	5.70	TR113	6.2												
+TR113		113	新豐	Xinfeng	新豊	しんほう	신퐁			新竹縣新豐鄉	TR112	6.20	TR114	4.8												
+TR114		114	竹北	Zhubei	竹北	ちくほく	주베이			新竹縣竹北市	TR113	4.80	TR115	5.8												
+TR115		115	新竹	Hsinchu	新竹	しんちく	신주			新竹市東區	TR114	5.80	TR116	8												
+TR116		116	香山	Xiangshan	香山	こうざん	샹샨			新竹市香山區	TR115	8.00	TR117	6.4												
+TR117		117	崎頂	Qiding	崎頂	きちょう	치딩			苗栗縣竹南鎮	TR116	6.40	TR118	4.6												
+TR118		118	竹南	Zhunan	竹南	ちくなん	주난			苗栗縣竹南鎮	TR117	4.60	TR135	5.3												
+TR135		135	造橋	Zaoqiao	造橋	ぞうきょう	자오챠오			苗栗縣造橋鄉	TR118	5.30	TR136	6.4												
+TR136		136	豐富	Fengfu	豊富	ほうふ	퐁푸			苗栗縣後龍鎮	TR135	6.40	TR137	3.5												
+TR137		137	苗栗	Miaoli	苗栗	びょうりつ	먀오리			苗栗縣苗栗市	TR136	3.50	TR138	6.6												
+TR138		138	南勢	Nanshi	南勢	なんせい	난스			苗栗縣苗栗市	TR137	6.60	TR139	4.2												
+TR139		139	銅鑼	Tongluo	銅鑼	どら	동뤄			苗栗縣銅鑼鄉	TR138	4.20	TR140	7.4												
+TR140		140	三義	Sanyi	三義	さんぎ	산이			苗栗縣三義鄉	TR139	7.40	TR142	10.9												
+TR142		142	泰安	Tai'an	泰安	たいあん	다이안			臺中市后里區	TR140	10.90	TR143	2.6												
+TR143		143	后里	Houli	后里	こうり	호우리			臺中市后里區	TR142	2.60	TR144	6.8												
+TR144		144	豐原	Fengyuan	豊原	とよはら	퐁위엔			臺中市豐原區	TR143	6.80	TR145	5												
+TR145		145	潭子	Tanzi	潭子	たんし	단즈			臺中市潭子區	TR144	5.00	TR225	5.1												
+TR225		225	太原	Taiyuan	太原	たいげん	다이위엔			臺中市北屯區	TR145	5.10	TR146	4.1												
+TR146		146	台中	Taichung	台中	たいちゅう	타이중			臺中市中區	TR225	4.10	TR223	4.2												
+TR223		223	大慶	Daqing	大慶	だいけい	다칭			臺中市南區	TR146	4.20	TR147	3												
+TR147		147	烏日	Wuri	烏日	うじつ	우르			臺中市烏日區	TR223	3.00	TR280	0.8												
+TR280		280	新烏日	Xinwuri	新烏日	しんうじつ	신우르			臺中市烏日區	TR147	0.80	TR148	2.5												
+TR148		148	成功	Chenggong	成功	せいこう	천공			臺中市烏日區	TR280	2.50	TR149	7.1												
+TR149		149	彰化	Changhua	彰化	しょうか	쟝화			彰化縣彰化市	TR148	7.10	TR150	6.6												
+TR150		150	花壇	Huatan	花壇	かだん	화단			彰化縣花壇鄉	TR149	6.60	TR227	4.6												
+TR227		227	大村	Dacun	大村	おおむら	다춘			彰化縣大村鄉	TR150	4.60	TR151	3.5												
+TR151		151	員林	Yuanlin	員林	いんりん	위엔린			彰化縣員林鎮	TR227	3.50	TR152	3.5												
+TR152		152	永靖	Yongjing	永靖	ながやす	용징			彰化縣永靖鄉	TR151	3.50	TR153	3.7												
+TR153		153	社頭	Shetou	社頭	しゃとう	서도우			彰化縣社頭鄉	TR152	3.70	TR154	4.3												
+TR154		154	田中	Tianzhong	田中	たなか	티엔종			彰化縣田中鎮	TR153	4.30	TR155	5.8												
+TR155		155	二水	Ershui	二水	にすい	얼쉐			彰化縣二水鄉	TR154	5.80	TR156	8.1												
+TR156		156	林內	Linnei	林内	りんない	린네이			雲林縣林內鄉	TR155	8.10	TR157	4.8												
+TR157		157	石榴	Shiliu	石榴	ざくろ	스료우			雲林縣斗六市	TR156	4.80	TR158	4.8												
+TR158		158	斗六	Douliu	斗六	とこく	도우료우			雲林縣斗六市	TR157	4.80	TR159	7.6												
+TR159		159	斗南	Dounan	斗南	となん	도난			雲林縣斗南鎮	TR158	7.60	TR160	3.9												
+TR160		160	石龜	Shigui	石亀	いしがめ	스궤			雲林縣斗南鎮	TR159	3.90	TR161	4.6												
+TR161		161	大林	Dalin	大林	おおばやし	다린			嘉義縣大林鎮	TR160	4.60	TR162	5.8												
+TR162		162	民雄	Minxiong	民雄	みんゆう	민슝			嘉義縣民雄鄉	TR161	5.80	TR228	6.7												
+TR228		228	嘉北	Jiabei	嘉北	かほく	쟈베이			嘉義市東區	TR162	6.70	TR163	2.6												
+TR163		163	嘉義	Chiayi	嘉義	かぎ	쟈이			嘉義市西區	TR228	2.60	TR164	6.6												
+TR164		164	水上	Shuishang	水上	みずかみ	쉐샹			嘉義縣水上鄉	TR163	6.60	TR165	2.6												
+TR165		165	南靖	Nanjing	南靖	みなみやす	난징			嘉義縣水上鄉	TR164	2.60	TR166	6												
+TR166		166	後壁	Houbi	後壁	こうへき	호우비			臺南市後壁區	TR165	6.00	TR167	7.7												
+TR167		167	新營	Xinying	新営	しんえい	신잉			臺南市新營區	TR166	7.70	TR168	3.3												
+TR168		168	柳營	Liuying	柳営	りゅうえい	료우잉			臺南市柳營區	TR167	3.30	TR169	3.9												
+TR169		169	林鳳營	Linfengying	林鳳営	りんほうえい	린퐁잉			臺南市六甲區	TR168	3.90	TR170	5.5												
+TR170		170	隆田	Longtian	隆田	たかだ	롱디엔			臺南市官田區	TR169	5.50	TR171	2.2												
+TR171		171	拔林	Balin	抜林	ばつりん	바린			臺南市官田區	TR170	2.20	TR172	4.6												
+TR172		172	善化	Shanhua	善化	ぜんか	샨화			臺南市善化區	TR171	4.60	TR282	2.9												
+TR282		282	南科	Nanke	南科	なんか	닌거			臺南市新市區	TR172	2.90	TR173	4.7												
+TR173		173	新市	Xinshi	新市	しんいち	신스			臺南市新市區	TR282	4.70	TR174	5												
+TR174		174	永康	Yongkang	永康	ながやす	용강			臺南市永康區	TR173	5.00	TR226	3.7												
+TR226		226	大橋	Daqiao	大橋	おおはし	다챠오			臺南市永康區	TR174	3.70	TR175	2.7												
+TR175		175	台南	Tainan	台南	たいなん	타이난			臺南市東區	TR226	2.70	TR176	7.6												
+TR176		176	保安	Bao'an	保安	ほあん	바오안			臺南市仁德區	TR175	7.60	TR177	4												
+TR177		177	中洲	Zhongzhou	中洲	なかす	종조우			臺南市仁德區	TR176	4.00	TR178	2.9												
+TR178		178	大湖	Dahu	大湖	だいこ	다후			高雄市路竹區	TR177	2.90	TR179	2.9												
+TR179		179	路竹	Luzhu	路竹	ろちく	루주			高雄市路竹區	TR178	2.90	TR180	7.8												
+TR180		180	岡山	Gangshan	岡山	おかやま	강샨			高雄市岡山區	TR179	7.80	TR181	3.6												
+TR181		181	橋頭	Qiaotou	橋頭	きょうとう	챠오도우			高雄市橋頭區	TR180	3.60	TR183	4.2												
+TR183		183	楠梓	Nanzi	楠梓	なんじ	난쯔			高雄市楠梓區	TR181	4.20	TR288	5.1												
+TR288		288	新左營	Xinzuoying	新左営	しんざえい	싡쭤잉			高雄市左營區	TR183	5.10	TR184	1.9												
+TR184		184	左營	Zuoying	左営	ざえい	쭤잉			高雄市左營區	TR288	1.90	TR185	6.6												
+TR185		185	高雄	Kaohsiung	高雄	たかお	가오슝			高雄市三民區	TR184	6.60	TR186	5.8												
+TR186		186	鳳山	Fengshan	鳳山	ほうざん	펑샨			高雄市鳳山區	TR185	5.80	TR187	3.7												
+TR187		187	後庄	Houzhuang	後庄	ごしょう	호우주앙			高雄市大寮區	TR186	3.70	TR188	4.3												
+TR188		188	九曲堂	Jiuqutang	九曲堂	きゅうきょくどう	죠우취당			高雄市大樹區	TR187	4.30	TR189	5												
+TR189		189	六塊厝	Liukuaicuo	六塊厝	ろっかいせき	료우과이춰			屏東縣屏東市	TR188	5.00	TR190	2.2												
+TR190		190	屏東	Pingtung	屏東	びょうとう	핑동			屏東縣屏東市	TR189	2.20	TR191	2.6												
+route	272D75		海線	Ocean Line	海線																					
+TR118A		118	竹南	Zhunan	竹南	ちくなん	주난			苗栗縣竹南鎮	TR117	4.60	TR119	4.5												
+TR119		119	談文	Tanwen	談文	たんぶん	탄웬			苗栗縣造橋鄉	TR118A	4.50	TR120	6.7												
+TR120		120	大山	Dashan	大山	おおやま	다샨			苗栗縣後龍鎮	TR119	6.70	TR121	3.8												
+TR121		121	後龍	Houlong	後龍	ごりゅう	호우롱			苗栗縣後龍鎮	TR120	3.80	TR122	3.6												
+TR122		122	龍港	Longgang	龍港	りゅうこう	롱강			苗栗縣後龍鎮	TR121	3.60	TR123	8.1												
+TR123		123	白沙屯	Baishatun	白沙屯	はくさとん	바이샤퉨			苗栗縣通霄鎮	TR122	8.10	TR124	3.1												
+TR124		124	新埔	Xinpu	新埔	しんほ	신푸			苗栗縣通霄鎮	TR123	3.10	TR125	5.8												
+TR125		125	通霄	Tongxiao	通霄	つうしょう	통샤오			苗栗縣通霄鎮	TR124	5.80	TR126	6.1												
+TR126		126	苑裡	Yuanli	苑裡	えんり	위엔리			苗栗縣苑裡鎮	TR125	6.10	TR127	7.7												
+TR127		127	日南	Rinan	日南	にちなん	르난			臺中市大甲區	TR126	7.70	TR128	4.6												
+TR128		128	大甲	Dajia	大甲	だいこう	다쟈			臺中市大甲區	TR127	4.60	TR129	5.3												
+TR129		129	臺中港	Taichung Port	台中港	たいちゅうこう	다이종강			臺中市清水區	TR128	5.30	TR130	6												
+TR130		130	清水	Qingshui	清水	しみず	칭쉐이			臺中市清水區	TR129	6.00	TR131	3.2												
+TR131		131	沙鹿	Shalu	沙鹿	さろく	샤루			臺中市沙鹿區	TR130	3.20	TR132	4.6												
+TR132		132	龍井	Longjing	龍井	たつい	롱징			臺中市龍井區	TR131	4.60	TR133	5												
+TR133		133	大肚	Dadu	大肚	だいと	다두			臺中市大肚區	TR132	5.00	TR134	5												
+TR134		134	追分	Zhuifen	追分	おいわけ	줴이펜			臺中市大肚區	TR133	5.00	TR149A	7.1												
+TR149A		149	彰化	Changhua	彰化	しょうか	쟝화			彰化縣彰化市	TR134	7.10	TR150	6.6												
+route	272D75		宜蘭線	Yilan Line	宜蘭線																					
+TR093A		93	八堵	Badu	八堵	はっと	바두			基隆市暖暖區	TR094	2.30	TR091	1.6												
+TR091		91	暖暖	Nuannuan	暖暖	なんなん	놘놘			基隆市暖暖區	TR093	1.60	TR090	2.3												
+TR090		90	四腳亭	Sijiaoting	四脚亭	しきゃくてい	시쟈오팅			新北市瑞芳區	TR091	2.30	TR089	5												
+TR089		89	瑞芳	Ruifang	瑞芳	すいほう	뤠이팡			新北市瑞芳區	TR090	5.00	TR088	4.6												
+TR088		88	侯硐	Houtong	侯硐	こうどう	호우동			新北市瑞芳區	TR089	4.60	TR087	2.5												
+TR087		87	三貂嶺	Sandiaoling	三貂嶺	さんちょうれい	산댜오링			新北市瑞芳區	TR088	2.50	TR086	3.6												
+TR086		86	牡丹	Mudan	牡丹	ぼたん	무단			新北市雙溪區	TR087	3.60	TR085	3.3												
+TR085		85	雙溪	Shuangxi	双渓	そうけい	솽시			新北市雙溪區	TR086	3.30	TR084	5.4												
+TR084		84	貢寮	Gongliao	貢寮	こうりょう	공랴오			新北市貢寮區	TR085	5.40	TR083	3.7												
+TR083		83	福隆	Fulong	福隆	ふくりゅう	푸롱			新北市貢寮區	TR084	3.70	TR082	5.4												
+TR082		82	石城	Shicheng	石城	いししろ	시청			宜蘭縣頭城鎮	TR083	5.40	TR081	2.7												
+TR081		81	大里	Dali	大里	おおさと	다리			宜蘭縣頭城鎮	TR082	2.70	TR080	4.7												
+TR080		80	大溪	Daxi	大渓	だいけい	다시			宜蘭縣頭城鎮	TR081	4.70	TR079	4.6												
+TR079		79	龜山	Guishan	亀山	かめやま	궤이샨			宜蘭縣頭城鎮	TR080	4.60	TR078	3.6												
+TR078		78	外澳	Wai'ao	外澳	がいおう	와이아오			宜蘭縣頭城鎮	TR079	3.60	TR077	3.6												
+TR077		77	頭城	Toucheng	頭城	とうじょう	도우청			宜蘭縣頭城鎮	TR078	3.60	TR076	2.2												
+TR076		76	頂埔	Dingpu	頂埔	ていほ	딩푸			宜蘭縣頭城鎮	TR077	2.20	TR075	4.1												
+TR075		75	礁溪	Jiaoxi	礁渓	しょうけい	쟈오시			宜蘭縣礁溪鄉	TR076	4.10	TR074	4.7												
+TR074		74	四城	Sicheng	四城	しじょう	시청			宜蘭縣礁溪鄉	TR075	4.70	TR073	3.7												
+TR073		73	宜蘭	Yilan	宜蘭	いらん	이란			宜蘭縣宜蘭市	TR074	3.70	TR072	5.8												
+TR072		72	二結	Erjie	二結	にけつ	얼지에			宜蘭縣五結鄉	TR073	5.80	TR071	1.2												
+TR071		71	中里	Zhongli	中里	なかさと	종리			宜蘭縣五結鄉	TR072	1.20	TR070	1.8												
+TR070		70	羅東	Luodong	羅東	らとう	뤄동			宜蘭縣羅東鎮	TR071	1.80	TR069	5												
+TR069		69	冬山	Dongshan	冬山	ふゆやま	동샨			宜蘭縣冬山鄉	TR070	5.00	TR068	4.2												
+TR068		68	新馬	Xinma	新馬	しんば	신마			宜蘭縣蘇澳鎮	TR069	4.20	TR067	0.9												
+TR067		67	蘇澳新	Su'aoxin	蘇澳新	そおうしん	수아오신			宜蘭縣蘇澳鎮	TR068	0.90	TR066	3.4												
+TR066		66	蘇澳	Su'ao	蘇澳	そおう	수아오			宜蘭縣蘇澳鎮	TR067	3.40														
+route	272D75		北迴線	North Link Line	北迴線																					
+TR067A		67	蘇澳新	Su'aoxin	蘇澳新	そおうしん	수아오신			宜蘭縣蘇澳鎮	TR068	0.90	TR064	5.2												
+TR064		64	永樂	Yongle	永楽	えいらく	영러			宜蘭縣蘇澳鎮	TR067A	5.20	TR063	5.8												
+TR063		63	東澳	Dong'ao	東澳	とうおう	동아오			宜蘭縣南澳鄉	TR064	5.80	TR062	8												
+TR062		62	南澳	Nan'ao	南澳	なんおう	난아오			宜蘭縣蘇澳鎮	TR063	8.00	TR060	3.7												
+TR060		60	武塔	Wuta	武塔	ぶとう	우다			宜蘭縣南澳鄉	TR062	3.70	TR058	12.9												
+TR058		58	漢本	Hanben	漢本	かんほん	한번			宜蘭縣南澳鄉	TR060	12.90	TR057	4.2												
+TR057		57	和平	Heping	和平	わへい	허핑			花蓮縣秀林鄉	TR058	4.20	TR056	7.7												
+TR056		56	和仁	Heren	和仁	わじん	허런			花蓮縣秀林鄉	TR057	7.70	TR055	10.1												
+TR055		55	崇德	Chongde	崇徳	しゅうとく	총더			花蓮縣秀林鄉	TR056	10.10	TR054	5.3												
+TR054		54	新城	Xincheng	新城	しんじょう	신청			花蓮縣新城鄉	TR055	5.30	TR053	5.3												
+TR053		53	景美	Jingmei	景美	けいび	진메이			花蓮縣秀林鄉	TR054	5.30	TR052	6.5												
+TR052		52	北埔	Beipu	北埔	ほくほ	베이푸			花蓮縣新城鄉	TR053	6.50	TR051	4.5												
+TR051		51	花蓮	Hualien	花蓮	かれん	화리엔			花蓮縣花蓮市	TR052	4.50	TR045	3.4												
+route	272D75		花東線	Hualien-Taitung Line	花東線																					
+TR051A		51	花蓮	Hualien	花蓮	かれん	화리엔			花蓮縣花蓮市	TR052	4.50	TR045	3.4												
+TR045		45	吉安	Ji'an	吉安	きつあん	지안			花蓮縣吉安鄉	TR051A	3.40	TR043	9												
+TR043		43	志學	Zhixue	志学	しがく	즈쉬에			花蓮縣壽豐鄉	TR045	9.00	TR042	2.9												
+TR042		42	平和	Pinghe	平和	へいわ	핑허			花蓮縣壽豐鄉	TR043	2.90	TR041	1.9												
+TR041		41	壽豐	Shoufeng	寿豊	じゅほう	서우퐁			花蓮縣壽豐鄉	TR042	1.90	TR040	2.7												
+TR040		40	豐田	Fengtian	豊田	とよた	퐁디엔			花蓮縣壽豐鄉	TR041	2.70	TR039	4.1												
+TR039		39	溪口	Xikou	渓口	けいこう	시고우			花蓮縣壽豐鄉	TR040	4.10	TR037	4.4												
+TR037		37	南平	Nanping	南平	なんへい	난핑			花蓮縣鳳林鎮	TR039	4.40	TR036	4.1												
+TR036		36	鳳林	Fenglin	鳳林	ほうりん	펑린			花蓮縣鳳林鎮	TR037	4.10	TR035	4.8												
+TR035		35	萬榮	Wanrong	萬栄	ばんえい	완롱			花蓮縣鳳林鎮	TR036	4.80	TR034	5.6												
+TR034		34	光復	Guangfu	光復	こうふく	광푸			花蓮縣光復鄉	TR035	5.60	TR032	7.7												
+TR032		32	大富	Dafu	大富	だいふ	다푸			花蓮縣光復鄉	TR034	7.70	TR031	3												
+TR031		31	富源	Fuyuan	富源	ふげん	푸위엔			花蓮縣瑞穗鄉	TR032	3.00	TR029	9.3												
+TR029		29	瑞穗	Ruisui	瑞穂	みずほ	뤠이쉐이			花蓮縣瑞穗鄉	TR031	9.30	TR027	9.2												
+TR027		27	三民	Sanmin	三民	さんみん	산민			花蓮縣玉里鎮	TR029	9.20	TR025	11.5												
+TR025		25	玉里	Yuli	玉里	ぎょくり	위리			花蓮縣玉里鎮	TR027	11.50	TR022	6.7												
+TR022		22	東里	Dongli	東里	とうり	동리			花蓮縣富里鄉	TR025	6.70	TR020	5.9												
+TR020		20	東竹	Dongzhu	東竹	とうちく	동주			花蓮縣富里鄉	TR022	5.90	TR018	6.2												
+TR018		18	富里	Fuli	富里	ふり	푸리			花蓮縣富里鄉	TR020	6.20	TR015	7												
+TR015		15	池上	Chishang	池上	いけがみ	치샹			臺東縣池上鄉	TR018	7.00	TR014	5.7												
+TR014		14	海端	Haiduan	海端	かいたん	하이뤠이			臺東縣關山鎮	TR015	5.70	TR012	6.4												
+TR012		12	關山	Guanshan	関山	かんさん	관샨			臺東縣關山鎮	TR014	6.40	TR011	3.7												
+TR011		11	月美	Yuemei	月美	げつび	위에메이			臺東縣關山鎮	TR012	3.70	TR010	4.2												
+TR010		10	瑞和	Ruihe	瑞和	すいわ	뤠이허			臺東縣鹿野鄉	TR011	4.20	TR009	2.7												
+TR009		9	瑞源	Ruiyuan	瑞源	すいげん	뤠이위엔			臺東縣鹿野鄉	TR010	2.70	TR008	5.6												
+TR008		8	鹿野	Luye	鹿野	ろくや	루이에			臺東縣鹿野鄉	TR009	5.60	TR006	6.2												
+TR006		6	山里	Shanli	山里	やまさと	산리			臺東縣卑南鄉	TR008	6.20	TR004	8												
+TR004		4	台東	Taitung	台東	たいとう	타이동			臺東縣臺東市	TR006	8.00	TR220	4.6												
+route	272D75		屏枋線	Pingfang Line	屏枋線																					
+TR190A		190	屏東	Pingtung	屏東	びょうとう	핑동			屏東縣屏東市	TR189	2.20	TR191	2.6												
+TR191		191	歸來	Guilai	帰来	きらい	궤라이			屏東縣屏東市	TR190A	2.60	TR192	2.3												
+TR192		192	麟洛	Linluo	麟洛	りんらく	린뤄			屏東縣麟洛鄉	TR191	2.30	TR193	2.4												
+TR193		193	西勢	Xishi	西勢	せいせい	시스			屏東縣竹田鄉	TR192	2.40	TR194	3.7												
+TR194		194	竹田	Zhutian	竹田	たけだ	주디엔			屏東縣竹田鄉	TR193	3.70	TR195	4.1												
+TR195		195	潮州	Chaozhou	潮州	ちょうしゅう	차오조우			屏東縣潮州鎮	TR194	4.10	TR196	4.8												
+TR196		196	崁頂	Kanding	崁頂	かんてい	간딩			屏東縣崁頂鄉	TR195	4.80	TR197	2.4												
+TR197		197	南州	Nanzhou	南州	なんしゅう	난조우			屏東縣南州鄉	TR196	2.40	TR198	3.6												
+TR198		198	鎮安	Zhen'an	鎮安	ちんあん	젠안			屏東縣林邊鄉	TR197	3.60	TR199	3.2												
+TR199		199	林邊	Linbian	林辺	りんへん	린비엔			屏東縣林邊鄉	TR198	3.20	TR200	4												
+TR200		200	佳冬	Jiadong	佳冬	かとう	쟈동			屏東縣佳冬鄉	TR199	4.00	TR201	3.1												
+TR201		201	東海	Donghai	東海	とうがい	동하이			屏東縣枋寮鄉	TR200	3.10	TR203	4.1												
+TR203		203	枋寮	Fangliao	枋寮	ぼうりょう	팡랴오			屏東縣枋寮鄉	TR201	4.10	TR204	5.3												
+route	272D75		南迴線	South Link Line	南迴線																					
+TR203A		203	枋寮	Fangliao	枋寮	ほうりょう	팡랴오			屏東縣枋寮鄉	TR201	4.10	TR204	5.3												
+TR204		204	加祿	Jialu	加禄	かろく	쟈루			屏東縣枋山鄉	TR203A	5.30	TR205	3.4												
+TR205		205	內獅	Neishi	内獅	ないし	네이시			屏東縣枋山鄉	TR204	3.40	TR206	4.9												
+TR206		206	枋山	Fangshan	枋山	ほうざん	팡샨			屏東縣獅子鄉	TR205	4.90	TR210	26.9												
+TR210		210	古莊	Guzhuang	古荘	こそう	구좡			臺東縣大武鄉	TR206	26.90	TR211	3.3												
+TR211		211	大武	Dawu	大武	おおたけ	다우			臺東縣大武鄉	TR210	3.30	TR213	11.7												
+TR213		213	瀧溪	Longxi	滝渓	りゅうけい	롱시			臺東縣太麻里鄉	TR211	11.70	TR215	8.4												
+TR215		215	金崙	Jinlun	金崙	きんりん	진룬			臺東縣太麻里鄉	TR213	8.40	TR217	11												
+TR217		217	太麻里	Taimali	太麻里	たいまり	다마리			臺東縣太麻里鄉	TR215	11.00	TR219	11.7												
+TR219		219	知本	Zhiben	知本	ちほん	즈번			臺東縣臺東市	TR217	11.70	TR220	7												
+TR220		220	康樂	Kangle	康楽	こうらく	강러			臺東縣臺東市	TR219	7.00	TR004A	4.6												
+TR004A		4	臺東	Taitung	台東	たいとう	타이동			臺東縣臺東市	TR220	4.60	TR006	8												
+route	272D75		成追線	Chezhu Line	成追線																					
+TR148A		148	成功	Chenggong	成功	せいこう	천공			臺中市烏日區	TR280	2.50	TR134A	2.2												
+TR134A		134	追分	Zhuifen	追分	おいわけ	줴이펜			臺中市大肚區	TR148A	2.20	TR149	7.1												
+route	272D75		平溪線	Pingxi Line	平溪線																					
+TR087A		87	三貂嶺	Sandiaoling	三貂嶺	さんちょうれい	산댜오링			新北市瑞芳區	TR088	2.50	TR231	3.5												
+TR231		231	大華	Dahua	大華	だいか	다화			新北市平溪區	TR087A	3.50	TR232	2.9												
+TR232		232	十分	Shihfen	十分	じゅんぶん	스펀			新北市平溪區	TR231	2.90	TR233	1.8												
+TR233		233	望古	Wanggu	望古	ぼうこ	왕구			新北市平溪區	TR232	1.80	TR234	2.2												
+TR234		234	嶺腳	Lingjiao	嶺脚	れいきゃく	링쟈오			新北市平溪區	TR233	2.20	TR235	1												
+TR235		235	平溪	Pingxi	平渓	へいけい	핑시			新北市平溪區	TR234	1.00	TR236	1.7												
+TR236		236	菁桐	Jingtong	菁桐	せいとう	칭동			新北市平溪區	TR235	1.70														
+route	272D75		內灣線	Neiwan Line	内湾線																					
+TR115A		115	新竹	Hsinchu	新竹	しんちく	신주			新竹市東區	TR114	5.80	TR241	8												
+TR241		241	竹中	Zhuzhong	竹中	たけなか	주종			新竹縣竹東鎮	TR115A	8.00	TR242	2.5												
+TR242		242	上員	Shangyuan	上員	じょういん	샹위엔			新竹縣竹東鎮	TR241	2.50	TR249	4.5												
+TR249		249	榮華	Ronghua	栄華	えいか	롱화			新竹縣竹東鎮	TR242	4.50	TR243	1.6												
+TR243		243	竹東	Zhudong	竹東	ちくとう	주동			新竹縣竹東鎮	TR249	1.60	TR244	3.4												
+TR244		244	橫山	Hengshan	横山	よこやま	헝샨			新竹縣橫山鄉	TR243	3.40	TR245	2.2												
+TR245		245	九讚頭	Jiuzantou	九讃頭	きゅうさんとう	져우잔도우			新竹縣橫山鄉	TR244	2.20	TR246	2.2												
+TR246		246	合興	Hexing	合興	ごうきょう	허싱			新竹縣橫山鄉	TR245	2.20	TR247	1.3												
+TR247		247	富貴	Fugui	富貴	ふき	푸궤이			新竹縣橫山鄉	TR246	1.30	TR248	2.2												
+TR248		248	內灣	Neiwan	内湾	ないわん	네이완			新竹縣橫山鄉	TR247	2.20														
+route	272D75		集集線	Jiji Line	集集線																					
+TR155A		155	二水	Ershui	二水	にすい	얼쉐이			彰化縣二水鄉	TR154	5.80	TR251	2.9												
+TR251		251	源泉	Yuanquan	源泉	げんせん	위엔취엔			彰化縣二水鄉	TR155A	2.90	TR252	7.9												
+TR252		252	濁水	Zhuoshui	濁水	だくすい	줘쉐이			南投縣名間鄉	TR251	7.90	TR253	4.9												
+TR253		253	龍泉	Longquan	龍泉	りゅうせん	롱취엔			南投縣集集鎮	TR252	4.90	TR254	4.4												
+TR254		254	集集	Jiji	集集	しゅうしゅう	지지			南投縣集集鎮	TR253	4.40	TR255	7.3												
+TR255		255	水里	Shuili	水里	みずさと	쉐니리			南投縣水里鄉	TR254	7.30	TR256	2.3												
+TR256		256	車埕	Checheng	車埕	しゃてい	처청			南投縣水里鄉	TR255	2.30														
+route	272D75		林口線	Linkou Line	林口線																					
+TR106A		106	桃園	Taoyuan	桃園	とうえん	타오위엔			桃園市桃園區	TR105	8.20	TY001	2.1												
+TY001			桃園高中	Taoyuan Senior High School	桃園高中	とうえんこうこう	타오위엔 고교			桃園市桃園區	TR106A	2.10	TY002	2												
+TY002			寶山	Baoshan	宝山	たからやま	바오샨			桃園市桃園區	TY001	2.00	TY003	4.2												
+TY003			南祥	Nanxiang	南祥	なんしょう	난샹			桃園市龜山區	TY002	4.20	TY004	3.4												
+TY004			長興	Changxing	長興	ちょうきょう	챵싱			桃園市蘆竹區	TY003	3.40	TY005	2.1												
+TY005			海山	Haishan	海山	かいざん	하이샨			桃園市蘆竹區	TY004	2.10	TY006	1.8												
+TY006			海湖	Haihu	海湖	かいこ	하이후			桃園市蘆竹區	TY005	1.80														
+route	272D75		沙崙線	Shalun Line	沙崙線																					
+TR177A		177	中洲	Zhongzhou	中洲	なかす	종조우			臺南市仁德區	TR176	4.00	TR283	2.6												
+TR283		283	長榮大學	Chang Jung Christian University	長栄大學	ちょうえいだいがく	창롱 대학			臺南市歸仁區	TR177A	2.60	TR284	2.7												
+TR284		284	沙崙	Shalun	沙崙	さりん	사룬			臺南市歸仁區	TR283	2.70														
+route	272D75		舊山線	Old Mountian Line	舊山線																					
+TR140A		140	三義	Sanyi	三義	さんぎ	산이			苗栗縣三義鄉	TR139	7.40	TR141	5												
+TR141		141	勝興	Shengxing	勝興	しょうきょう	성싱			苗栗縣三義鄉	TR140A	5.00	ML001	3.2												
+ML001			魚藤坪	Yutengping	魚藤坪	ぎょとうへい	위텅핑			苗栗縣三義鄉	TR141	3.20	TR142x	5.4												
+TR142x		142	泰安	Tai'an	泰安	たいあん	다이안			臺中市后里區	ML001	5.40														
+sys			台灣高鐵	Taiwan High Speed Railway	台湾高速鉄道																					
+route	F5A35B		台灣高鐵	THSR	台湾高速鉄道																					
+thsr-01		NAG	南港	Nangang	南港	なんこう	난강			台北市南港區			thsr-02	9.174												
+thsr-02		TPE	台北	Taipei	台北	たいぺい	타이베이			台北市中正區	thsr-01	9.17	thsr-03	7.216												
+thsr-03		BAC	板橋	Banciao	板橋	いたばし	반치아오			新北市板橋區	thsr-02	7.22	thsr-04	29.165												
+thsr-04		TAY	桃園	Taoyuan	桃園	とうえん	타오위엔			桃園市中壢區	thsr-03	29.17	thsr-05	29.894												
+thsr-05		HSC	新竹	Hsinchu	新竹	しんちく	신주			新竹縣竹北市	thsr-04	29.89	thsr-06	32.686												
+thsr-06		MIL	苗栗	Miaoli	苗栗	びょうりつ	먀오리			苗栗縣後龍鎮	thsr-05	32.69	thsr-07	60.868												
+thsr-07		TAC	台中	Taichung	台中	たいちゅう	타이중			台中市烏日區	thsr-06	60.87	thsr-08	28.153												
+thsr-08		CHH	彰化	Changhua	彰化	しょうか	쟝화			彰化縣田中鎮	thsr-07	28.15	thsr-09	24.594												
+thsr-09		YUL	雲林	Yunlin	雲林	うんりん	윈린			雲林縣虎尾鎮	thsr-08	24.59	thsr-10	33.105												
+thsr-10		CHY	嘉義	Chiayi	嘉義	かぎ	쟈이			嘉義縣太保市	thsr-09	33.11	thsr-11	62.275												
+thsr-11		TAN	台南	Tainan	台南	たいなん	타이난			台南市歸仁區	thsr-10	62.28	thsr-12	31.328												
+thsr-12		ZUY	左營	Zuoying	左営	ざえい	쭤잉			高雄市左營區	thsr-11	31.33														
+																										
+																										
+																										
+sys			JR東日本	JR East	JR東日本																					
+route	67C33F		山手線	Yamanote Line	山手線																					
+jre-JY01		JY01	東京	Tōkyō	東京	とうきょう	도쿄			東京都千代田区	jre-JY30	0.80	jre-JY02	1.30												
+jre-JY02		JY02	神田	Kanda	神田	かんだ	간다	アース製薬本社前		東京都千代田区	jre-JY01	1.30	jre-JY03	0.70												
+jre-JY03		JY03	秋葉原	Akihabara	秋葉原	あきはばら	아키하바라			東京都千代田区	jre-JY02	0.70	jre-JY04	1.00												
+jre-JY04		JY04	御徒町	Okachimachi	御徒町	おかちまち	오카치마치			東京都台東区	jre-JY03	1.00	jre-JY05	0.60												
+jre-JY05		JY05	上野	Ueno	上野	うえの	우에노			東京都台東区	jre-JY04	0.60	jre-JY06	1.10												
+jre-JY06		JY06	鶯谷	Uguisudani	鶯谷	うぐいすだに	우구이스다니			東京都台東区	jre-JY05	1.10	jre-JY07	1.10												
+jre-JY07		JY07	日暮里	Nippori	日暮里	にっぽり	닛포리			東京都荒川区	jre-JY06	1.10	jre-JY08	0.50												
+jre-JY08		JY08	西日暮里	Nishi-Nippori	西日暮里	にしにっぽり	니시닛포리			東京都荒川区	jre-JY07	0.50	jre-JY09	0.80												
+jre-JY09		JY09	田端	Tabata	田端	たばた	다바타			東京都北区	jre-JY08	0.80	jre-JY10	1.60												
+jre-JY10		JY10	駒込	Komagome	駒込	こまごめ	고마고메			東京都豊島区	jre-JY09	1.60	jre-JY11	0.70												
+jre-JY11		JY11	巢鴨	Sugamo	巣鴨	すがも	스가모			東京都豊島区	jre-JY10	0.70	jre-JY12	1.10												
+jre-JY12		JY12	大塚	Ōtsuka	大塚	おおつか	오쓰카			東京都豊島区	jre-JY11	1.10	jre-JY13	1.80												
+jre-JY13		JY13	池袋	Ikebukuro	池袋	いけぶくろ	이케부쿠로			東京都豊島区	jre-JY12	1.80	jre-JY14	1.20												
+jre-JY14		JY14	目白	Mejiro	目白	めじろ	메지로			東京都豊島区	jre-JY13	1.20	jre-JY15	0.90												
+jre-JY15		JY15	高田馬場	Takadanobaba	高田馬場	たかだのばば	다카다노바바			東京都新宿区	jre-JY14	0.90	jre-JY16	1.40												
+jre-JY16		JY16	新大久保	Shin-Ōkubo	新大久保	しんおおくぼ	신오쿠보			東京都新宿区	jre-JY15	1.40	jre-JY17	1.30												
+jre-JY17		JY17	新宿	Shinjuku	新宿	しんじゅく	신주쿠			東京都新宿区	jre-JY16	1.30	jre-JY18	0.70												
+jre-JY18		JY18	代代木	Yoyogi	代々木	よよぎ	요요기			東京都渋谷区	jre-JY17	0.70	jre-JY19	1.50												
+jre-JY19		JY19	原宿	Harajuku	原宿	はらじゅく	하라주쿠			東京都渋谷区	jre-JY18	1.50	jre-JY20	1.20												
+jre-JY20		JY20	澀谷	Shibuya	渋谷	しぶや	시부야			東京都渋谷区	jre-JY19	1.20	jre-JY21	1.60												
+jre-JY21		JY21	惠比壽	Ebisu	恵比寿	えびす	에비스			東京都渋谷区	jre-JY20	1.60	jre-JY22	1.50												
+jre-JY22		JY22	目黑	Meguro	目黒	めぐろ	메구로			東京都品川区	jre-JY21	1.50	jre-JY23	1.20												
+jre-JY23		JY23	五反田	Gotanda	五反田	ごたんだ	고탄다			東京都品川区	jre-JY22	1.20	jre-JY24	0.90												
+jre-JY24		JY24	大崎	Ōsaki	大崎	おおさき	오사키			東京都品川区	jre-JY23	0.90	jre-JY25	2.00												
+jre-JY25		JY25	品川	Shinagawa	品川	しながわ	시나가와			東京都港区	jre-JY24	2.00	jre-JY26	0.90												
+jre-JY26		JY26	高輪Gateway	Tanakawa Gateway	高輪ゲートウェイ	たかなわげーとうぇい	다카나와 게이트웨이			東京都港区	jre-JY25	0.90	jre-JY27	1.30												
+jre-JY27		JY27	田町	Tamachi	田町	たまち	다마치			東京都港区	jre-JY26	1.30	jre-JY28	1.50												
+jre-JY28		JY28	濱松町	Hamamatsuchō	浜松町	はままつちょう	하마마쓰초			東京都港区	jre-JY27	1.50	jre-JY29	1.20												
+jre-JY29		JY29	新橋	Shimbashi	新橋	しんばし	신바시			東京都港区	jre-JY28	1.20	jre-JY30	1.10												
+jre-JY30		JY30	有樂町	Yūrakuchō	有楽町	ゆうらくちょう	유라쿠초			東京都千代田区	jre-JY29	1.10	jre-JY30	0.80												
+route	D56822		中央線快速	Chūō Line (Rapid)	中央線快速																					
+jre-JC01		JC01	東京	Tōkyō	東京	とうきょう	도쿄			東京都千代田区			jre-JC02	1.30												
+jre-JC02		JC02	神田	Kanda	神田	かんだ	간다	アース製薬本社前		東京都千代田区	jre-JC01	1.30	jre-JC03	1.30												
+jre-JC03		JC03	御茶之水	Ochanomizu	御茶ノ水	おちゃのみず	오차노미즈			東京都千代田区	jre-JC02	1.30	jre-JC04	4.00												
+jre-JC04		JC04	四谷	Yotsuya	四ッ谷	よつや	요쓰야			東京都新宿区	jre-JC03	4.00	jre-JC05	3.70												
+jre-JC05		JC05	新宿	Shinjuku	新宿	しんじゅく	신주쿠			東京都新宿区	jre-JC04	3.70	jre-JC06	4.40												
+jre-JC06		JC06	中野	Nakano	中野	なかの	나카노			東京都中野区	jre-JC05	4.40	jre-JC07	1.40												
+jre-JC07		JC07	高圓寺	Kōenji	高円寺	こうえんじ	고엔지			東京都杉並区	jre-JC06	1.40	jre-JC08	1.20												
+jre-JC08		JC08	阿佐谷	Asagaya	阿佐ヶ谷	あさがや	아사가야			東京都杉並区	jre-JC07	1.20	jre-JC09	1.40												
+jre-JC09		JC09	荻窪	Ogikubo	荻窪	おぎくぼ	오기쿠보			東京都杉並区	jre-JC08	1.40	jre-JC10	1.90												
+jre-JC10		JC10	西荻窪	Nishi-Ogikubo	西荻窪	にしおぎくぼ	니시오기쿠보			東京都杉並区	jre-JC09	1.90	jre-JC11	1.90												
+jre-JC11		JC11	吉祥寺	Kichijōji	吉祥寺	きちじょうじ	기치조지			東京都武蔵野市	jre-JC10	1.90	jre-JC12	1.60												
+jre-JC12		JC12	三鷹	Mitaka	三鷹	みたか	미타카			東京都三鷹市	jre-JC11	1.60	jre-JC13	1.60												
+jre-JC13		JC13	武藏境	Musashi-Sakai	武蔵境	むさしさかい	무사시사카이			東京都武蔵野市	jre-JC12	1.60	jre-JC14	1.70												
+jre-JC14		JC14	東小金井	Higashi-Koganei	東小金井	ひがしこがねい	히가시코가네이			東京都小金井市	jre-JC13	1.70	jre-JC15	1.70												
+jre-JC15		JC15	武藏小金井	Musashi-Koganei	武蔵小金井	むさしこがねい	무사시코가네이			東京都小金井市	jre-JC14	1.70	jre-JC16	2.30												
+jre-JC16		JC16	國分寺	Kokubunji	国分寺	こくぶんじ	고쿠분지			東京都国分寺市	jre-JC15	2.30	jre-JC17	1.40												
+jre-JC17		JC17	西國分寺	Nishi-Kokubunji	西国分寺	にしこくぶんじ	니시코쿠분지			東京都国分寺市	jre-JC16	1.40	jre-JC18	1.70												
+jre-JC18		JC18	國立	Kunitachi	国立	くにたち	구니타치			東京都国立市	jre-JC17	1.70	jre-JC19	3.00												
+jre-JC19		JC19	立川	Tachikawa	立川	たちかわ	다치카와			東京都立川市	jre-JC18	3.00	jre-JC20	3.30												
+jre-JC20		JC20	日野	Hino	日野	ひの	히노			東京都日野市	jre-JC19	3.30	jre-JC21	2.30												
+jre-JC21		JC21	豐田	Toyoda	豊田	とよだ	도요다			東京都日野市	jre-JC20	2.30	jre-JC22	4.30												
+jre-JC22		JC22	八王子	Hachiōji	八王子	はちおうじ	하치오지			東京都八王子市	jre-JC21	4.30	jre-JC23	2.40												
+jre-JC23		JC23	西八王子	Nishi-Hachiōji	西八王子	にしはちおうじ	니시하치오지			東京都八王子市	jre-JC22	2.40	jre-JC24	3.30												
+jre-JC24		JC24	高尾	Takao	高尾	たかお	다카오			東京都八王子市	jre-JC23	3.30														
+																										
+																										
+sys			東京Metro	Tokyo Metro	東京メトロ																					
+route	#FF9500		銀座線	Ginza Line	銀座線																					
+tkm-G01		G01	澀谷	Shibuya	渋谷	しぶや	시부야			東京都渋谷区			tkm-G02	1.3												
+tkm-G02		G02	表參道	Omotesandō	表参道	おもてさんどう	오모테산도			東京都港区	tkm-G01	1.30	tkm-G03	0.7												
+tkm-G03		G03	外苑前	Gaiemmae	外苑前	がいえんまえ	가이엔마에			東京都港区	tkm-G02	0.70	tkm-G04	0.7												
+tkm-G04		G04	青山一丁目	Aoyama-itchōme	青山一丁目	あおやまいっちょうめ	아오야마이치초메			東京都港区	tkm-G03	0.70	tkm-G05	1.1												
+tkm-G05		G05	赤坂見附	Akasaka-mitsuke	赤坂見附	あかさかみつけ	아카사카미쓰케			東京都港区	tkm-G04	1.10	tkm-G06	0.6												
+tkm-G06		G06	溜池山王	Tameike-sannō	溜池山王	ためいけさんのう	다메이케산노			東京都千代田区	tkm-G05	0.60	tkm-G07	1.1												
+tkm-G07		G07	虎之門	Toranomon	虎ノ門	とらのもん	도라노몬			東京都港区	tkm-G06	1.10	tkm-G08	1												
+tkm-G08		G08	新橋	Shimbashi	新橋	しんばし	신바시			東京都港区	tkm-G07	1.00	tkm-G09	0.8												
+tkm-G09		G09	銀座	Ginza	銀座	ぎんざ	긴자			東京都中央区	tkm-G08	0.80	tkm-G10	0.7												
+tkm-G10		G10	京橋	Kyōbashi	京橋	きょうばし	교바시			東京都中央区	tkm-G09	0.70	tkm-G11	0.7												
+tkm-G11		G11	日本橋	Nihombashi	日本橋	にほんばし	니혼바시			東京都中央区	tkm-G10	0.70	tkm-G12	1												
+tkm-G12		G12	三越前	Mitsukoshimae	三越前	みつこしまえ	미쓰코시마에			東京都中央区	tkm-G11	1.00	tkm-G13	0.7												
+tkm-G13		G13	神田	Kanda	神田	かんだ	간다			東京都千代田区	tkm-G12	0.70	tkm-G14	0.7												
+tkm-G14		G14	末廣町	Suehirochō	末広町	すえひろちょう	수에히로초			東京都千代田区	tkm-G13	0.70	tkm-G15	1												
+tkm-G15		G15	上野廣小路	Ueno-hirokōji	上野広小路	うえのひろこうじ	우에노히로코지			東京都台東区	tkm-G14	1.00	tkm-G16	0.7												
+tkm-G16		G16	上野	Ueno	上野	うえの	우에노			東京都台東区	tkm-G15	0.70	tkm-G17	1.2												
+tkm-G17		G17	稲荷町	Inarichō	稲荷町	いなりちょう	이나리초			東京都台東区	tkm-G16	1.20	tkm-G18	0.7												
+tkm-G18		G18	田原町	Tawaramachi	田原町	たわらまち	다와라마치			東京都台東区	tkm-G17	0.70	tkm-G19	0.6												
+tkm-G19		G19	淺草	Asakusa	浅草	あさくさ	아사쿠사			東京都台東区	tkm-G18	0.60														
+route	#F62E36		丸之內線	Marunouchi Line	丸ノ内線																					
+tkm-M01		M01	荻窪	Ogikubo	荻窪	おぎくぼ	오기쿠보			東京都杉並区			tkm-M02	1.5												
+tkm-M02		M02	南阿佐谷	Minami-asagaya	南阿佐ヶ谷	みなみあさがや	미나미아사가야			東京都杉並区	tkm-M01	1.50	tkm-M03	1.2												
+tkm-M03		M03	新高圓寺	Shin-kōenji	新高円寺	しんこうえんじ	신코엔지			東京都杉並区	tkm-M02	1.20	tkm-M04	0.9												
+tkm-M04		M04	東高圓寺	Higashi-kōenji	東高円寺	ひがしこうえんじ	히가시코엔지			東京都杉並区	tkm-M03	0.90	tkm-M05	1												
+tkm-M05		M05	新中野	Shin-nakano	新中野	しんなかの	신나카노			東京都中野区	tkm-M04	1.00	tkm-M06	1.1												
+tkm-M06		M06	中野坂上	Nakano-sakaue	中野坂上	なかのさかうえ	나카노사카우에			東京都中野区	tkm-M05	1.10	tkm-M07	1.1												
+tkm-M07		M07	西新宿	Nishi-shinjuku	西新宿	にししんじゅく	니시신주쿠			東京都新宿区	tkm-M06	1.10	tkm-M08	0.8												
+tkm-M08		M08	新宿	Shinjuku	新宿	しんじゅく	신주쿠			東京都新宿区	tkm-M07	0.80	tkm-M09	0.3												
+tkm-M09		M09	新宿三丁目	Shinjuku-sanchōme	新宿三丁目	しんじゅくさんちょうめ	신주쿠산초메			東京都新宿区	tkm-M08	0.30	tkm-M10	0.7												
+tkm-M10		M10	新宿御苑前	Shinjuku-gyoemmae	新宿御苑前	しんじゅくぎょえんまえ	신주쿠교엔마에			東京都新宿区	tkm-M09	0.70	tkm-M11	0.9												
+tkm-M11		M11	四谷三丁目	Yotsuya-sanchōme	四谷三丁目	よつやさんちょうめ	요쓰야산초메			東京都新宿区	tkm-M10	0.90	tkm-M12	1												
+tkm-M12		M12	四谷	Yotsuya	四ツ谷	よつや	요쓰야			東京都新宿区	tkm-M11	1.00	tkm-M13	1.3												
+tkm-M13		M13	赤坂見附	Akasaka-mitsuke	赤坂見附	あかさかみつけ	아카사카미쓰케			東京都港区	tkm-M12	1.30	tkm-M14	0.9												
+tkm-M14		M14	國會議事堂前	Kokkai-gijidōmae	国会議事堂前	こっかいぎじどうまえ	고카이기지도마에			東京都千代田区	tkm-M13	0.90	tkm-M15	0.7												
+tkm-M15		M15	霞之關	Kasumigaseki	霞ケ関	かすみがせき	가스미가세키			東京都千代田区	tkm-M14	0.70	tkm-M16	1												
+tkm-M16		M16	銀座	Ginza	銀座	ぎんざ	긴자			東京都中央区	tkm-M15	1.00	tkm-M17	1.1												
+tkm-M17		M17	東京	Tōkyō	東京	とうきょう	도쿄			東京都千代田区	tkm-M16	1.10	tkm-M18	0.6												
+tkm-M18		M18	大手町	Ōtemachi	大手町	おおてまち	오테마치			東京都千代田区	tkm-M17	0.60	tkm-M19	0.9												
+tkm-M19		M19	淡路町	Awajichō	淡路町	あわじちょう	아와지초			東京都千代田区	tkm-M18	0.90	tkm-M20	0.8												
+tkm-M20		M20	御茶之水	Ochanomizu	御茶ノ水	おちゃのみず	오차노미즈			東京都文京区	tkm-M19	0.90	tkm-M21	0.8												
+tkm-M21		M21	本鄉三丁目	Hongō-sanchōme	本郷三丁目	ほんごうさんちょうめ	혼고산초메			東京都文京区	tkm-M20	0.80	tkm-M22	0.8												
+tkm-M22		M22	後樂園	Kōrakuen	後楽園	こうらくえん	고라쿠엔			東京都文京区	tkm-M21	0.80	tkm-M23	1.8												
+tkm-M23		M23	茗荷谷	Myōgadani	茗荷谷	みょうがだに	묘가다니			東京都文京区	tkm-M22	1.80	tkm-M24	1.2												
+tkm-M24		M24	新大塚	Shin-ōtsuka	新大塚	しんおおつか	신오쓰카			東京都文京区	tkm-M23	1.20	tkm-M25	1.8												
+tkm-M25		M25	池袋	Ikebukuro	池袋	いけばくろ	이케부쿠로			東京都豊島区	tkm-M24	1.80														
+tkm-m03		m03	方南町	Hōnanchō	方南町	ほうなんちょう	호난초			東京都杉並区			tkm-m04	1.3												
+tkm-m04		m04	中野富士見町	Nakano-fujimichō	中野富士見町	なかのふじみちょう	나카노후지미초			東京都中野区	tkm-m03	1.30	tkm-m05	0.6												
+tkm-m05		m05	中野新橋	Nakano-shimbashi	中野新橋	なかのしんばし	나카노신바시			東京都中野区	tkm-m04	0.60	tkm-M06	1.3												
+route	#B5B5AC		日比谷線	Hibiya Line	日比谷線																					
+tkm-H01		H01	中目黑	Naka-meguro	中目黒	なかめぐろ	나카메구로			東京都目黒区			tkm-H02	1												
+tkm-H02		H02	惠比壽	Ebisu	恵比寿	えびす	에비스			東京都渋谷区	tkm-H01	1.00	tkm-H03	1.5												
+tkm-H03		H03	廣尾	Hiro-o	広尾	ひろお	히로오			東京都港区	tkm-H02	1.50	tkm-H04	1.1												
+tkm-H04		H04	六本木	Roppongi	六本木	ろっぽんぎ	롯폰기			東京都港区	tkm-H03	1.10	tkm-H05	1.5												
+tkm-H05		H05	神谷町	Kamiyachō	神谷町	かみやちょう	가미야초			東京都港区	tkm-H04	1.50	tkm-H06	0.5												
+tkm-H06		H06	虎門之丘	Toranomon Hills	虎ノ門ヒルズ	とらのもんひるず	도라노몬 힐스			東京都港区	tkm-H05	0.50	tkm-H07	0.8												
+tkm-H07		H07	霞ケ関	Kasumigaseki	霞ケ関	かすみがせき	가스미가세키			東京都千代田区	tkm-H06	0.80	tkm-H08	1												
+tkm-H08		H08	日比谷	Hibiya	日比谷	ひびや	히비야			東京都千代田区	tkm-H07	1.00	tkm-H09	0.4												
+tkm-H09		H09	銀座	Ginza	銀座	ぎんざ	긴자			東京都中央区	tkm-H08	0.40	tkm-H10	0.4												
+tkm-H10		H10	東銀座	Higashi-ginza	東銀座	ひがしぎんざ	히가시긴자			東京都中央区	tkm-H09	0.40	tkm-H11	0.6												
+tkm-H11		H11	築地	Tsukiji	築地	つきじ	쓰키지			東京都中央区	tkm-H10	0.60	tkm-H12	1												
+tkm-H12		H12	八丁堀	Hatchōbori	八丁堀	はっちょうぼり	핫초보리			東京都中央区	tkm-H11	1.00	tkm-H13	0.5												
+tkm-H13		H13	茅場町	Kayabachō	茅場町	かやばちょう	가야바초			東京都中央区	tkm-H12	0.50	tkm-H14	0.9												
+tkm-H14		H14	人形町	Ningyōchō	人形町	にんぎょうちょう	닝교초			東京都中央区	tkm-H13	0.90	tkm-H15	0.6												
+tkm-H15		H15	小傳馬町	Kodemmachō	小伝馬町	こでんまちょう	고덴마초			東京都中央区	tkm-H14	0.60	tkm-H16	0.7												
+tkm-H16		H16	秋葉原	Akihabara	秋葉原	あきはばら	아키하바라			東京都千代田区	tkm-H15	0.70	tkm-H17	1												
+tkm-H17		H17	仲御徒町	Naka-okachimachi	仲御徒町	なかおかちまち	나카오카치마치			東京都台東区	tkm-H16	1.00	tkm-H18	0.5												
+tkm-H18		H18	上野	Ueno	上野	うえの	우에노			東京都台東区	tkm-H17	0.50	tkm-H19	1.2												
+tkm-H19		H19	入谷	Iriya	入谷	いりや	이리야			東京都台東区	tkm-H18	1.20	tkm-H20	1.2												
+tkm-H20		H20	三之輪	Minowa	三ノ輪	みのわ	미노와			東京都台東区	tkm-H19	1.20	tkm-H21	0.8												
+tkm-H21		H21	南千住	Minami-senju	南千住	みなみせんじゅ	미나미센주			東京都荒川区	tkm-H20	0.80	tkm-H22	1.3												
+tkm-H22		H22	北千住	Kita-senju	北千住	きたせんじゅ	기타센주			東京都足立区	tkm-H21	1.30														
+route	#009BBF		東西線	Tozai Line	東西線																					
+tkm-T01		T01	中野	Nakano	中野	なかの	나카노			東京都中野区			tkm-T02	1.9												
+tkm-T02		T02	落合	Ochiai	落合	おちあい	오치아이			東京都新宿区	tkm-T01	1.90	tkm-T03	1.9												
+tkm-T03		T03	高田馬場	Takadanobaba	高田馬場	たかだのばば	다카다노바바			東京都新宿区	tkm-T02	1.90	tkm-T04	1.7												
+tkm-T04		T04	早稻田	Waseda	早稲田	わせだ	와세다			東京都新宿区	tkm-T03	1.70	tkm-T05	1.2												
+tkm-T05		T05	神樂坂	Kagurazaka	神楽坂	かぐらざか	가구라자카			東京都新宿区	tkm-T04	1.20	tkm-T06	1.2												
+tkm-T06		T06	飯田橋	Iidabashi	飯田橋	いいだばし	이이다바시			東京都新宿区	tkm-T05	1.20	tkm-T07	0.7												
+tkm-T07		T07	九段下	Kudanshita	九段下	くだんした	구단시타			東京都千代田区	tkm-T06	0.70	tkm-T08	1												
+tkm-T08		T08	竹橋	Takebashi	竹橋	たけばし	다케바시			東京都千代田区	tkm-T07	1.00	tkm-T09	1												
+tkm-T09		T09	大手町	Ōtemachi	大手町	おおてまち	오테마치			東京都千代田区	tkm-T08	1.00	tkm-T10	0.8												
+tkm-T10		T10	日本橋	Nihombashi	日本橋	にほんばし	니혼바시			東京都中央区	tkm-T09	0.80	tkm-T11	0.7												
+tkm-T11		T11	茅場町	Kayabachō	茅場町	かやばちょう	가야바초			東京都中央区	tkm-T10	0.70	tkm-T12	1.8												
+tkm-T12		T12	門前仲町	Monzen-nakachō	門前仲町	もんぜんなかちょう	몬젠나카초			東京都江東区	tkm-T11	1.80	tkm-T13	1.1												
+tkm-T13		T13	木場	Kiba	木場	きば	기바			東京都江東区	tkm-T12	1.10	tkm-T14	1.1												
+tkm-T14		T14	東陽町	Tōyōchō	東陽町	とうようちょう	도요초			東京都江東区	tkm-T13	1.10	tkm-T15	1.2												
+tkm-T15		T15	南砂町	Minami-sunamachi	南砂町	みなみすなまち	미나미스나마치			東京都江東区	tkm-T14	1.20	tkm-T16	2.7												
+tkm-T16		T16	西葛西	Nishi-kasai	西葛西	にしかさい	니시카사이			東京都江戸川区	tkm-T15	2.70	tkm-T17	1.2												
+tkm-T17		T17	葛西	Kasai	葛西	かさい	가사이			東京都江戸川区	tkm-T16	1.20	tkm-T18	1.9												
+tkm-T18		T18	浦安	Urayasu	浦安	うらやす	우라야스			千葉県浦安市	tkm-T17	1.90	tkm-T19	1.3												
+tkm-T19		T19	南行德	Minami-gyōtoku	南行徳	みなみぎょうとく	미나미교토쿠			千葉県市川市	tkm-T18	1.30	tkm-T20	1.2												
+tkm-T20		T20	行德	Gyōtoku	行徳	ぎょうとく	교토쿠			千葉県市川市	tkm-T19	1.20	tkm-T21	1.3												
+tkm-T21		T21	妙典	Myōden	妙典	みょうでん	묘덴			千葉県市川市	tkm-T20	1.30	tkm-T22	2.1												
+tkm-T22		T22	原木中山	Baraki-nakayama	原木中山	ばらきなかやま	바라키나카야마			千葉県船橋市	tkm-T21	2.10	tkm-T23	1.9												
+tkm-T23		T23	西船橋	Nishi-funabashi	西船橋	にしふなばし	니시후나바시			千葉県船橋市	tkm-T22	1.90														
+route	#00BB85		千代田線	Chiyoda Line	千代田線																					
+tkm-C01		C01	代代木上原	Yoyogi-uehara	代々木上原	よよぎうえはら	요요기우에하라			東京都渋谷区			tkm-C02	1.4												
+tkm-C02		C02	代代木公園	Yoyogi-kōen	代々木公園	よよぎこうえん	요요기공원			東京都渋谷区	tkm-C01	1.40	tkm-C03	1												
+tkm-C03		C03	明治神宮前	Meiji-jingūmae	明治神宮前	めいじじんぐうまえ	메이지진구마에	原宿	Harajuku	東京都渋谷区	tkm-C02	1.00	tkm-C04	0.9												
+tkm-C04		C04	表參道	Omotesandō	表参道	おもてさんどう	오모테산도			東京都港区	tkm-C03	0.90	tkm-C05	1.4												
+tkm-C05		C05	乃木坂	Nogizaka	乃木坂	のぎざか	노기자카			東京都港区	tkm-C04	1.40	tkm-C06	1.1												
+tkm-C06		C06	赤坂	Akasaka	赤坂	あかさか	아카사카			東京都港区	tkm-C05	1.10	tkm-C07	0.8												
+tkm-C07		C07	國會議事堂前	Kokkai-gijidōmae	国会議事堂前	こっかいぎじどうまえ	고카이기지도마에			東京都千代田区	tkm-C06	0.80	tkm-C08	0.8												
+tkm-C08		C08	霞之關	Kasumigaseki	霞ケ関	かすみがせき	가스미가세키			東京都千代田区	tkm-C07	0.80	tkm-C09	0.8												
+tkm-C09		C09	日比谷	Hibiya	日比谷	ひびや	히비야			東京都千代田区	tkm-C08	0.80	tkm-C10	0.7												
+tkm-C10		C10	二重橋前	Nijūbashimae	二重橋前	にじゅうばしまえ	니쥬바시마에	丸の内	Marunouchi	東京都千代田区	tkm-C09	0.70	tkm-C11	0.7												
+tkm-C11		C11	大手町	Ōtemachi	大手町	おおてまち	오테마치			東京都千代田区	tkm-C10	0.70	tkm-C12	1.3												
+tkm-C12		C12	新御茶之水	Shin-ochanomizu	新御茶ノ水	しんおちゃのみず	신오차노미즈			東京都千代田区	tkm-C11	1.30	tkm-C13	1.2												
+tkm-C13		C13	湯島	Yushima	湯島	ゆしま	유시마			東京都文京区	tkm-C12	1.30	tkm-C14	1.2												
+tkm-C14		C14	根津	Nezu	根津	ねづ	네즈			東京都文京区	tkm-C13	1.20	tkm-C15	1												
+tkm-C15		C15	千駄木	Sendagi	千駄木	せんだぎ	센다기			東京都文京区	tkm-C14	1.00	tkm-C16	0.9												
+tkm-C16		C16	西日暮里	Nishi-nippori	西日暮里	にしにっぽり	니시니포리			東京都荒川区	tkm-C15	0.90	tkm-C17	0.9												
+tkm-C17		C17	町屋	Machiya	町屋	まちや	마치야			東京都荒川区	tkm-C16	0.90	tkm-C18	1.7												
+tkm-C18		C18	北千住	Kita-senju	北千住	きたせんじゅ	기타센주			東京都足立区	tkm-C17	1.70	tkm-C19	2.6												
+tkm-C19		C19	綾瀨	Ayase	綾瀬	あやせ	아야세			東京都足立区	tkm-C18	2.60	tkm-C20	2.1												
+tkm-C20		C20	北綾瀨	Kita-ayase	北綾瀬	きたあやせ	기타아야세			東京都足立区	tkm-C19	2.10														
+route	#C1A470		有樂町線	Yūrakuchō Line	有楽町線																					
+tkm-Y01		Y01	和光市	Wakōshi	和光市	わこうし	와코시			埼玉県和光市			tkm-Y02	2.2												
+tkm-Y02		Y02	地下鐵成增	Chikatetsu-narimasu	地下鉄成増	ちかてつなります	지카테쓰나리마스			東京都板橋区	tkm-Y01	2.20	tkm-Y03	1.4												
+tkm-Y03		Y03	地下鐵赤塚	Chikatetsu-akatsuka	地下鉄赤塚	ちかてつあかつか	지카테쓰아카쓰카			東京都板橋区	tkm-Y02	1.40	tkm-Y04	1.1												
+tkm-Y04		Y04	平和台	Heiwadai	平和台	へいわだい	헤이와다이			東京都練馬区	tkm-Y03	1.10	tkm-Y05	1.4												
+tkm-Y05		Y05	冰川台	Hikawadai	氷川台	ひかわだい	히카와다이			東京都練馬区	tkm-Y04	1.40	tkm-Y06	1.5												
+tkm-Y06		Y06	小竹向原	Kotake-mukaihara	小竹向原	こたけむかいら	고타케무카이하라			東京都練馬区	tkm-Y05	1.50	tkm-Y07	1												
+tkm-Y07		Y07	千川	Senkawa	千川	せんかわ	센카와			東京都豊島区	tkm-Y06	1.00	tkm-Y08	1												
+tkm-Y08		Y08	要町	Kanamechō	要町	かなめちょう	가나메초			東京都豊島区	tkm-Y07	1.00	tkm-Y09	1.2												
+tkm-Y09		Y09	池袋	Ikebukuro	池袋	いけばくろ	이케부쿠로			東京都豊島区	tkm-Y08	1.20	tkm-Y10	0.7												
+tkm-Y10		Y10	東池袋	Higashi-ikebukuro	東池袋	ひがしいけばくろ	히가시이케부쿠로			東京都豊島区	tkm-Y09	0.70	tkm-Y11	1.1												
+tkm-Y11		Y11	護國寺	Gokokuji	護国寺	ごこくじ	고코쿠지			東京都文京区	tkm-Y10	0.70	tkm-Y12	1.3												
+tkm-Y12		Y12	江戶川橋	Edogawabashi	江戸川橋	えどがわばし	에도가와바시			東京都文京区	tkm-Y11	1.30	tkm-Y13	1.6												
+tkm-Y13		Y13	飯田橋	Iidabashi	飯田橋	いいだばし	이이다바시			東京都新宿区	tkm-Y12	1.60	tkm-Y14	1.1												
+tkm-Y14		Y14	市ケ谷	Ichigaya	市ケ谷	いちがや	이치가야			東京都新宿区	tkm-Y13	1.10	tkm-Y15	0.9												
+tkm-Y15		Y15	麴町	Kōjimachi	麹町	こうじまち	고지마치			東京都千代田区	tkm-Y14	0.90	tkm-Y16	0.9												
+tkm-Y16		Y16	永田町	Nagatachō	永田町	ながたちょう	나가타초			東京都千代田区	tkm-Y15	0.90	tkm-Y17	0.9												
+tkm-Y17		Y17	櫻田門	Sakuradamon	桜田門	さくらだもん	사쿠라다몬			東京都千代田区	tkm-Y16	0.90	tkm-Y18	1												
+tkm-Y18		Y18	有樂町	Yūrakuchō	有楽町	ゆうらくちょう	유라쿠초			東京都千代田区	tkm-Y17	1.00	tkm-Y19	1.1												
+tkm-Y19		Y19	銀座一丁目	Ginza-itchōme	銀座一丁目	ぎんざいっちょうめ	긴자이치초메			東京都中央区	tkm-Y18	1.10	tkm-Y20	0.7												
+tkm-Y20		Y20	新富町	Shintomichō	新富町	しんとみちょう	신토미초			東京都中央区	tkm-Y19	0.70	tkm-Y21	1.3												
+tkm-Y21		Y21	月島	Tsukishima	月島	つきしま	쓰키시마			東京都中央区	tkm-Y20	1.30	tkm-Y22	1.4												
+tkm-Y22		Y22	豐洲	Toyosu	豊洲	とよす	도요스			東京都江東区	tkm-Y21	1.40	tkm-Y23	1.7												
+tkm-Y23		Y23	辰巳	Tatsumi	辰巳	たつみ	다쓰미			東京都江東区	tkm-Y22	1.70	tkm-Y24	1.5												
+tkm-Y24		Y24	新木場	Shin-kiba	新木場	しんきば	신기바			東京都江東区	tkm-Y23	1.50														
+route	#8F76D6		半藏門線	Hanzōmon Line	半蔵門線																					
+tkm-Z01		Z01	澀谷	Shibuya	渋谷	しぶや	시부야			東京都渋谷区			tkm-Z02	1.3												
+tkm-Z02		Z02	表參道	Omotesandō	表参道	おもてさんどう	오모테산도			東京都港区	tkm-Z01	1.30	tkm-Z03	1.4												
+tkm-Z03		Z03	青山一丁目	Aoyama-itchōme	青山一丁目	あおやまいっちょうめ	아오야마이치초메			東京都港区	tkm-Z02	1.40	tkm-Z04	1.3												
+tkm-Z04		Z04	永田町	Nagatachō	永田町	ながたちょう	나가타초			東京都千代田区	tkm-Z03	1.30	tkm-Z05	1.4												
+tkm-Z05		Z05	半藏門	Hanzōmon	半蔵門	はんぞうもん	한조몬			東京都千代田区	tkm-Z04	1.40	tkm-Z06	1												
+tkm-Z06		Z06	九段下	Kudanshita	九段下	くだんした	구단시타			東京都千代田区	tkm-Z05	1.00	tkm-Z07	0.4												
+tkm-Z07		Z07	神保町	Jimbōchō	神保町	じんぼうちょう	진보초			東京都千代田区	tkm-Z06	0.40	tkm-Z08	1.7												
+tkm-Z08		Z08	大手町	Ōtemachi	大手町	おおてまち	오테마치			東京都千代田区	tkm-Z07	1.70	tkm-Z09	0.7												
+tkm-Z09		Z09	三越前	Mitsukoshimae	三越前	みつこしまえ	미쓰코시마에			東京都中央区	tkm-Z08	0.70	tkm-Z10	0.7												
+tkm-Z10		Z10	水天宮前	Suitengūmae	水天宮前	すいてんぐうまえ	스이텐구마에			東京都中央区	tkm-Z09	0.70	tkm-Z11	1.3												
+tkm-Z11		Z11	清澄白河	Kiyosumi-shirakawa	清澄白河	きよすみしらかわ	기요스미시라카와			東京都江東区	tkm-Z10	1.30	tkm-Z12	1.2												
+tkm-Z12		Z12	住吉	Sumiyoshi	住吉	すみよし	스미요시			東京都江東区	tkm-Z11	1.20	tkm-Z13	1												
+tkm-Z13		Z13	錦絲町	Kinshichō	錦糸町	きんしちょう	긴시초			東京都墨田区	tkm-Z12	1.00	tkm-Z14	1.4												
+tkm-Z14		Z14	押上	Oshiage	押上	おしあげ	오시아게	スカイツリー前	SKYTREE mae	東京都墨田区	tkm-Z13	1.40														
+route	#00AC9B		南北線	Namboku Line	南北線																					
+tkm-N01		N01	目黑	Meguro	目黒	めぐろ	메구로			東京都品川区			tkm-N02	1.3												
+tkm-N02		N02	白金台	Shirokanedai	白金台	しろかねだい	시로카네다이			東京都港区	tkm-N01	1.30	tkm-N03	1												
+tkm-N03		N03	白金高輪	Shirokane-takanawa	白金高輪	しろかねたかなわ	시로카네타카나와			東京都港区	tkm-N02	1.00	tkm-N04	1.3												
+tkm-N04		N04	麻布十番	Azabu-jūban	麻布十番	あざぶじゅうばん	아자부주반			東京都港区	tkm-N03	1.30	tkm-N05	0.6												
+tkm-N05		N05	六本木一丁目	Roppongi-itchōme	六本木一丁目	ろっぽんぎいっちょうめ	롯폰기이치초메			東京都港区	tkm-N04	0.60	tkm-N06	1.2												
+tkm-N06		N06	溜池山王	Tameike-sannō	溜池山王	ためいけさんのう	다메이케산노			東京都千代田区	tkm-N05	1.20	tkm-N07	0.9												
+tkm-N07		N07	永田町	Nagatachō	永田町	ながたちょう	나가타초			東京都千代田区	tkm-N06	0.90	tkm-N08	1.3												
+tkm-N08		N08	四谷	Yotsuya	四ツ谷	よつや	요쓰야			東京都新宿区	tkm-N07	1.30	tkm-N09	1												
+tkm-N09		N09	市之谷	Ichigaya	市ケ谷	いちがや	이치가야			東京都新宿区	tkm-N08	1.00	tkm-N10	1.1												
+tkm-N10		N10	飯田橋	Iidabashi	飯田橋	いいだばし	이이다바시			東京都新宿区	tkm-N09	1.10	tkm-N11	0.5												
+tkm-N11		N11	後樂園	Kōrakuen	後楽園	こうらくえん	고라쿠엔			東京都文京区	tkm-N10	0.50	tkm-N12	1.3												
+tkm-N12		N12	東大前	Tōdaimae	東大前	とうだいまえ	도다이마에			東京都文京区	tkm-N11	1.30	tkm-N13	1.1												
+tkm-N13		N13	本駒込	Hon-komagome	本駒込	ほんこまごめ	혼코마고메			東京都文京区	tkm-N12	1.10	tkm-N14	0.7												
+tkm-N14		N14	駒込	Komagome	駒込	こまごめ	고마고메			東京都豊島区	tkm-N13	0.70	tkm-N15	1.4												
+tkm-N15		N15	西之原	Nishigahara	西ヶ原	にしがはら	니시가하라			東京都北区	tkm-N14	1.40	tkm-N16	1												
+tkm-N16		N16	王子	Ōji	王子	おうじ	오우지			東京都北区	tkm-N15	1.00	tkm-N17	1.2												
+tkm-N17		N17	王子神谷	Ōji-kamiya	王子神谷	おうじかみや	오우지가미야			東京都北区	tkm-N16	1.20	tkm-N18	1.6												
+tkm-N18		N18	志茂	Shimo	志茂	しも	시모			東京都北区	tkm-N17	1.60	tkm-N19	1.1												
+tkm-N19		N19	赤羽岩淵	Akabane-iwabuchi	赤羽岩淵	あかばねいわぶち	아카바네이와부치			東京都北区	tkm-N18	1.10														
+route	#9C5E31		副都心線	Fukutosin Line	副都心線																					
+tkm-F01		F01	和光市	Wakōshi	和光市	わこうし	와코시			埼玉県和光市			tkm-F02	2.2												
+tkm-F02		F02	地下鐵成增	Chikatetsu-narimasu	地下鉄成増	ちかてつなります	지카테쓰나리마스			東京都板橋区	tkm-F01	2.20	tkm-F03	1.4												
+tkm-F03		F03	地下鐵赤塚	Chikatetsu-akatsuka	地下鉄赤塚	ちかてつあかつか	지카테쓰아카쓰카			東京都板橋区	tkm-F02	1.40	tkm-F04	1.1												
+tkm-F04		F04	平和台	Heiwadai	平和台	へいわだい	헤이와다이			東京都練馬区	tkm-F03	1.10	tkm-F05	1.4												
+tkm-F05		F05	冰川台	Hikawadai	氷川台	ひかわだい	히카와다이			東京都練馬区	tkm-F04	1.40	tkm-F06	1.5												
+tkm-F06		F06	小竹向原	Kotake-mukaihara	小竹向原	こたけむかいら	고타케무카이하라			東京都練馬区	tkm-F05	1.50	tkm-F07	1												
+tkm-F07		F07	千川	Senkawa	千川	せんかわ	센카와			東京都豊島区	tkm-F06	1.00	tkm-F08	1												
+tkm-F08		F08	要町	Kanamechō	要町	かなめちょう	가나메초			東京都豊島区	tkm-F07	1.00	tkm-F09	1.2												
+tkm-F09		F09	池袋	Ikebukuro	池袋	いけばくろ	이케부쿠로			東京都豊島区	tkm-F08	1.20	tkm-F10	0.9												
+tkm-F10		F10	雜司谷	Zōshigaya	雑司が谷	ぞうしがや	조시가야			東京都豊島区	tkm-F09	1.20	tkm-F11	1.5												
+tkm-F11		F11	西早稻田	Nishi-waseda	西早稲田	にしわせだ	니시와세다			東京都新宿区	tkm-F10	1.50	tkm-F12	0.9												
+tkm-F12		F12	東新宿	Higashi-shinjuku	東新宿	ひがししんじゅく	히가시신주쿠			東京都新宿区	tkm-F11	0.90	tkm-F13	1.1												
+tkm-F13		F13	新宿三丁目	Shinjuku-sanchōme	新宿三丁目	しんじゅくさんちょうめ	신주쿠산초메			東京都新宿区	tkm-F12	1.10	tkm-F14	1.4												
+tkm-F14		F14	北參道	Kita-sandō	北参道	きたさんどう	기타산도			東京都渋谷区	tkm-F13	1.40	tkm-F15	1.2												
+tkm-F15		F15	明治神宮前	Meiji-jingūmae	明治神宮前	めいじじんぐうまえ	메이지진구마에	原宿	Harajuku	東京都渋谷区	tkm-F14	1.20	tkm-F16	1.5												
+tkm-F16		F16	澀谷	Shibuya	渋谷	しぶや	시부야			東京都渋谷区	tkm-F15	1.50														
+sys			都營地下鐵	Toei Subway	都営地下鉄																					
+route	#E85298		淺草線	Asakusa Line	浅草線																					
+toei-A01		A01	西馬込	Nishi-magome	西馬込	にしまごめ	니시마고메			東京都大田区			toei-A02	1.20												
+toei-A02		A02	馬込	Magome	馬込	まごめ	마고메			東京都大田区	toei-A01	1.20	toei-A03	1.10												
+toei-A03		A03	中延	Nakanobu	中延	なかのぶ	나카노부			東京都品川区	toei-A02	1.10	toei-A04	1.10												
+toei-A04		A04	戶越	Togoshi	戸越	とごし	도고시			東京都品川区	toei-A03	1.10	toei-A05	1.60												
+toei-A05		A05	五反田	Gotanda	五反田	ごたんだ	고탄다			東京都品川区	toei-A04	1.60	toei-A06	0.70												
+toei-A06		A06	高輪台	Takanawadai	高輪台	たかなわだい	타카나와다이			東京都港区	toei-A05	0.70	toei-A07	1.20												
+toei-A07		A07	泉岳寺	Sengakuji	泉岳寺	せんがくじ	센가쿠지			東京都港区	toei-A06	1.20	toei-A08	1.10												
+toei-A08		A08	三田	Mita	三田	みた	미타			東京都港区	toei-A07	1.10	toei-A09	0.60												
+toei-A09		A09	大門	Daimon	大門	だいもん	다이몬			東京都港区	toei-A08	0.60	toei-A10	1.00												
+toei-A10		A10	新橋	Shimbashi	新橋	しんばし	신바시			東京都港区	toei-A09	1.00	toei-A11	1.10												
+toei-A11		A11	東銀座	Higashi-ginza	東銀座	ひがしぎんざ	히가시긴자			東京都中央区	toei-A10	1.10	toei-A12	0.60												
+toei-A12		A12	寶町	Takarachō	宝町	たからちょう	다카라초			東京都中央区	toei-A11	0.60	toei-A13	0.80												
+toei-A13		A13	日本橋	Nihombashi	日本橋	にほんばし	니혼바시			東京都中央区	toei-A12	0.80	toei-A14	0.80												
+toei-A14		A14	人形町	Ningyōchō	人形町	にんぎょうちょう	닝교초			東京都中央区	toei-A13	0.80	toei-A15	0.70												
+toei-A15		A15	東日本橋	Higashi-nihombashi	東日本橋	ひがしにほんばし	히가시니혼바시			東京都中央区	toei-A14	0.70	toei-A16	0.70												
+toei-A16		A16	淺草橋	Asakusabashi	浅草橋	あさくさばし	아사쿠사바시			東京都台東区	toei-A15	0.70	toei-A17	0.70												
+toei-A17		A17	藏前	Kuramae	蔵前	くらまえ	쿠라마에			東京都台東区	toei-A16	0.70	toei-A18	1.20												
+toei-A18		A18	淺草	Asakusa	浅草	あさくさ	아사쿠사			東京都台東区	toei-A17	1.20	toei-A19	0.70												
+toei-A19		A19	本所吾妻橋	Honjō-azumabashi	本所吾妻橋	ほんじょあづまばし	혼조아즈마바시			東京都墨田区	toei-A18	0.70	toei-A20	0.80												
+toei-A20		A20	押上	Oshiage	押上	おしあげ	오시아게	スカイツリー前	SKYTREE mae	東京都墨田区	toei-A19	0.80														
+route	#0067B0		三田線	Mita Line	三田線																					
+toei-I01		I01	目黑	Meguro	目黒	めぐろ	메구로			東京都品川区			toei-I02	1.30												
+toei-I02		I02	白金台	Shirokanedai	白金台	しろかねだい	시로카네다이			東京都港区	toei-I01	1.30	toei-I03	1.00												
+toei-I03		I03	白金高輪	Shirokane-takanawa	白金高輪	しろかねたかなわ	시로카네타카나와			東京都港区	toei-I02	1.00	toei-I04	1.30												
+toei-I04		I04	三田	Mita	三田	みた	미타			東京都港区	toei-I03	1.30	toei-I05	0.60												
+toei-I05		I05	芝公園	Shibakōen	芝公園	しばこうえん	시바코엔			東京都港区	toei-I04	0.60	toei-I06	0.70												
+toei-I06		I06	御成門	Onarimon	御成門	おなりもん	오나리몬			東京都港区	toei-I05	0.70	toei-I07	1.10												
+toei-I07		I07	內幸町	Uchisaiwaichō	内幸町	うちさいわいちょう	우치사이와이초			東京都千代田区	toei-I06	1.10	toei-I08	0.90												
+toei-I08		I08	日比谷	Hibiya	日比谷	ひびや	히비야			東京都千代田区	toei-I07	0.90	toei-I09	0.90												
+toei-I09		I09	大手町	Ōtemachi	大手町	おおてまち	오테마치			東京都千代田区	toei-I08	0.90	toei-I10	1.20												
+toei-I10		I10	神保町	Jimbōchō	神保町	じんぼうちょう	진보초			東京都千代田区	toei-I09	1.20	toei-I11	1.00												
+toei-I11		I11	水道橋	Suidōbashi	水道橋	すいどうばし	스이도바시			東京都文京区	toei-I10	1.00	toei-I12	0.70												
+toei-I12		I12	春日	Kasuga	春日	かすが	카스가	文京シビックセンター前	Bunkyo Civic Center mae	東京都文京区	toei-I11	0.70	toei-I13	1.00												
+toei-I13		I13	白山	Hakusan	白山	はくさん	하쿠산			東京都文京区	toei-I12	1.00	toei-I14	1.00												
+toei-I14		I14	千石	Sengoku	千石	せんごく	센고쿠			東京都文京区	toei-I13	1.00	toei-I15	0.90												
+toei-I15		I15	巢鴨	Sugamo	巣鴨	すがも	스가모			東京都豊島区	toei-I14	0.90	toei-I16	1.20												
+toei-I16		I16	西巢鴨	Nishi-sugamo	西巣鴨	にしすがも	니시스가모			東京都豊島区	toei-I15	1.20	toei-I17	1.00												
+toei-I17		I17	新板橋	Shin-itabashi	新板橋	しんいたばし	신이타바시			東京都板橋区	toei-I16	1.00	toei-I18	1.00												
+toei-I18		I18	板橋區役所前	Itabashi-kuyakushomae	板橋区役所前	いたばしくやくしょまえ	이타바시구야쿠쇼마에			東京都板橋区	toei-I17	1.00	toei-I19	1.20												
+toei-I19		I19	板橋本町	Itabashi-honchō	板橋本町	いたばしほんちょう	이타바시혼초			東京都板橋区	toei-I18	1.20	toei-I20	0.90												
+toei-I20		I20	本蓮沼	Motohasunuma	本蓮沼	もとはすぬま	모토하스누마			東京都板橋区	toei-I19	0.90	toei-I21	1.10												
+toei-I21		I21	志村坂上	Shimura-sakaue	志村坂上	しむらさかうえ	시무라사카우에			東京都板橋区	toei-I20	1.10	toei-I22	0.90												
+toei-I22		I22	志村三丁目	Shimura-sanchōme	志村三丁目	しむらさんちょうめ	시무라산초메			東京都板橋区	toei-I21	0.90	toei-I23	1.20												
+toei-I23		I23	蓮根	Hasune	蓮根	はすね	하스네			東京都板橋区	toei-I22	1.20	toei-I24	0.80												
+toei-I24		I24	西台	Nishidai	西台	にしだい	니시다이			東京都板橋区	toei-I23	0.80	toei-I25	1.00												
+toei-I25		I25	高島平	Takashimadaira	高島平	たかしまだいら	타카시마다이라			東京都板橋区	toei-I24	1.00	toei-I26	0.70												
+toei-I26		I26	新高島平	Shin-takashimadaira	新高島平	しんたかしまだいら	신타카시마다이라			東京都板橋区	toei-I25	0.70	toei-I27	0.70												
+toei-I27		I27	西高島平	Nishi-takashimadaira	西高島平	にしたかしまだいら	니시타카시마다이라			東京都板橋区	toei-I26	0.70														
+route	#9FB12E		新宿線	Shinjuku Line	新宿線																					
+toei-S01		S01	新宿	Shinjuku	新宿	しんじゅく	신주쿠			東京都新宿区			toei-S02	0.80												
+toei-S02		S02	新宿三丁目	Shinjuku-sanchōme	新宿三丁目	しんじゅくさんちょうめ	신주쿠산초메			東京都新宿区	toei-S01	0.80	toei-S03	1.20												
+toei-S03		S03	曙橋	Akebonobashi	曙橋	あけぼのばし	아케보노바시			東京都新宿区	toei-S02	1.20	toei-S04	1.50												
+toei-S04		S04	市之谷	Ichigaya	市ケ谷	いちがや	이치가야			東京都新宿区	toei-S03	1.50	toei-S05	1.30												
+toei-S05		S05	九段下	Kudanshita	九段下	くだんした	구단시타			東京都千代田区	toei-S04	1.30	toei-S06	0.60												
+toei-S06		S06	神保町	Jimbōchō	神保町	じんぼうちょう	진보초			東京都千代田区	toei-S05	0.60	toei-S07	0.90												
+toei-S07		S07	小川町	Ogawamachi	小川町	おがわまち	오가와마치			東京都千代田区	toei-S06	0.90	toei-S08	0.90												
+toei-S08		S08	岩本町	Iwamotochō	岩本町	いわもとちょう	이와모토초	秋葉原	Akihabara	東京都千代田区	toei-S07	0.90	toei-S09	0.80												
+toei-S09		S09	馬喰橫山	Bakuro-yokoyama	馬喰横山	ばくろよこやま	바쿠로요코야마			東京都中央区	toei-S08	0.80	toei-S10	1.10												
+toei-S10		S10	濱町	Hamachō	浜町	はまちょう	하마초			東京都中央区	toei-S09	1.10	toei-S11	0.80												
+toei-S11		S11	森下	Morishita	森下	morishita	모리시타			東京都江東区	toei-S10	0.80	toei-S12	0.70												
+toei-S12		S12	菊川	Kikukawa	菊川	きくかわ	키쿠카와			東京都墨田区	toei-S11	0.70	toei-S13	0.90												
+toei-S13		S13	住吉	Sumiyoshi	住吉	すみよし	스미요시			東京都江東区	toei-S12	0.90	toei-S14	1.00												
+toei-S14		S14	西大島	Nishi-ōjima	西大島	にしおおじま	니시오지마			東京都江東区	toei-S13	1.00	toei-S15	0.70												
+toei-S15		S15	大島	Ōjima	大島	おおじま	오지마			東京都江東区	toei-S14	0.70	toei-S16	1.20												
+toei-S16		S16	東大島	Higashi-ōjima	東大島	ひがしおおじま	히가시오지마			東京都江東区	toei-S15	1.20	toei-S17	1.70												
+toei-S17		S17	船堀	Funabori	船堀	ふなぼり	후나보리			東京都江戸川区	toei-S16	1.70	toei-S18	1.70												
+toei-S18		S18	一之江	Ichinoe	一之江	いちのえ	이치노에			東京都江戸川区	toei-S17	1.70	toei-S19	1.20												
+toei-S19		S19	瑞江	Mizue	瑞江	みずえ	미즈에			東京都江戸川区	toei-S18	1.20	toei-S20	1.50												
+toei-S20		S20	篠崎	Shinozaki	篠崎	しのざき	시노자기			東京都江戸川区	toei-S19	1.50	toei-S21	1.50												
+toei-S21		S21	本八幡	Moto-yawata	本八幡	もとやわた	모토야와타			千葉県市川市	toei-S20	1.50														
+route	#B6007A		大江戶線	Ōedo Line	大江戸線																					
+toei-E01		E01	新宿西口	Shinjuku-nishiguchi	新宿西口	しんじゅくにしぐち	신주쿠니시구치			東京都新宿区			toei-E02	0.80												
+toei-E02		E02	東新宿	Higashi-shinjuku	東新宿	ひがししんじゅく	히가시신주쿠			東京都新宿区	toei-E01	0.80	toei-E03	1.00												
+toei-E03		E03	若松河田	Wakamatsu-kawada	若松河田	わかまつかわだ	와카마쓰카와다			東京都新宿区	toei-E02	1.00	toei-E04	0.60												
+toei-E04		E04	牛込柳町	Ushigome-yanagichō	牛込柳町	うしごめやなぎちょう	우시고메야나기초			東京都新宿区	toei-E03	0.60	toei-E05	1.00												
+toei-E05		E05	牛込神樂坂	Ushigome-kagurazaka	牛込神楽坂	うしごめかぐらざか	우시고메카구라자카			東京都新宿区	toei-E04	1.00	toei-E06	1.00												
+toei-E06		E06	飯田橋	Iidabashi	飯田橋	いいだばし	이이다바시			東京都文京区	toei-E05	1.00	toei-E07	1.00												
+toei-E07		E07	春日	Kasuga	春日	かすが	카스가	文京シビックセンター前	Bunkyo Civic Center mae	東京都文京区	toei-E06	1.00	toei-E08	0.80												
+toei-E08		E08	本鄉三丁目	Hongō-sanchōme	本郷三丁目	ほんごうさんちょうめ	혼고산초메			東京都文京区	toei-E07	0.80	toei-E09	1.10												
+toei-E09		E09	上野御徒町	Ueno-okachimachi	上野御徒町	うえのおかちまち	우에노오카치마치			東京都台東区	toei-E08	1.10	toei-E10	0.80												
+toei-E10		E10	新御徒町	Shin-okachimachi	新御徒町	しんおかちまち	신오카치마치			東京都台東区	toei-E09	0.80	toei-E11	1.00												
+toei-E11		E11	藏前	Kuramae	蔵前	くらまえ	쿠라마에			東京都台東区	toei-E10	1.00	toei-E12	1.20												
+toei-E12		E12	兩國	Ryōgoku	両国	りょうごく	료고쿠	江戸東京博物館前	Edo-Tokyo Museum mae	東京都墨田区	toei-E11	1.20	toei-E13	1.20												
+toei-E13		E13	森下	Morishita	森下	もりした	모리시타			東京都江東区	toei-E12	1.20	toei-E14	0.60												
+toei-E14		E14	清澄白河	Kiyosumi-shirakawa	清澄白河	きよすみしらかわ	기요스미시라카와			東京都江東区	toei-E13	0.60	toei-E15	1.20												
+toei-E15		E15	門前仲町	Monzen-nakachō	門前仲町	もんぜんなかちょう	몬젠나카초			東京都江東区	toei-E14	1.20	toei-E16	1.40												
+toei-E16		E16	月島	Tsukishima	月島	つきしま	쓰키시마			東京都中央区	toei-E15	1.40	toei-E17	0.80												
+toei-E17		E17	勝鬨	Kachidoki	勝どき	かちどき	카치도키			東京都中央区	toei-E16	0.80	toei-E18	1.50												
+toei-E18		E18	築地市場	Tsukijishijō	築地市場	つきじしじょう	쓰키지시조			東京都中央区	toei-E17	1.50	toei-E19	0.90												
+toei-E19		E19	汐留	Shiodome	汐留	しおどめ	시오도메	シオサイト	SIO-SITE	東京都港区	toei-E18	0.90	toei-E20	0.70												
+toei-E20		E20	大門	Daimon	大門	だいもん	다이몬	浜松町	Hamamatsuchō	東京都港区	toei-E19	0.70	toei-E21	1.00												
+toei-E21		E21	赤羽橋	Akabanebashi	赤羽橋	あかばねばし	아카바네바시			東京都港区	toei-E20	1.00	toei-E22	0.80												
+toei-E22		E22	麻布十番	Azabu-jūban	麻布十番	あざぶじゅうばん	아자부주반			東京都港区	toei-E21	0.80	toei-E23	1.10												
+toei-E23		E23	六本木	Roppongi	六本木	ろっぽんぎ	롯폰기			東京都港区	toei-E22	1.10	toei-E24	1.30												
+toei-E24		E24	青山一丁目	Aoyama-itchōme	青山一丁目	あおやまいっちょうめ	아오야마이치초메			東京都港区	toei-E23	1.30	toei-E25	1.20												
+toei-E25		E25	國立競技場	Kokuritsu-kyōgijō	国立競技場	こくりつきょうぎじょう	고쿠리쓰쿄기조			東京都新宿区	toei-E24	1.20	toei-E26	1.50												
+toei-E26		E26	代代木	Yoyogi	代々木	よよぎ	요요기			東京都渋谷区	toei-E25	1.50	toei-E27	0.60												
+toei-E27		E27	新宿	Shinjuku	新宿	しんじゅく	신주쿠			東京都新宿区	toei-E26	0.60	toei-E28	0.80												
+toei-E28		E28	都廳前	Tochōmae	都庁前	とちょうまえ	도초마え			東京都新宿区	toei-E27	0.80	toei-E29	1.20												
+toei-E29		E29	西新宿五丁目	Nishi-shinjuku-gochōme	西新宿五丁目	にししんじゅくごちょうめ	니시신주쿠고초메	清水橋	Shimizubashi	東京都新宿区	toei-E28	1.20	toei-E30	0.80												
+toei-E30		E30	中野坂上	Nakano-sakaue	中野坂上	なかのさかうえ	나카노사카우에			東京都中野区	toei-E29	0.80	toei-E31	1.00												
+toei-E31		E31	東中野	Higashi-nakano	東中野	ひがしなかの	히가시나카노			東京都中野区	toei-E30	1.00	toei-E32	1.00												
+toei-E32		E32	中井	Nakai	中井	なかい	나카이			東京都新宿区	toei-E31	1.00	toei-E33	1.30												
+toei-E33		E33	落合南長崎	Ochiai-minami-nagasaki	落合南長崎	おちあいみなみながさき	오치아이미나미나가사키			東京都新宿区	toei-E32	1.30	toei-E34	1.60												
+toei-E34		E34	新江古田	Shin-egota	新江古田	しんえごた	신에고타			東京都中野区	toei-E33	1.60	toei-E35	1.60												
+toei-E35		E35	練馬	Nerima	練馬	ねりま	네리마			東京都練馬区	toei-E34	1.60	toei-E36	0.90												
+toei-E36		E36	豐島園	Toshimaen	豊島園	としまえん	도시마엔			東京都練馬区	toei-E35	0.90	toei-E37	1.50												
+toei-E37		E37	練馬春日町	Nerima-kasugachō	練馬春日町	ねりまかすがちょう	네리마카스가초			東京都練馬区	toei-E36	1.50	toei-E38	1.40												
+toei-E38		E38	光之丘	Hikarigaoka	光が丘	ひかりがおか	히카리가오카			東京都練馬区	toei-E37	1.40														
+																										
+sys			熊本電鐵	Kumamoto Electric Railway	熊本電鉄																					
+route	ff9933		菊池線	Kikuchi Line	菊池線																					
+KDK01			上熊本	Kami-Kumamoto	上熊本	かみくまもと	가미쿠마모토			熊本県熊本市			KDK02	0.7												
+KDK02			韓韓阪	Kankanzaka	韓々坂	かんかんざか	간칸자카			熊本県熊本市	KDK01	0.7	KDK03	0.7												
+KDK03			池田	Ikeda	池田	いけだ	이케다			熊本県熊本市	KDK02	0.7	KDK04	0.7												
+KDK04			打越	Uchigoshi	打越	うちごし	우지고시			熊本県熊本市	KDK03	0.7	KDK05	0.5												
+KDK05			坪井川公園	Tsuboigawa-koen	坪井川公園	つぼいがわこうえん	쓰보이가와고엔			熊本県熊本市	KDK04	0.5	KDK06	0.8												
+KDK06			北熊本	Kita-Kumamoto	北熊本	きたくまもと	기타쿠마모토			熊本県熊本市	KDK05	0.8	KDK07	1.2												
+KDK07			龜井	Kamei	亀井	かめい	가메이			熊本県熊本市	KDK06	1.2	KDK08	0.4												
+KDK08			八景水谷	Hakenomiya	八景水谷	はけのみや	하케노미야			熊本県熊本市	KDK07	0.4	KDK09	0.9												
+KDK09			堀川	Horikawa	堀川	ほりかわ	호리카와			熊本県熊本市	KDK08	0.9	KDK10	1												
+KDK10			新須屋	Shin-suya	新須屋	しんすや	신스야			熊本県合志市	KDK09	1	KDK11	0.5												
+KDK11			須屋	Suya	須屋	すや	스야			熊本県合志市	KDK10	0.5	KDK12	0.8												
+KDK12			三石	Mitsuishi	三ツ石	みついし	미쓰이시 			熊本県合志市	KDK11	0.8	KDK13	0.8												
+KDK13			黑石	Kuroishi	黒石	くろいし	구로이시			熊本県合志市	KDK12	0.8	KDK14	0.9												
+KDK14			電波高專前	Dempakosen-mae	電波高専前	でんぱこうせんまえ	덴파고센마에			熊本県合志市	KDK13	0.9	KDK15	0.4												
+KDK15			再春莊前	Saishunso-mae	再春荘前	さいしゅんそうまえ	사이슌소마에			熊本県合志市	KDK14	0.4	KDK16	0.5												
+KDK16			御代志	Miyoshi	御代志	みよし	미요시			熊本県合志市	KDK15	0.5														
+route	ff9933		藤崎線	Fujisaki Line	藤崎線																					
+KDF01			北熊本	Kita-kumamoto	北熊本	きたくまもと	기타쿠마모토			熊本県熊本市	KDK07		KDF02	1.2												
+KDF02			黑髮町	Kurokami-machi	黒髪町	くろかみまち	구로카미마지			熊本県熊本市	KDF01	1.2	KDF03	1.1												
+KDF03			藤崎宮前	Fujisakigu-mae	藤崎宮前	ふじさきぐうまえ	후지사키구마에			熊本県熊本市	KDF02	1.1														
+route	008000		菊池線(1986年廢線時)	Kikuchi Line (1986)	菊池線(1986年廃線時)																					
+KDK16x			御代志	Miyoshi	御代志	みよし	미요시			熊本県西合志町	KDK15	0.5	KDK17	1.2												
+KDK17			大池	Oike	大池	おおいけ	오이케			熊本県西合志町	KDK16	1.2	KDK18	1.3												
+KDK18			辻久保	Tsujikubo	辻久保	つじくぼ	쓰지쿠보			熊本県西合志町	KDK17	1.3	KDK19	2.1												
+KDK19			高江	Takae	高江	たかえ	다카에			熊本県泗水町	KDK18	2.1	KDK20	0.5												
+KDK20			泗水	Shisui	泗水	しすい	시스이			熊本県泗水町	KDK19	0.5	KDK21	2.2												
+KDK21			富之原	Tominohara	富の原	とみのはら	도미노하라			熊本県菊池市	KDK20	2.2	KDK22	3												
+KDK22			廣瀨	Hirose	広瀬	ひろせ	히로세			熊本県菊池市	KDK21	3	KDK23	1.6												
+KDK23			深川	Fukagawa	深川	ふかがわ	후카가와			熊本県菊池市	KDK22	1.6	KDK24	1.6												
+KDK24			菊池	Kikuchi	菊池	きくち	기쿠지			熊本県菊池市	KDK23	1.6														
+																										
+sys			熊本市電	Kumamoto City Tram	熊本市電																					
+route	008000		田崎線	Tasaki Line	田崎線																					
+KST03		3	熊本驛前	Kumamoto Station	熊本駅前	くまもとえきまえ				熊本県熊本市	KSK02		KST02	0.3												
+KST02		2	二本木口	Nihongiguchi	二本木口	にほんぎぐち				熊本県熊本市	KST03	0.3	KST01	0.2												
+KST01		1	田崎橋	Tasakibashi	田崎橋	たさきばし				熊本県熊本市	KST02	0.2														
+route	008000		幹線	Main Line	幹線																					
+KSK01		3	熊本驛前	Kumamoto Station	熊本駅前	くまもとえきまえ				熊本県熊本市	KST02		KSK02	0.5												
+KSK02		4	祇園橋	Gionbashi	祇園橋	ぎおんばし				熊本県熊本市	KSK01	0.5	KSK03	0.5												
+KSK03		5	吳服町	Gofukumachi	呉服町	ごふくまち				熊本県熊本市	KSK02	0.5	KSK04	0.4												
+KSK04		6	河原町	Kawaramachi	河原町	かわらまち				熊本県熊本市	KSK03	0.4	KSK05	0.4												
+KSK05		7	慶德校前	Keitokukō Mae	慶徳校前	けいとくこうまえ				熊本県熊本市	KSK04	0.4	KSK06	0.4												
+KSK06		8	辛島町	Karashimachō	辛島町	からしまちょう				熊本県熊本市	KSK05	0.4	KSK07	0.2												
+KSK07		9	花畑町	Hanabatachō	花畑町	はなばたちょう				熊本県熊本市	KSK06	0.2	KSK08	0.4												
+KSK08		10	熊本城‧市役所前	Kumamotojō -Shiyakusho Mae	熊本城・市役所前	くまもとじょう・しやくしょまえ				熊本県熊本市	KSK07	0.4	KSK09	0.2												
+KSK09		11	通町筋	Tōrichō Suji	通町筋	とおりちょうすじ				熊本県熊本市	KSK08	0.2	KSK10	0.3												
+KSK10		12	水道町	Suidochō	水道町	すいどうちょう				熊本県熊本市	KSK09	0.3	KSS02													
+route	008000		水道町線	Suidochō Line	水道町線																					
+KSS01		12	水道町	Suidochō	水道町	すいどうちょう				熊本県熊本市	KSK09		KSS02	0.5												
+KSS02		13	九品寺交差點	Kuhonji Kōsaten	九品寺交差点	くほんじこうさてん				熊本県熊本市	KSS01	0.5	KSS03	0.3												
+KSS03		14	交通局前	Kōtsūkyoku Mae	交通局前	こうつうきょくまえ				熊本県熊本市	KSS02	0.3	KSS04	0.5												
+KSS04		15	味噌天神前	Misotenjin Mae	味噌天神前	みそてんじんまえ				熊本県熊本市	KSS03	0.5	KSS05	0.4												
+KSS05		16	新水前寺驛前	Shin-Suizenjieki Mae	新水前寺駅前	しんすいぜんじえきまえ				熊本県熊本市	KSS04	0.4	KSS06	0.3												
+KSS06		17	國府	Kokubu	国府	こくぶ				熊本県熊本市	KSS05	0.3	KSS07	0.4												
+KSS07		18	水前寺公園	Suizenji Park	水前寺公園	すいぜんじこうえん				熊本県熊本市	KSS06	0.4	KSG02													
+route	008000		健軍線	Kengun Line	健軍線																					
+KSG01		18	水前寺公園	Suizenji Park	水前寺公園	すいぜんじこうえん				熊本県熊本市	KSS06		KSG01	0.3												
+KSG02		19	市立體育館前	Shiritsu Taiikukan Mae	市立体育館前	しりつたいいくかんまえ				熊本県熊本市	KSG01	0.3	KSG02	0.5												
+KSG03		20	商業高校前	Shōgyōkōkō Mae	商業高校前	しょうぎょうこうこうまえ				熊本県熊本市	KSG02	0.5	KSG03	0.3												
+KSG04		21	八丁馬場	Hattyōbaba	八丁馬場	はっちょうばば				熊本県熊本市	KSG03	0.3	KSG04	0.4												
+KSG05		22	神水‧市民病院前	Kuwamizu Shimin-byōin Mae	神水・市民病院前	くわみず・しみんびょういんまえ				熊本県熊本市	KSG04	0.4	KSG05	0.5												
+KSG06		23	健軍校前	Kengunkō Mae	健軍校前	けんぐんこうまえ				熊本県熊本市	KSG05	0.5	KSG06	0.4												
+KSG07		24	動植物園入口	Dōshokubutsuen Iriguchi	動植物園入口	どうしょくぶつえんいりぐち				熊本県熊本市	KSG06	0.4	KSG07	0.3												
+KSG08		25	健軍交番前	Kengunkōban Mae	健軍交番前	けんぐんこうばんまえ				熊本県熊本市	KSG07	0.3	KSG08	0.3												
+KSG09		26	健軍町	Kengunmachi	健軍町	けんぐんまえ				熊本県熊本市	KSG08	0.3														
+route	008000		上熊本線	Kami Kumamot Line	上熊本線																					
+KSB01		8	辛島町	Karashimachō	辛島町	からしまちょう				熊本県熊本市	KSK07		KSB02	0.3												
+KSB02		B9	西辛島町	Nishi Karashimachō	西辛島町	にしからしまちょう				熊本県熊本市	KSB01	0.3	KSB03	0.2												
+KSB03		B8	洗馬橋	Senbabashi	洗馬橋	せんばばし				熊本県熊本市	KSB02	0.2	KSB04	0.2												
+KSB04		B7	新町	Shimachi	新町	しんまち				熊本県熊本市	KSB03	0.2	KSB05	0.4												
+KSB05		B6	蔚山町	Urusanmachi	蔚山町	うるさんまち				熊本県熊本市	KSB04	0.4	KSB06	0.4												
+KSB06		B5	段山町	Daniyamamachi	段山町	だにやままち				熊本県熊本市	KSB05	0.4	KSB07	0.5												
+KSB07		B4	杉塘	Sugidomo	杉塘	すぎども				熊本県熊本市	KSB06	0.5	KSB08	0.4												
+KSB08		B3	本妙寺入口	Honmyōji Iriguchi	本妙寺入口	ほんみょうじいりぐち				熊本県熊本市	KSB07	0.4	KSB09	0.1												
+KSB09		B2	縣立体育館前	Kenritsu Taiikukan Mae	県立体育館前	けんりつたいいくかんまえ				熊本県熊本市	KSB08	0.1	KSB10	0.4												
+KSB10		B1	上熊本驛前	Kami Kumamoto Station	上熊本駅前	かみくまもとえきまえ				熊本県熊本市	KSB09	0.4														
+																										
+																										
+																										
+sys			Seoul首都圈電鐵	Seoul Metro	ソウル首都圏電鉄																					
+route	#0052A4		1號線	Line 1	1号線																					
+seoul-124		124	清涼里	Cheongnyangni	清涼里	ちょんりゃんり	청량리	서울시립대입구	Univ. of Seoul	서울特別市 東大門區			seoul-125	0.90												
+seoul-125		125	祭基洞	Jegi-dong	祭基洞	ちぇぎどん	제기동			서울特別市 東大門區	seoul-124	0.90	seoul-126	0.70												
+seoul-126		126	新設洞	Sinseol-dong	新設洞	しんそるどん	신설동			서울特別市 東大門區	seoul-125	0.70	seoul-127	0.60												
+seoul-127		127	東廟前	Dongmyo	東廟前	どんみょあぷ	동묘앞			서울特別市 鐘路區	seoul-126	0.60	seoul-128	0.70												
+seoul-128		128	東大門	Dongdaemun	東大門	どんだいむん	동대문			서울特別市 鐘路區	seoul-127	0.70	seoul-129	0.90												
+seoul-129		129	鐘路5街	Jongno 5(o)-ga	鐘路5街	じょんのおが	종로5가			서울特別市 鐘路區	seoul-128	0.90	seoul-130	0.60												
+seoul-130		130	鐘路3街	Jongno 3(sam)-ga	鐘路3街	じょんのさむが	종로3가			서울特別市 鐘路區	seoul-129	0.60	seoul-131	0.80												
+seoul-131		131	鐘閣	Jonggak	鐘閣	じょんがく	종각			서울特別市 鐘路區	seoul-130	0.80	seoul-132	0.60												
+seoul-132		132	市廳	City Hall	市庁	しちょん	시청			서울特別市 中區	seoul-131	0.60	seoul-133	1.10												
+seoul-133		133	首爾站	Seoul Station	ソウル駅	そうるえき	서울역			서울特別市 中區	seoul-132	1.10														
+route	#00A84D		2號線	Line 2	2号線																					
+seoul-201		201	市廳	City Hall	市庁	しちょん	시청			서울特別市 中區	seoul-243	1.10	seoul-202	1.10												
+seoul-202		202	乙支路1街	Euljiro 1(il)-ga	乙支路1街	うるちろいるが	을지로1가			서울特別市 中區	seoul-201	1.10	seoul-203	0.60												
+seoul-203		203	乙支路3街	Euljiro 3(sam)-ga	乙支路3街	うるちろさむが	을지로3가			서울特別市 中區	seoul-202	0.60	seoul-204	0.60												
+seoul-204		204	乙支路4街	Euljiro 4(sa)-ga	乙支路4街	うるちろさが	을지로4가			서울特別市 中區	seoul-203	0.60	seoul-205	1.00												
+seoul-205		205	東大門歷史文化公園	Dongdaemun History & Culture Park	東大門歴史文化公園	どんだいむんよくさむなごんをん	동대문역사문화공원			서울特別市 中區	seoul-204	1.00	seoul-206	0.90												
+seoul-206		206	新堂	Sindang	新堂	しんだん	신당			서울特別市 中區	seoul-205	0.90	seoul-207	0.90												
+seoul-207		207	上往十里	Sangwangsimni	上往十里	さんわんしむに	상왕십리			서울特別市 城東區	seoul-206	0.90	seoul-208	0.80												
+seoul-208		208	往十里	Wangsimni	往十里	わんしむに	왕십리	성동구청	Seongdong-gu Office	서울特別市 城東區	seoul-207	0.80	seoul-209	1.00												
+seoul-209		209	漢陽大	Hanyang Univ.	漢陽大	はにゃんで	한양대			서울特別市 城東區	seoul-208	1.00	seoul-210	1.10												
+seoul-210		210	纛島	Ttukseom	トゥクソム	とぅくそむ	뚝섬			서울特別市 城東區	seoul-209	1.10	seoul-211	0.80												
+seoul-211		211	聖水	Seongsu	聖水	せんす	성수			서울特別市 城東區	seoul-210	0.80	seoul-212	1.20												
+seoul-212		212	建大入口	Konkuk Univ.	建大入口	こんでいぷく	건대입구			서울特別市 廣津區	seoul-211	1.20	seoul-213	1.60												
+seoul-213		213	九宜	Guui	九宜	くい	구의	광진구청	Gwangjin-gu Office	서울特別市 廣津區	seoul-212	1.60	seoul-214	1.50												
+seoul-214		214	江邊	Gangbyeon	江辺	かんびょん	강변	동서울터미널	Dongseoul Terminal	서울特別市 廣津區	seoul-213	1.50	seoul-215	2.10												
+seoul-215		215	蠶室渡口	Jamsillaru	蚕室ナル	ちゃむしるなる	잠실나루			서울特別市 松坡區	seoul-214	2.10	seoul-216	1.00												
+seoul-216		216	蠶室	Jamsil	蚕室	ちゃむしる	잠실	송파구청	Songpa-gu Office	서울特別市 松坡區	seoul-215	1.00	seoul-217	1.20												
+seoul-217		217	蠶室新川	Jamsilsaenae	蚕室セネ	ちゃむしるせね	잠실새내			서울特別市 松坡區	seoul-216	1.20	seoul-218	1.20												
+seoul-218		218	綜合運動場	Sports Complex	総合運動場	ちょんはぷうんどんじょん	종합운동장			서울特別市 松坡區	seoul-217	1.20	seoul-219	1.00												
+seoul-219		219	三成	Samseong	三成	さむそん	삼성	무역센터	World Trade Center Seoul	서울特別市 江南區	seoul-218	1.00	seoul-220	1.30												
+seoul-220		220	宣陵	Seolleung	宣陵	そるるん	선릉			서울特別市 江南區	seoul-219	1.30	seoul-221	0.70												
+seoul-221		221	驛三	Yeoksam	駅三	よくさむ	역삼			서울特別市 江南區	seoul-220	0.70	seoul-222	0.80												
+seoul-222		222	江南	Gangnam	江南	かんなむ	강남			서울特別市 江南區	seoul-221	0.80	seoul-223	1.20												
+seoul-223		223	教大	Seoul Nat'l Univ. of Education	教大	きょで	교대	법원·검찰청	Court & Public Prosecutors	서울特別市 瑞草區	seoul-222	1.20	seoul-224	0.70												
+seoul-224		224	瑞草	Seocho	瑞草	そちょ	서초			서울特別市 瑞草區	seoul-223	0.70	seoul-225	1.70												
+seoul-225		225	方背	Bangbae	方背	ぱんべ	방배			서울特別市 瑞草區	seoul-224	1.70	seoul-226	1.60												
+seoul-226		226	舍堂	Sadang	舎堂	さだん	사당			서울特別市 銅雀區	seoul-225	1.60	seoul-227	1.70												
+seoul-227		227	落星垈	Nakseongdae	落星垈	なくそんで	낙성대	강감찬	Gang Gam-chan	서울特別市 冠岳區	seoul-226	1.70	seoul-228	1.00												
+seoul-228		228	首爾大入口	Seoul Nat'l Univ.	ソウル大入口	そうるだいぷく	서울대입구	관악구청	Gwanak-gu Office	서울特別市 冠岳區	seoul-227	1.00	seoul-229	1.20												
+seoul-229		229	奉天	Bongcheon	奉天	ぼんちょん	봉천			서울特別市 冠岳區	seoul-228	1.20	seoul-230	1.10												
+seoul-230		230	新林	Sillim	新林	しんりむ	신림			서울特別市 冠岳區	seoul-229	1.10	seoul-231	1.80												
+seoul-231		231	新大方	Sindaebang	新大方	しんでばん	신대방			서울特別市 銅雀區	seoul-230	1.80	seoul-232	1.10												
+seoul-232		232	九老數位團地	Guro Digital Complex	九老デジタル団地	くろでじとるだんじ	구로디지털단지			서울特別市 九老區	seoul-231	1.10	seoul-233	1.10												
+seoul-233		233	大林	Daerim	大林	てりむ	대림	구로구청	Guro-gu Office	서울特別市 九老區	seoul-232	1.10	seoul-234	1.20												
+seoul-234		234	新道林	Sindorim	新道林	しんどりむ	신도림			서울特別市 九老區	seoul-233	1.20	seoul-235	1.20												
+seoul-235		235	文來	Mullae	文来	むんれ	문래			서울特別市 永登浦區	seoul-234	1.20	seoul-236	0.90												
+seoul-236		236	永登浦區廳	Yeongdeungpo-gu Office	永登浦区庁	よんどんぽぐちょう	영등포구청			서울特別市 永登浦區	seoul-235	0.90	seoul-237	1.10												
+seoul-237		237	堂山	Dangsan	堂山	たんさん	당산			서울特別市 永登浦區	seoul-236	1.10	seoul-238	2.00												
+seoul-238		238	合井	Hapjeong	合井	はぷじょん	합정			서울特別市 麻浦區	seoul-237	2.00	seoul-239	1.10												
+seoul-239		239	弘大入口	Hongik Univ.	弘大入口	ほんでいぷく	홍대입구			서울特別市 麻浦區	seoul-238	1.10	seoul-240	1.30												
+seoul-240		240	新村	Sinchon	新村	しんちょん	신촌			서울特別市 麻浦區	seoul-239	1.30	seoul-241	0.80												
+seoul-241		241	梨大	Ewha Womans Univ.	梨大	いで	이대			서울特別市 西大門區	seoul-240	0.80	seoul-242	0.90												
+seoul-242		242	阿峴	Ahyeon	阿峴	あひょん	아현			서울特別市 麻浦區	seoul-241	0.90	seoul-243	0.80												
+seoul-243		243	忠正路	Chungjeongno	忠正路	ちゅんじょんろ	충정로	경기대입구	Kyonggi Univ.	서울特別市 西大門區	seoul-242	0.80	seoul-201	1.10												
+route	#EF7C1C		3號線	Line 3	3号線																					
+seoul-309		309	大化	Daehwa	大化	たいふぁ	대화			京畿道 高陽市			seoul-310	1.40												
+seoul-310		310	注葉	Juyeop	注葉	ちゅよぷ	주엽			京畿道 高陽市	seoul-309	1.40	seoul-311	1.30												
+seoul-311		311	鼎缽山	Jeongbalsan	鼎鉢山	ちょんばるさん	정발산	고양아람누리	Goyang Aram Nuri	京畿道 高陽市	seoul-310	1.30	seoul-312	0.90												
+seoul-312		312	馬頭	Madu	馬頭	まどぅ	마두			京畿道 高陽市	seoul-311	0.90	seoul-313	1.40												
+seoul-313		313	白石	Baekseok	白石	ぺくそく	백석	건강보험일산병원	Ilsan Hospital	京畿道 高陽市	seoul-312	1.40	seoul-314	2.50												
+seoul-314		314	大谷	Daegok	大谷	てごく	대곡			京畿道 高陽市	seoul-313	2.50	seoul-315	2.10												
+seoul-315		315	花井	Hwajeong	花井	ふぁじょん	화정			京畿道 高陽市	seoul-314	2.10	seoul-316	2.60												
+seoul-316		316	元堂	Wondang	元堂	うぉんだん	원당			京畿道 高陽市	seoul-315	2.60	seoul-317	2.90												
+seoul-317		317	元興	Wonheung	元興	うぉんふん	원흥			京畿道 高陽市	seoul-316	2.90	seoul-318	2.10												
+seoul-318		318	三松	Samsong	三松	さむそん	삼송			京畿道 高陽市	seoul-317	2.10	seoul-319	1.70												
+seoul-319		319	紙杻	Jichuk	紙杻	ちちゅく	지축			京畿道 高陽市	seoul-318	1.70	seoul-320	1.50												
+seoul-320		320	舊把撥	Gupabal	旧把撥	くぱばる	구파발			서울特別市 恩平區	seoul-319	1.50	seoul-321	2.00												
+seoul-321		321	延新川	Yeonshinnae	延新川	よんしんね	연신내			서울特別市 恩平區	seoul-320	2.00	seoul-322	1.30												
+seoul-322		322	佛光	Bulgwang	仏光	ぷるぐぁん	불광			서울特別市 恩平區	seoul-321	1.30	seoul-323	1.10												
+seoul-323		323	碌磻	Nokbeon	碌磻	のくぽん	녹번			서울特別市 恩平區	seoul-322	1.10	seoul-324	1.60												
+seoul-324		324	弘濟	Hongje	弘済	ほんじぇ	홍제			서울特別市 西大門區	seoul-323	1.60	seoul-325	0.90												
+seoul-325		325	毋岳齋	Muakjae	毋岳齋	むあくじぇ	무악재			서울特別市 西大門區	seoul-324	0.90	seoul-326	1.10												
+seoul-326		326	獨立門	Dongnimmun	独立門	どんにむん	독립문			서울特別市 鐘路區	seoul-325	1.10	seoul-327	1.60												
+seoul-327		327	景福宮	Gyeongbokgung	景福宮	きょんぼっくん	경복궁	정부서울청사	Gov't Complex Seoul	서울特別市 鐘路區	seoul-326	1.60	seoul-328	1.10												
+seoul-328		328	安國	Anguk	安国	あんぐく	안국			서울特別市 鐘路區	seoul-327	1.10	seoul-329	1.00												
+seoul-329		329	鐘路3街	Jongno 3(sam)-ga	鐘路3街	じょんのさむが	종로3가			서울特別市 鐘路區	seoul-328	1.00	seoul-330	0.60												
+seoul-330		330	乙支路3街	Euljiro 3(sam)-ga	乙支路3街	うるちろさむが	을지로3가			서울特別市 中區	seoul-329	0.60	seoul-331	0.70												
+seoul-331		331	忠武路	Chungmuro	忠武路	ちゅんむろ	충무로			서울特別市 中區	seoul-330	0.70	seoul-332	0.90												
+seoul-332		332	東大入口	Dongguk Univ.	東大入口	とんでいぷく	동대입구			서울特別市 中區	seoul-331	0.90	seoul-333	0.70												
+seoul-333		333	藥水	Yaksu	薬水	やくす	약수			서울特別市 中區	seoul-332	0.70	seoul-334	0.80												
+seoul-334		334	金湖	Geumho	金湖	くむほ	금호			서울特別市 城東區	seoul-333	0.80	seoul-335	0.80												
+seoul-335		335	玉水	Oksu	玉水	おくす	옥수			서울特別市 城東區	seoul-334	0.80	seoul-336	2.10												
+seoul-336		336	狎鷗亭	Apgujeong	狎鴎亭	あぷぐじょん	압구정			서울特別市 江南區	seoul-335	2.10	seoul-337	1.50												
+seoul-337		337	新沙	Sinsa	新沙	しんさ	신사			서울特別市 江南區	seoul-336	1.50	seoul-338	0.90												
+seoul-338		338	蚕院	Jamwon	蚕院	ちゃむおん	잠원			서울特別市 瑞草區	seoul-337	0.90	seoul-339	1.20												
+seoul-339		339	高速巴士客運站	Express Bus Terminal	高速ターミナル	こうそくたーみなる	고속터미널			서울特別市 瑞草區	seoul-338	1.20	seoul-340	1.20												
+seoul-340		340	教大	Seoul Nat'l Univ. of Education	教大	きょで	교대	법원·검찰청	Court & Prosecutors	서울特別市 瑞草區	seoul-339	1.20	seoul-341	0.90												
+seoul-341		341	南部巴士客運站	Nambu Bus Terminal	南部ターミナル	なんぶたーみなる	남부터미널	예술의전당	Seoul Arts Center	서울特別市 瑞草區	seoul-340	0.90	seoul-342	1.80												
+seoul-342		342	良才	Yangjae	良才	やんじぇ	양재	서초구청	Seocho-gu Office	서울特別市 瑞草區	seoul-341	1.80	seoul-343	1.20												
+seoul-343		343	梅峰	Maebong	梅峰	めぼん	매봉			서울特別市 江南區	seoul-342	1.20	seoul-344	0.80												
+seoul-344		344	道谷	Dogok	道谷	とごく	도곡			서울特別市 江南區	seoul-343	0.80	seoul-345	0.80												
+seoul-345		345	大峙	Daechi	大峙	てち	대치			서울特別市 江南區	seoul-344	0.80	seoul-346	0.80												
+seoul-346		346	鶴灘	Hangnyeoul	鶴灘	はんにょうる	학여울			서울特別市 江南區	seoul-345	0.80	seoul-347	0.90												
+seoul-347		347	大廳	Daecheong	大庁	てちょん	대청			서울特別市 江南區	seoul-346	0.90	seoul-348	1.20												
+seoul-348		348	逸院	Irwon	逸院	いるぉん	일원			서울特別市 江南區	seoul-347	1.20	seoul-349	1.80												
+seoul-349		349	水西	Suseo	水西	すそ	수서			서울特別市 江南區	seoul-348	1.80	seoul-350	1.20												
+seoul-350		350	可樂市場	Garak Market	可楽市場	からくしじょん	가락시장			서울特別市 松坡區	seoul-349	1.20	seoul-351	0.80												
+seoul-351		351	警察病院	Police Hospital	警察病院	きょんちゃるびょんをん	경찰병원			서울特別市 松坡區	seoul-350	0.80	seoul-352	0.80												
+seoul-352		352	梧琴	Ogeum	梧琴	おぐむ	오금			서울特別市 松坡區	seoul-351	0.80														
+route	#00A5DE		4號線	Line 4	4号線																					
+seoul-405		405	榛接	Jinjeop	榛接	ちんじょぷ	진접			京畿道 南楊州市			seoul-406	2.10												
+seoul-406		406	梧南	Onam	梧南	おなむ	오남			京畿道 南楊州市	seoul-405	2.10	seoul-408	7.70												
+seoul-408		408	豐壤	Pungyang	豊壌	ぷんやん	풍양			京畿道 南楊州市	seoul-406	7.70	seoul-409	2.60												
+seoul-409		409	別內別加欄	Byeollaebyeolgaram	別内別加欄	びょるねびょるがらむ	별내별가람			京畿道 南楊州市	seoul-408	2.60	seoul-410	3.10												
+seoul-410		410	堂嶺	Dangogae	堂嶺	たんごげ	당고개			서울特別市 蘆原區	seoul-409	3.10	seoul-411	1.20												
+seoul-411		411	上溪	Sanggye	上渓	さんげ	상계			서울特別市 蘆原區	seoul-410	1.20	seoul-412	1.00												
+seoul-412		412	蘆原	Nowon	蘆原	のうぉん	노원			서울特別市 蘆原區	seoul-411	1.00	seoul-413	1.40												
+seoul-413		413	倉洞	Chang-dong	倉洞	ちゃんどん	창동			서울特別市 道峰區	seoul-412	1.40	seoul-414	1.70												
+seoul-414		414	雙門	Ssangmun	双門	さんむん	쌍문			서울特別市 道峰區	seoul-413	1.70	seoul-415	1.50												
+seoul-415		415	水踰	Suyu	水踰	すゆ	수유	강북구청	Gangbuk-gu Office	서울特別市 江北區	seoul-414	1.50	seoul-416	1.40												
+seoul-416		416	彌阿	Mia	弥阿	みあ	미아	서울사이버대학교	Seoul Cyber Univ.	서울特別市 江北區	seoul-415	1.40	seoul-417	1.50												
+seoul-417		417	彌阿十字路	Miasageori	弥阿サゴリ	みあさごり	미아사거리			서울特別市 江北區	seoul-416	1.50	seoul-418	1.30												
+seoul-418		418	吉音	Gireum	吉音	きるむ	길음			서울特別市 城北區	seoul-417	1.30	seoul-419	1.40												
+seoul-419		419	誠信女大入口	Sungshin Women's Univ.	誠信女大入口	そんしんにょでいぷく	성신여대입구	돈암	Donam	서울特別市 城北區	seoul-418	1.40	seoul-420	1.00												
+seoul-420		420	漢城大入口	Hansung Univ.	漢城大入口	はんそんでいぷく	한성대입구	삼선교	Samseongyo	서울特別市 城北區	seoul-419	1.00	seoul-421	0.90												
+seoul-421		421	惠化	Hyehwa	恵化	へふぁ	혜화	서울대학교병원	SNU Hospital	서울特別市 鐘路區	seoul-420	0.90	seoul-422	1.50												
+seoul-422		422	東大門	Dongdaemun	東大門	どんだいむん	동대문			서울特別市 鐘路區	seoul-421	1.50	seoul-423	0.70												
+seoul-423		423	東大門歷史文化公園	Dongdaemun History & Culture Park	東大門歴史文化公園	どんだいむんよくさむなごんをん	동대문역사문화공원			서울特別市 中區	seoul-422	0.70	seoul-424	1.30												
+seoul-424		424	忠武路	Chungmuro	忠武路	ちゅんむろ	충무로			서울特別市 中區	seoul-423	1.30	seoul-425	0.70												
+seoul-425		425	明洞	Myeong-dong	明洞	みょんどん	명동	정화예술대	Jeonghwa Arts Univ.	서울特別市 中區	seoul-424	0.70	seoul-426	0.70												
+seoul-426		426	會賢	Hoehyeon	会賢	ふぇひょん	회현	남대문시장	Namdaemun Market	서울特別市 中區	seoul-425	0.70	seoul-427	0.90												
+seoul-427		427	首爾站	Seoul Station	ソウル駅	そうるえき	서울역			서울特別市 中區	seoul-426	0.90	seoul-428	1.00												
+seoul-428		428	淑明女大入口	Sookmyung Women's Univ.	淑大入口	すんでいぷく	숙대입구	갈월	Galwol	서울特別市 龍山區	seoul-427	1.00	seoul-429	1.20												
+seoul-429		429	三角地	Samgakji	三角地	さむがくち	삼각지			서울特別市 龍山區	seoul-428	1.20	seoul-430	0.70												
+seoul-430		430	新龍山	Sinyongsan	新龍山	しにょんさん	신용산			서울特別市 龍山區	seoul-429	0.70	seoul-431	1.30												
+seoul-431		431	二村	Ichon	二村	いちょん	이촌	국립중앙박물관	Nat'l Museum of Korea	서울特別市 龍山區	seoul-430	1.30	seoul-432	1.70												
+seoul-432		432	銅雀	Dongjak	銅雀	どんじゃく	동작	국립현충원	Seoul Nat'l Cemetery	서울特別市 銅雀區	seoul-431	1.70	seoul-433	1.80												
+seoul-433		433	総神大入口(梨水)	Chongshin Univ.(Isu)	総神大入口	ちょんしんでいぷく	총신대입구			서울特別市 銅雀區	seoul-432	1.80	seoul-434	1.10												
+seoul-434		434	舍堂	Sadang	舎堂	さだん	사당			서울特別市 銅雀區	seoul-433	1.10	seoul-435	1.60												
+seoul-435		435	南泰嶺	Namtaeryeong	南泰嶺	なむてりょん	남태령			서울特別市 瑞草區	seoul-434	1.60														
+																										
+sys			韓國鐵道公社	Korean Railway	韓国鉄道公社																					
+route	#003DA5		京釜高速線	Gyeongbu Railway	京釜高速線																					
+ktx-G01			幸信	Haengsin	幸信	へんしん	행신			京畿道 高陽市			ktx-G02	14.90												
+ktx-G02			首爾	Seoul	ソウル	そうる	서울			서울特別市 中區	ktx-G01	14.90	ktx-G03	3.20												
+ktx-G03			龍山	Yongsan	龍山	よんさん	용산			서울特別市 龍山區	ktx-G02	3.20	ktx-G04	18.80												
+ktx-G04			光明	Gwangmyeong	光明	くぁんみょん	광명			京畿道 光明市	ktx-G03	18.80	ktx-G05	74.00												
+ktx-G05			天安牙山	Cheonan-Asan	天安牙山	てなんあさん	천안아산	온양온천	Onyangoncheon	忠淸南道 牙山市	ktx-G04	74.00	ktx-G06	28.60												
+ktx-G06			五松	Osong	五松	おそん	오송			忠淸北道 淸州市	ktx-G05	28.60	ktx-G07	35.10												
+ktx-G07			大田	Daejeon	大田	てじょん	대전			大田廣域市 東區	ktx-G06	35.10	ktx-G08	73.80												
+ktx-G08			金泉龜尾	Gimcheon(Gumi)	金泉亀尾	きむちょんぐみ	김천(구미)			慶尙北道 金泉市	ktx-G07	73.80	ktx-G09	52.50												
+ktx-G09			西大邱	Seodaeju	西大邱	そてぐ	서대구			大邱廣域市 西區	ktx-G08	52.50	ktx-G10	7.40												
+ktx-G10			東大邱	Dongdaegu	東大邱	とんてぐ	동대구			大邱廣域市 東區	ktx-G09	7.40	ktx-G11	29.00												
+ktx-G11			慶州	Gyeongju	慶州	きょんじゅ	경주			慶尙北道 慶州市	ktx-G10	29.00	ktx-G12	30.00												
+ktx-G12			蔚山	Ulsan	蔚山	うるさん	울산	통도사	Tongdosa	蔚山廣域市 蔚州郡	ktx-G11	30.00	ktx-G13	51.70												
+ktx-G13			釜山	Busan	釜山	ぷさん	부산			釜山廣域市 東區	ktx-G12	51.70														
+route	#003DA5		湖南高速線	Honam Railway	湖南高速線																					
+ktx-H01			龍山	Yongsan	龍山	よんさん	용산			서울特別市 龍山區			ktx-H02	138.40												
+ktx-H02			公州	Gongju	公州	くんじゅ	공주			忠淸南道 公州市	ktx-H01	138.40	ktx-H03	43.80												
+ktx-H03			益山	Iksan	益山	いくさん	익산			全羅北道 益山市	ktx-H02	43.80	ktx-H04	42.10												
+ktx-H04			井邑	Jeongeup	井邑	ちょんうぷ	정읍			全羅北道 井邑市	ktx-H03	42.10	ktx-H05	70.50												
+ktx-H05			光州松汀	GwangjuSongjeong	光州松汀	くぁんじゅそんじょん	광주송정			光州廣域市 光山區	ktx-H04	70.50	ktx-H06	15.80												
+ktx-H06			羅州	Naju	羅州	なじゅ	나주			全羅南道 羅州市	ktx-H05	15.80	ktx-H07	51.00												
+ktx-H07			木浦	Mokpo	木浦	もくぽ	목포			全羅南道 木浦市	ktx-H06	51.00														
+route	#003DA5		慶全高速線	Gyeongjeon Line	慶全高速線																					
+ktx-S01			密陽	Miryang	密陽	みりゃん	밀양			慶尙南道 密陽市	ktx-G10	55.20	ktx-S02	15.00												
+ktx-S02			進永	Jinyeong	進永	ちにょん	진영			慶尙南道 金海市	ktx-S01	15.00	ktx-S03	11.00												
+ktx-S03			昌原中央	Changwonjungang	昌原中央	ちゃんをんちゅんあん	창원중앙			慶尙南道 昌原市	ktx-S02	11.00	ktx-S04	10.00												
+ktx-S04			昌原	Changwon	昌原	ちゃんをん	창원			慶尙南道 昌原市	ktx-S03	10.00	ktx-S05	4.00												
+ktx-S05			馬山	Masan	馬山	まさん	마산			慶尙南道 昌原市	ktx-S04	4.00	ktx-S06	14.00												
+ktx-S06			晋州	Jinju	晋州	ちんじゅ	진주			慶尙南道 晋州市	ktx-S05	14.00														
+route	#003DA5		全羅高速線	Jeolla Line	全羅高速線																					
+ktx-J01			全州	Jeonju	全州	ちょんじゅ	전주			全羅北道 全州市	ktx-H03	25.50	ktx-J02	48.00												
+ktx-J02			南原	Namwon	南原	なむをん	남원			全羅北道 南原市	ktx-J01	48.00	ktx-J03	25.00												
+ktx-J03			谷城	Gokseong	谷城	こくそん	곡성			全羅南道 谷城郡	ktx-J02	25.00	ktx-J04	18.00												
+ktx-J04			求禮口	Guryegu	求礼口	くれぐ	구례구			全羅南道 順天市	ktx-J03	18.00	ktx-J05	18.00												
+ktx-J05			順天	Suncheon	順天	すんちょん	순천			全羅南道 順天市	ktx-J04	18.00	ktx-J06	13.00												
+ktx-J06			麗川	Yeocheon	麗川	よちょん	여천			全羅南道 麗水市	ktx-J05	13.00	ktx-J07	9.00												
+ktx-J07			麗水EXPO	Yeosu-EXPO	麗水EXPO	よすえきすぽ	여수EXPO			全羅南道 麗水市	ktx-J06	9.00														
+route	#003DA5		江陵高速線	Gangneung Line	江陵高速線																					
+ktx-K01			淸涼里	Cheongnyangni	清涼里	ちょんりゃんり	청량리			서울特別市 東大門區			ktx-K02	23.00												
+ktx-K02			楊平	Yangpyeong	楊平	やんぴょん	양평			京畿道 楊平郡	ktx-K01	23.00	ktx-K03	43.00												
+ktx-K03			萬鐘	Manjong	万鐘	まんじょん	만종			江原特別自治道 原州市	ktx-K02	43.00	ktx-K04	12.00												
+ktx-K04			橫城	Hoengseong	横城	ふぇんそん	횡성			江原特別自治道 橫城郡	ktx-K03	12.00	ktx-K05	10.00												
+ktx-K05			屯內	Dunnae	屯内	とぅんね	둔내			江原特別自治道 橫城郡	ktx-K04	10.00	ktx-K06	20.00												
+ktx-K06			平昌	Pyeongchang	平昌	ぴょんちゃん	평창			江原特別自治道 平昌郡	ktx-K05	20.00	ktx-K07	14.00												
+ktx-K07			珍富	Jinbu	珍富	ちんぶ	진부	오대산	Odaesan	江原特別自治道 平昌郡	ktx-K06	14.00	ktx-K08	16.00												
+ktx-K08			江陵	Gangneung	江陵	かんぬん	강릉			江原特別自治道 江陵市	ktx-K07	16.00														
+route	#003DA5		中央高速線	Jungang Line	中央高速線																					
+ktx-C01			原州	Wonju	原州	うぉんじゅ	원주			江原特別自治道 原州市	ktx-K01	85.00	ktx-C02	18.00												
+ktx-C02			鳳陽	Pongyang	鳳陽	ぽにゃん	봉양			忠淸北道 堤川市	ktx-C01	18.00	ktx-C03	7.00												
+ktx-C03			堤川	Jecheon	堤川	ちぇちょん	제천			忠淸北道 堤川市	ktx-C02	7.00	ktx-C04	25.00												
+ktx-C04			丹陽	Danyang	丹陽	たにゃん	단양			忠淸北道 丹陽郡	ktx-C03	25.00	ktx-C05	15.00												
+ktx-C05			豐基	Punggi	豊基	ぷんぎ	풍기			慶尙北道 榮州市	ktx-C04	15.00	ktx-C06	12.00												
+ktx-C06			榮州	Yeongju	栄州	よんじゅ	영주			慶尙北道 榮州市	ktx-C05	12.00	ktx-C07	22.00												
+ktx-C07			安東	Andong	安東	あんどん	안동			慶尙北道 安東市	ktx-C06	22.00														
+																										
+sys			港鐵	Hong Kong MTR	香港鉄道																					
+route	#0071BC		港島綫	"	Island Line"	港島線（アイランド線）																					
+mtr-IS01			堅尼地城	Kennedy Town	ケネディタウン	けねでぃたうん	케네디타운			中西區			mtr-IS02	0.80												
+mtr-IS02			香港大學	HKU	香港大学	ほんこうだいがく	홍콩대학			中西區	mtr-IS01	0.80	mtr-IS03	0.90												
+mtr-IS03			西營盤	Sai Ying Pun	西営盤	さいいんぷん	사이잉푼			中西區	mtr-IS02	0.90	mtr-IS04	0.80												
+mtr-IS04			上環	Sheung Wan	上環	じょうわん	셩완			中西區	mtr-IS03	0.80	mtr-IS05	0.80												
+mtr-IS05			中環	Central	中環	ちゅうかん	센트럴			中西區	mtr-IS04	0.80	mtr-IS06	0.90												
+mtr-IS06			金鐘	Admiralty	金鐘	きんしょう	애드미럴티			中西區	mtr-IS05	0.90	mtr-IS07	0.80												
+mtr-IS07			灣仔	Wan Chai	湾仔	わんちゃい	완차이			灣仔區	mtr-IS06	0.80	mtr-IS08	0.70												
+mtr-IS08			銅鑼灣	Causeway Bay	コーズウェイベイ	こーずうぇいべい	코즈웨이베이			灣仔區	mtr-IS07	0.70	mtr-IS09	0.60												
+mtr-IS09			天后	Tin Hau	天后	てんごう	틴하우			東區	mtr-IS08	0.60	mtr-IS10	0.70												
+mtr-IS10			炮台山	Fortress Hill	フォートレスヒル	ふぉーとれすひる	포트리스힐			東區	mtr-IS09	0.70	mtr-IS11	0.70												
+mtr-IS11			北角	North Point	ノースポイント	のーすぽいんと	노스포인트			東區	mtr-IS10	0.70	mtr-IS12	0.80												
+mtr-IS12			鰂魚涌	Quarry Bay	クォーリーベイ	くぉーりーべい	쿼리베이			東區	mtr-IS11	0.80	mtr-IS13	1.00												
+mtr-IS13			太古	Tai Koo	太古	たいこ	타이구			東區	mtr-IS12	1.00	mtr-IS14	0.70												
+mtr-IS14			西灣河	Sai Wan Ho	西湾河	さいわんほー	사이완호			東區	mtr-IS13	0.70	mtr-IS15	0.70												
+mtr-IS15			筲箕灣	Shau Kei Wan	シャウケイワン	しゃうけいわん	샤우케이완			東區	mtr-IS14	0.70	mtr-IS16	1.30												
+mtr-IS16			杏花邨	Heng Fa Chuen	ハンファチュン	はんふぁちゅん	헹화춘			東區	mtr-IS15	1.30	mtr-IS17	1.10												
+mtr-IS17			柴灣	Chai Wan	柴湾	さいわん	차이완			東區	mtr-IS16	1.10														
+route	#ED1D24		荃灣綫	Tsuen Wan Line	荃湾線（セン湾線）																					
+mtr-TW01			荃灣	Tsuen Wan	荃灣	ちゅんわん	췬완			荃灣區			mtr-TW02	0.80												
+mtr-TW02			大窩口	Tai Wo Hau	大窩口	だいかこう	타이워하우			葵青區	mtr-TW01	0.80	mtr-TW03	1.10												
+mtr-TW03			葵興	Kwai Hing	葵興	ききょう	콰이힝			葵青區	mtr-TW02	1.10	mtr-TW04	0.90												
+mtr-TW04			葵芳	Kwai Fong	葵芳	きほう	콰이퐁			葵青區	mtr-TW03	0.90	mtr-TW05	1.10												
+mtr-TW05			荔景	Lai King	荔景	らいけい	라이킹			葵青區	mtr-TW04	1.10	mtr-TW06	1.20												
+mtr-TW06			美孚	Mei Foo	美孚	びふ	메이푸			深水埗區	mtr-TW05	1.20	mtr-TW07	0.90												
+mtr-TW07			荔枝角	Lai Chi Kok	茘枝角	らいしかく	라이치콕			深水埗區	mtr-TW06	0.90	mtr-TW08	0.80												
+mtr-TW08			長沙灣	Cheung Sha Wan	長沙湾	ちょうさわん	청사완			深水埗區	mtr-TW07	0.80	mtr-TW09	0.80												
+mtr-TW09			深水埗	Sham Shui Po	深水埗	しんすいほ	삼수이포			深水埗區	mtr-TW08	0.80	mtr-TW10	0.90												
+mtr-TW10			太子	Prince Edward	プリンスエドワード	ぷりんすえどわーど	프린스에드워드			油尖旺區	mtr-TW09	0.90	mtr-TW11	0.60												
+mtr-TW11			旺角	Mong Kok	モンコック	もんこっく	몽콕			油尖旺區	mtr-TW10	0.60	mtr-TW12	0.70												
+mtr-TW12			油麻地	Yau Ma Tei	ヤウマティ	やうまてぃ	야우마테이			油尖旺區	mtr-TW11	0.70	mtr-TW13	1.00												
+mtr-TW13			佐敦	Jordan	ジョーダン	じょーだん	조던			油尖旺區	mtr-TW12	1.00	mtr-TW14	0.70												
+mtr-TW14			尖沙咀	Tsim Sha Tsui	チムサーチョイ	ちむさーちょい	침사추이			油尖旺區	mtr-TW13	0.70	mtr-TW15	1.10												
+mtr-TW15			金鐘	Admiralty	金鐘	きんしょう	애드미럴티			中西區	mtr-TW14	1.10	mtr-TW16	0.90												
+mtr-TW16			中環	Central	中環	ちゅうかん	센트럴			中西區	mtr-TW15	0.90														
+route	#00AB4E		觀塘綫	Kwun Tong Line	観塘線（クントン線）																					
+mtr-KT01			黃埔	Whampoa	ウォンポー	うぉんぽー	웡후			九龍城區			mtr-KT02	0.70												
+mtr-KT02			何文田	Ho Man Tin	ホーマンティン	ほーまんてぃん	호만틴			九龍城區	mtr-KT01	0.70	mtr-KT03	1.20												
+mtr-KT03			油麻地	Yau Ma Tei	ヤウマティ	やうまてぃ	야우마테이			油尖旺區	mtr-KT02	1.20	mtr-KT04	0.70												
+mtr-KT04			旺角	Mong Kok	モンコック	もんこっく	몽콕			油尖旺區	mtr-KT03	0.70	mtr-KT05	0.60												
+mtr-KT05			太子	Prince Edward	プリンスエドワード	ぷりんすえどわーど	프린스에드워드			油尖旺區	mtr-KT04	0.60	mtr-KT06	1.10												
+mtr-KT06			石硤尾	Shek Kip Mei	セップキップメイ	せっぷきっぷめい	섹킵메이			深水埗區	mtr-KT05	1.10	mtr-KT07	1.10												
+mtr-KT07			九龍塘	Kowloon Tong	九龍塘	きゅうりゅうとう	구룡통			九龍城區	mtr-KT06	1.10	mtr-KT08	1.20												
+mtr-KT08			樂富	Lok Fu	ラクフ	らくふ	록푸			黃大仙區	mtr-KT07	1.20	mtr-KT09	0.80												
+mtr-KT09			黃大仙	Wong Tai Sin	ウォンタイシン	うぉんたいしん	웡타이신			黃大仙區	mtr-KT08	0.80	mtr-KT10	0.80												
+mtr-KT10			鑽石山	Diamond Hill	ダイヤモンドヒル	だいやもんどひる	다이아몬드힐			黃大仙區	mtr-KT09	0.80	mtr-KT11	1.10												
+mtr-KT11			彩虹	Choi Hung	チョイフン	ちょいふん	초이훙			黃大仙區	mtr-KT10	1.10	mtr-KT12	1.40												
+mtr-KT12			九龍灣	Kowloon Bay	九龍湾	きゅうりゅうわん	구룡베이			觀塘區	mtr-KT11	1.40	mtr-KT13	0.90												
+mtr-KT13			牛頭角	Ngau Tau Kok	ガウトウカク	がうとうかく	응아우타우콕			觀塘區	mtr-KT12	0.90	mtr-KT14	0.70												
+mtr-KT14			觀塘	Kwun Tong	觀塘	くんとん	관통			觀塘區	mtr-KT13	0.70	mtr-KT15	1.40												
+mtr-KT15			藍田	Lam Tin	藍田	らんでん	람틴			觀塘區	mtr-KT14	1.40	mtr-KT16	1.20												
+mtr-KT16			油塘	Yau Tong	ヤウトン	やうとん	야우통			觀塘區	mtr-KT15	1.20	mtr-KT17	2.00												
+mtr-KT17			調景嶺	Tiu Keng Leng	ティウケンレン	てぃうけんれん	티우켕렝			西貢區	mtr-KT16	2.00														
+route	#53B7E8		東鐵綫	East Rail Line	東鉄線（イーストレール線）																					
+hk-EA01			金鐘	Admiralty	金鐘	きんしょう	애드미럴티			中西區			hk-EA02	2.10												
+hk-EA02			會展	Exhibition Centre	会展	かいてん	엑시비션 센터			灣仔區	hk-EA01	2.10	hk-EA03	1.90												
+hk-EA03			紅磡	Hung Hom	ホンハム	ほんはむ	헝함			油尖旺區	hk-EA02	1.90	hk-EA04	1.30												
+hk-EA04			旺角東	Mong Kok East	モンコック東	もんこっくひがし	몽콕이스트			油尖旺區	hk-EA03	1.30	hk-EA05	2.40												
+hk-EA05			九龍塘	Kowloon Tong	九龍塘	きゅうりゅうとう	구룡통			九龍城區	hk-EA04	2.40	hk-EA06	1.80												
+hk-EA06			大圍	Tai Wai	大囲	たいい	타이와이			沙田區	hk-EA05	1.80	hk-EA07	1.10												
+hk-EA07			沙田	Sha Tin	沙田	さでん	사틴			沙田區	hk-EA06	1.10	hk-EA08	2.80												
+hk-EA08			火炭	Fo Tan	火炭	かたん	포탄			沙田區	hk-EA07	2.80	hk-EA09	2.10												
+hk-EA09			大學	University	大学	だいがく	대학			沙田區	hk-EA08	2.10	hk-EA10	4.50												
+hk-EA10			大埔墟	Tai Po Market	大埔墟	たいぽきょ	타이포마켓			大埔區	hk-EA09	4.50	hk-EA11	1.50												
+hk-EA11			太和	Tai Wo	太和	たいわ	타이워			大埔區	hk-EA10	1.50	hk-EA12	4.80												
+hk-EA12			粉嶺	Fanling	粉嶺	ふんれい	판링			北區	hk-EA11	4.80	hk-EA13	1.60												
+hk-EA13			上水	Sheung Shui	上水	じょうすい	셩수이			北區	hk-EA12	1.60	hk-EA14	3.20												
+hk-EA14			羅湖	Lo Wu	羅湖	らこ	로워			北區	hk-EA13	3.20														
+																										
+																										
+																										
+sys			曼谷BTS	Bangkok BTS	バンコクBTS																					
+route	#61BB46		素坤逸線	Sukhumvit Line	スクンビット線																					
+bkbts-N24		N24	庫特	Khu Khot	クーコット	くーこっと	쿠콧			Pathum Thani			bkbts-N23	1.20												
+bkbts-N23		N23	空四	Khlong Si	クロンシー	くろんしー	클롱시			Pathum Thani	bkbts-N24	1.20	bkbts-N22	1.30												
+bkbts-N22		N22	普密蓬阿杜德醫院	Bhumibol Adulyadej Hospital	プミポンアドゥンヤデート病院	ぷみぽんあどぅんやでーとびょういん	푸미폰 아둔야뎃 병원			Sai Mai	bkbts-N23	1.30	bkbts-N21	1.00												
+bkbts-N21		N21	皇家空軍博物館	Royal Thai Air Force Museum	タイ王立空軍博物館	たいおうりつくうぐんはくぶつかん	태국 왕립 공군 박물관			Don Mueang	bkbts-N22	1.00	bkbts-N20	1.10												
+bkbts-N20		N20	亞速	Yaek Kor Por Aor	イェークコーポーオー	いぇーくこーぽーおー	엑코포오			Don Mueang	bkbts-N21	1.10	bkbts-N19	1.50												
+bkbts-N19		N19	新橋	Saphan Mai	サパンマイ	さぱんまい	사판마이			Bang Khen	bkbts-N20	1.50	bkbts-N18	1.10												
+bkbts-N18		N18	西提甘	Sai Yut	サーイユット	さーいゆっと	사이윳			Bang Khen	bkbts-N19	1.10	bkbts-N17	1.20												
+bkbts-N17		N17	帕斯米旺路	Phahonyothin 59	パホンヨーティン59	ぱほんよーてぃん59	파혼요틴 59			Bang Khen	bkbts-N18	1.20	bkbts-N16	1.00												
+bkbts-N16		N16	屈拍史大那哈達臥寺	Wat Phra Sri Mahathat	ワット・プラスリマハタート	わっと・ぷらすりまはたーと	왓 프라스리마하탓			Bang Khen	bkbts-N17	1.00	bkbts-N15	1.20												
+bkbts-N15		N15	第11步兵團	11th Infantry Regiment	第11歩兵連隊	だい11ほへいれんたい	제11보병연대			Bang Khen	bkbts-N16	1.20	bkbts-N14	1.00												
+bkbts-N14		N14	曼谷理工大學	Bang Bua	バーンブア	ばーんぶあ	방부아			Bang Khen	bkbts-N15	1.00	bkbts-N13	1.10												
+bkbts-N13		N13	林業局	Royal Forest Department	林業局	りんぎょうきょく	왕립 산림국			Chatuchak	bkbts-N14	1.10	bkbts-N12	1.00												
+bkbts-N12		N12	農業大學	Kasetsart University	カセサート大学	かせさーとだいがく	카세사트 대학교			Chatuchak	bkbts-N13	1.00	bkbts-N11	1.20												
+bkbts-N11		N11	社那尼空	Sena Nikhom	セーナーニコム	せーなーにこむ	세나 니콤			Chatuchak	bkbts-N12	1.20	bkbts-N10	1.00												
+bkbts-N10		N10	拉差裕庭	Ratchayothin	ラチャヨーティン	らちゃよーてぃん	라차요틴			Chatuchak	bkbts-N11	1.00	bkbts-N9	1.10												
+bkbts-N9		N9	拉拋五叉路口	Ha Yaek Lat Phrao	ハーイェーク・ラップラオ	はーいぇーく・らっぷらお	하얘크 랏프라오			Chatuchak	bkbts-N10	1.10	bkbts-N8	1.20												
+bkbts-N8		N8	蒙奇	Mo Chit	モーチット	もーちっと	모칫			Chatuchak	bkbts-N9	1.20	bkbts-N7	1.30												
+bkbts-N7		N7	水牛橋	Saphan Khwai	サパーンクワーイ	さぱんくわーい	사판콰이			Phaya Thai	bkbts-N8	1.30	bkbts-N5	1.10												
+bkbts-N5		N5	阿里	Ari	アーリー	あーりー	아리			Phaya Thai	bkbts-N7	1.10	bkbts-N4	0.80												
+bkbts-N4		N4	打靶場	Sanam Pao	サナームパオ	さなーむぱお	사남파오			Phaya Thai	bkbts-N5	0.80	bkbts-N3	1.00												
+bkbts-N3		N3	勝利紀念碑	Victory Monument	アヌサワリーチャイ	あぬさわりーちゃい	전승기념탑			Ratchathewi	bkbts-N4	1.00	bkbts-N2	0.90												
+bkbts-N2		N2	披耶泰	Phaya Thai	パヤータイ	ぱやーたい	파야타이			Ratchathewi	bkbts-N3	0.90	bkbts-N1	0.70												
+bkbts-N1		N1	拉差貼威	Ratchathewi	ラーチャテーウィー	らーちゃてーうぃー	라차테위			Ratchathewi	bkbts-N2	0.70	bkbts-CEN	1.10												
+bkbts-CEN		CEN	暹羅	Siam	サイアム	さいあむ	시암			Ratchathewi	bkbts-N1	1.10	bkbts-E1	0.90												
+bkbts-E1		E1	七隆	Chit Lom	チットロム	ちっとろむ	칫롬			Ratchathewi	bkbts-CEN	0.90	bkbts-E2	0.80												
+bkbts-E2		E2	菲隆奇	Phloen Chit	プルンチット	ぷるんちっと	플런칫			Ratchathewi	bkbts-E1	0.80	bkbts-E3	0.80												
+bkbts-E3		E3	娜娜	Nana	ナナ	なな	나나			Watthana	bkbts-E2	0.80	bkbts-E4	0.70												
+bkbts-E4		E4	阿速	Asok	アソーク	あそーく	아속			Watthana	bkbts-E3	0.70	bkbts-E5	1.20												
+bkbts-E5		E5	鵬蓬	Phrom Phong	プロンポン	ぷろんぽん	프롬퐁			Khlong Toei	bkbts-E4	1.20	bkbts-E6	1.10												
+bkbts-E6		E6	通羅	Thong Lo	トンロー	とんろー	통로			Watthana	bkbts-E5	1.10	bkbts-E7	0.80												
+bkbts-E7		E7	艾甲邁	Ekkamai	エカマイ	えかまい	에카마이			Watthana	bkbts-E6	0.80	bkbts-E8	0.80												
+bkbts-E8		E8	拍崑崙	Phra Khanong	プラカノン	ぷらかのん	프라카농			Khlong Toei	bkbts-E7	0.80	bkbts-E9	1.10												
+bkbts-E9		E9	翁聿	On Nut	オンヌット	おんぬっと	온눗			Watthana	bkbts-E8	1.10	bkbts-E10	1.30												
+bkbts-E10		E10	挽節	Bang Chak	バーンチャック	ばーんちゃっく	방착			Phra Khanong	bkbts-E9	1.30	bkbts-E11	0.90												
+bkbts-E11		E11	布納威提	Punnawithi	プンナウィティ	ぷんなうぃてぃ	푼나위티			Phra Khanong	bkbts-E10	0.90	bkbts-E12	1.00												
+bkbts-E12		E12	烏冬速	Udom Suk	ウドムスック	うどむすっく	우돔숙			Bang Na	bkbts-E11	1.00	bkbts-E13	1.40												
+bkbts-E13		E13	挽那	Bang Na	バーンナー	ばーんなー	방나			Bang Na	bkbts-E12	1.40	bkbts-E14	1.10												
+bkbts-E14		E14	軸承	Bearing	ベーリング	べーりんぐ	베어링			Bang Na	bkbts-E13	1.10	bkbts-E15	1.50												
+bkbts-E15		E15	三龍	Samrong	サムロン	さむろん	삼롱			Samut Prakan	bkbts-E14	1.50	bkbts-E16	1.30												
+bkbts-E16		E16	普照	Pu Chao	プーチャオ	ぷーちゃお	푸차오			Samut Prakan	bkbts-E15	1.30	bkbts-E17	1.10												
+bkbts-E17		E17	愛侶灣	Chang Erawan	チャーンエラワン	ちゃーんえらわん	창 에라완			Samut Prakan	bkbts-E16	1.10	bkbts-E18	1.30												
+bkbts-E18		E18	海軍學院	Royal Thai Naval Academy	海軍兵学校前	かいぐんへいがっこうまえ	해군사관학교			Samut Prakan	bkbts-E17	1.30	bkbts-E19	1.40												
+bkbts-E19		E19	北欖	Pak Nam	パークナム	ぱーくなむ	팍남			Samut Prakan	bkbts-E18	1.40	bkbts-E20	0.90												
+bkbts-E20		E20	詩納卡琳	Srinagarindra	シーナカリン	しーなかりん	시나카린			Samut Prakan	bkbts-E19	0.90	bkbts-E21	1.00												
+bkbts-E21		E21	佩卡莎	Phraek Sa	プレークサー	ぷれーくさー	프랙사			Samut Prakan	bkbts-E20	1.00	bkbts-E22	1.20												
+bkbts-E22		E22	賽路	Sai Luat	サイルアット	さいるあっと	사이루앗			Samut Prakan	bkbts-E21	1.20	bkbts-E23	1.20												
+bkbts-E23		E23	凱哈	Kheha	ケーハ	けーは	케하			Samut Prakan	bkbts-E22	1.20														
+route	#006341		是隆線	Si Lom Line	シーロム線																					
+bkbts-W1		W1	國家運動場	National Stadium	国立競技場	こくりつきょうぎじょう	국립 경기장			Pathum Wan			bkbts-CEN	0.90												
+bkbts-S1		S1	拉差當梅	Ratchadamri	ラーチャダムリ	らーちゃだむり	라차담리			Pathum Wan	bkbts-CEN	0.90	bkbts-S2	1.10												
+bkbts-S2		S2	莎拉當	Sala Daeng	サラデーン	さらでーん	살라댕			Bang Rak	bkbts-S1	1.10	bkbts-S3	0.80												
+bkbts-S3		S3	鐘那席	Chong Nonsi	チョンノンシー	ちょんのんしー	총논시			Bang Rak	bkbts-S2	0.80	bkbts-S5	1.10												
+bkbts-S5		S5	聖路易斯	Saint Louis	セントルイス	せんとるいす	세인트 루이스			Bang Rak	bkbts-S3	1.10	bkbts-S6	0.70												
+bkbts-S6		S6	蘇叻沙克	Surasak	スラサック	すらさっく	수라삭			Bang Rak	bkbts-S5	0.70	bkbts-S7	0.80												
+bkbts-S7		S7	鄭皇橋	Saphan Taksin	サパーンタークシン	さぱーんたーくしん	사판탁신			Bang Rak	bkbts-S6	0.80	bkbts-S8	1.20												
+bkbts-S8		S8	吞武里廣場	Krung Thon Buri	クルントンブリー	くるんとんぶりー	크룽톤부리			Khlong San	bkbts-S7	1.20	bkbts-S9	1.10												
+bkbts-S9		S9	大羅斗圈	Wongwian Yai	ウォンウェンヤイ	うぉんうぇんやい	웡위안 야이			Thon Buri	bkbts-S8	1.10	bkbts-S10	1.50												
+bkbts-S10		S10	剖尼米	Pho Nimit	ポーニミット	ぽーにみっと	포니밋			Thon Buri	bkbts-S9	1.50	bkbts-S11	0.80												
+bkbts-S11		S11	達拉普祿	Talat Phlu	タラートプルー	たらーとぷるー	탈랏플루			Thon Buri	bkbts-S10	0.80	bkbts-S12	1.10												
+bkbts-S12		S12	烏塔卡	Wutthakat	ウッターカート	うったーかーと	우따깟			Thon Buri	bkbts-S11	1.10	bkbts-S13	1.20												
+bkbts-S13		S13	挽瓦	Bang Wa	バーンワー	ばーんわー	방와			Phasi Charoen	bkbts-S12	1.20														
+sys			曼谷MRT	Bangkok MRT	バンコクMRT																					
+route	#005DAA		藍線	Blue Line	ブルーライン																					
+bkmrt-BL01		BL01	塔帕	Tha Phra	タープラ	たーぷら	타프라			Bangkok Yai			bkmrt-BL02	1.20												
+bkmrt-BL02		BL02	乍蘭13	Charan 13	チャラン13	ちゃらん13	차란 13			Bangkok Yai	bkmrt-BL01	1.20	bkmrt-BL03	1.40												
+bkmrt-BL03		BL03	輝猜	Fai Chai	ファイチャイ	ふぁいちゃい	파이차이			Bangkok Noi	bkmrt-BL02	1.40	bkmrt-BL04	1.50												
+bkmrt-BL04		BL04	曼坤喃	Bang Khun Non	バーンクンノン	ばーんくんのん	방쿤논			Bangkok Noi	bkmrt-BL03	1.50	bkmrt-BL05	1.20												
+bkmrt-BL05		BL05	曼宜坎	Bang Yi Khan	バーンイーカン	ばーんいーかん	방이칸			Bang Phlat	bkmrt-BL04	1.20	bkmrt-BL06	1.30												
+bkmrt-BL06		BL06	詩琳通	Sirindhorn	シリントン	しりんとん	시린돈			Bang Phlat	bkmrt-BL05	1.30	bkmrt-BL07	1.10												
+bkmrt-BL07		BL07	曼普	Bang Phlat	バーンプラット	ばーんぷらっと	방플랏			Bang Phlat	bkmrt-BL06	1.10	bkmrt-BL08	0.90												
+bkmrt-BL08		BL08	曼喔	Bang O	バーンオー	ばーんおー	방오			Bang Phlat	bkmrt-BL07	0.90	bkmrt-BL09	1.10												
+bkmrt-BL09		BL09	曼坡	Bang Pho	バーンポー	ばーんぽー	방포			Bang Sue	bkmrt-BL08	1.10	bkmrt-BL10	1.00												
+bkmrt-BL10		BL10	挽賜	Bang Sue	バンスー	ばんすー	방수	阿皮瓦曼谷中央車站	Krung Thep Aphiwat	Bang Sue	bkmrt-BL09	1.00	bkmrt-BL11	1.20												
+bkmrt-BL11		BL11	甘帕安碧	Kamphaeng Phet	カンペーンペット	かんぺーんぺっと	캄팽펫			Chatuchak	bkmrt-BL10	1.20	bkmrt-BL12	1.00												
+bkmrt-BL12		BL12	乍都節公園	Chatuchak Park	チャトゥチャック公園	ちゃとぅちゃっくこうえん	짜뚜짝 공원			Chatuchak	bkmrt-BL11	1.00	bkmrt-BL13	1.10												
+bkmrt-BL13		BL13	帕鳳裕庭	Phahon Yothin	パホンヨーティン	ぱほんよーてぃん	파혼요틴			Chatuchak	bkmrt-BL12	1.10	bkmrt-BL14	1.20												
+bkmrt-BL14		BL14	叻拋	Lat Phrao	ラップラオ	らっぷらお	랏프라오			Chatuchak	bkmrt-BL13	1.20	bkmrt-BL15	1.10												
+bkmrt-BL15		BL15	叻差拉披色	Ratchadaphisek	ラチャダーピセーク	らちゃだーぴせーく	라차다피섹			Huai Khwang	bkmrt-BL14	1.10	bkmrt-BL16	1.00												
+bkmrt-BL16		BL16	素提訕	Sutthisan	スティサーン	すてぃさーん	수티산			Huai Khwang	bkmrt-BL15	1.00	bkmrt-BL17	1.20												
+bkmrt-BL17		BL17	輝煌	Huai Khwang	フアイクワン	ふあいくわん	후아이쾅			Huai Khwang	bkmrt-BL16	1.20	bkmrt-BL18	1.30												
+bkmrt-BL18		BL18	泰國文化中心	Thailand Cultural Centre	タイ文化センター	たいぶんかせんたー	태국 문화 센터			Huai Khwang	bkmrt-BL17	1.30	bkmrt-BL19	1.10												
+bkmrt-BL19		BL19	帕藍9	Phra Ram 9	プララーム9	ぷららーむ9	프라람 9			Huai Khwang	bkmrt-BL18	1.10	bkmrt-BL20	1.00												
+bkmrt-BL20		BL20	碧武里	Phetchaburi	ペッチャブリー	ぺっちゃぶりー	펫차부리			Ratchathewi	bkmrt-BL19	1.00	bkmrt-BL21	1.10												
+bkmrt-BL21		BL21	素坤逸	Sukhumvit	スクンビット	すくんびっと	수쿰빗			Watthana	bkmrt-BL20	1.10	bkmrt-BL22	1.20												
+bkmrt-BL22		BL22	詩麗吉王后國家會議中心	Queen Sirikit National Convention Centre	クイーン・シリキット・ナショナル・コンベンション・センター	くいーん・しりきっと・なしょなる・こんべんしょん・せんたー	퀸 시리킷 국립 컨벤션 센터			Khlong Toei	bkmrt-BL21	1.20	bkmrt-BL23	1.10												
+bkmrt-BL23		BL23	孔提	Khlong Toei	クロントーイ	くろんとーい	클롱또이			Khlong Toei	bkmrt-BL22	1.10	bkmrt-BL24	1.00												
+bkmrt-BL24		BL24	倫披尼	Lumphini	ルンピニー	るんぴにー	룸피니			Pathum Wan	bkmrt-BL23	1.00	bkmrt-BL25	1.10												
+bkmrt-BL25		BL25	是隆	Si Lom	シーロム	しーろむ	실롬			Bang Rak	bkmrt-BL24	1.10	bkmrt-BL26	1.10												
+bkmrt-BL26		BL26	三養	Sam Yan	サムヤーン	さむやーん	삼얀			Pathum Wan	bkmrt-BL25	1.10	bkmrt-BL27	1.20												
+bkmrt-BL27		BL27	華喃峰	Hua Lamphong	フアランポーン	ふあらんぽーん	후아람퐁			Pathum Wan	bkmrt-BL26	1.20	bkmrt-BL28	1.20												
+bkmrt-BL28		BL28	龍蓮寺	Wat Mangkon	ワットマンコン	わっとまんこん	왓망콘			Samphanthawong	bkmrt-BL27	1.20	bkmrt-BL29	1.10												
+bkmrt-BL29		BL29	三峰	Sam Yot	サムヨート	さむよーと	삼욧			Phra Nakhon	bkmrt-BL28	1.10	bkmrt-BL30	1.00												
+bkmrt-BL30		BL30	沙南猜	Sanam Chai	サナームチャイ	さなーむちゃい	사남차이	暹羅博物館	Museum Siam	Phra Nakhon	bkmrt-BL29	1.00	bkmrt-BL31	1.30												
+bkmrt-BL31		BL31	依沙拉帕	Itsaraphap	イッサラパープ	いっさらぱーぷ	잇사라팝			Bangkok Yai	bkmrt-BL30	1.30	bkmrt-BL01	1.20												
+bkmrt-BL32		BL32	曼派	Bang Phai	バーンパイ	ばーんぱい	방파이			Phasi Charoen	bkmrt-BL01	1.40	bkmrt-BL33	1.10												
+bkmrt-BL33		BL33	挽哇	Bang Wa	バーンワー	ばーんわー	방와			Phasi Charoen	bkmrt-BL32	1.10	bkmrt-BL34	1.30												
+bkmrt-BL34		BL34	碧甲盛48	Phetkasem 48	ペッカセーム48	ぺっかせーむ48	펫카셈 48			Phasi Charoen	bkmrt-BL33	1.30	bkmrt-BL35	1.10												
+bkmrt-BL35		BL35	帕西乍倫	Phasi Charoen	パーシチャルーン	ぱーしちゃるーん	파시차룬	西康廣場	Seacon Bangkae	Phasi Charoen	bkmrt-BL34	1.10	bkmrt-BL36	1.20												
+bkmrt-BL36		BL36	挽凱	Bang Khae	バーンケー	ばーんけー	방캐			Bang Khae	bkmrt-BL35	1.20	bkmrt-BL37	1.10												
+bkmrt-BL37		BL37	叻松	Lak Song	ラックソーン	らっくそーん	락송			Bang Khae	bkmrt-BL36	1.10														
+																										
+sys			新加坡SMRT	Singapore SMRT	シンガポールSMRT																					
+route	#D42E12		南北線	North South Line	南北線																					
+sgmrt-NS1		NS1	裕廊東	Jurong East	ジュロン・イースト	じゅろん・いーすと	주롱 이스트			Jurong East			sgmrt-NS2	1.50												
+sgmrt-NS2		NS2	武吉巴督	Bukit Batok	ブキ・バトック	ぶき・ばとっく	부킷 바톡			Bukit Batok	sgmrt-NS1	1.50	sgmrt-NS3	1.30												
+sgmrt-NS3		NS3	武吉甘柏	Bukit Gombak	ブキ・ゴンバック	ぶき・ごんばっく	부킷 곰박			Bukit Batok	sgmrt-NS2	1.30	sgmrt-NS4	1.20												
+sgmrt-NS4		NS4	蔡厝港	Choa Chu Kang	チョア・チュー・カン	ちょあ・ちゅー・かん	초아추캉			Choa Chu Kang	sgmrt-NS3	1.20	sgmrt-NS5	1.10												
+sgmrt-NS5		NS5	油池	Yew Tee	ユー・ティー	ゆー・てぃー	유티			Choa Chu Kang	sgmrt-NS4	1.10	sgmrt-NS7	4.50												
+sgmrt-NS7		NS7	卡蘭吉	Kranji	クランジ	くらんじ	크란지			Sungei Kadut	sgmrt-NS5	4.50	sgmrt-NS8	1.60												
+sgmrt-NS8		NS8	馬西嶺	Marsiling	マシリン	ましりん	마실링			Woodlands	sgmrt-NS7	1.60	sgmrt-NS9	1.20												
+sgmrt-NS9		NS9	兀蘭	Woodlands	ウッドランズ	うっどらんず	우들랜즈			Woodlands	sgmrt-NS8	1.20	sgmrt-NS10	1.10												
+sgmrt-NS10		NS10	海軍部	Admiralty	アドミラルティ	あどみらるてぃ	애드미럴티			Woodlands	sgmrt-NS9	1.10	sgmrt-NS11	1.40												
+sgmrt-NS11		NS11	三巴旺	Sembawang	センバワン	せんばわん	셈바왕			Sembawang	sgmrt-NS10	1.40	sgmrt-NS12	1.30												
+sgmrt-NS12		NS12	坎貝拉	Canberra	キャンベラ	きゃんべら	캔버라			Sembawang	sgmrt-NS11	1.30	sgmrt-NS13	1.20												
+sgmrt-NS13		NS13	義順	Yishun	イーシュン	いーしゅん	이슌			Yishun	sgmrt-NS12	1.20	sgmrt-NS14	1.10												
+sgmrt-NS14		NS14	卡迪	Khatib	カティ	かてぃ	카티브			Yishun	sgmrt-NS13	1.10	sgmrt-NS15	4.10												
+sgmrt-NS15		NS15	楊厝港	Yio Chu Kang	イオ・チュー・カン	いお・ちゅー・かん	이오추캉			Ang Mo Kio	sgmrt-NS14	4.10	sgmrt-NS16	1.20												
+sgmrt-NS16		NS16	宏茂橋	Ang Mo Kio	アン・モ・キオ	あん・も・きお	앙모쿄			Ang Mo Kio	sgmrt-NS15	1.20	sgmrt-NS17	1.80												
+sgmrt-NS17		NS17	碧山	Bishan	ビシャン	びしゃん	비샨			Bishan	sgmrt-NS16	1.80	sgmrt-NS18	1.10												
+sgmrt-NS18		NS18	布萊德	Braddell	ブラッデル	ぶらっでる	브래델			Toa Payoh	sgmrt-NS17	1.10	sgmrt-NS19	0.90												
+sgmrt-NS19		NS19	大巴窯	Toa Payoh	トア・パヨ	とあ・ぱよ	토아 파요			Toa Payoh	sgmrt-NS18	0.90	sgmrt-NS20	1.10												
+sgmrt-NS20		NS20	諾維娜	Novena	ノベナ	のべな	노베나			Novena	sgmrt-NS19	1.10	sgmrt-NS21	1.30												
+sgmrt-NS21		NS21	紐頓	Newton	ニュートン	にゅーとん	뉴턴			Newton	sgmrt-NS20	1.30	sgmrt-NS22	1.10												
+sgmrt-NS22		NS22	烏節	Orchard	オーチャード	おーちゃーど	오차드			Orchard	sgmrt-NS21	1.10	sgmrt-NS23	1.00												
+sgmrt-NS23		NS23	索美塞	Somerset	サマセット	さませっと	서머셋			Orchard	sgmrt-NS22	1.00	sgmrt-NS24	0.90												
+sgmrt-NS24		NS24	多美歌	Dhoby Ghaut	ドビー・ゴート	どびー・ごーと	도비 고트			Museum	sgmrt-NS23	0.90	sgmrt-NS25	0.90												
+sgmrt-NS25		NS25	政府大廈	City Hall	シティ・ホール	してぃ・ほーる	시티 홀			Downtown Core	sgmrt-NS24	0.90	sgmrt-NS26	0.70												
+sgmrt-NS26		NS26	萊佛士坊	Raffles Place	ラッフルズ・プレイス	らっふるず・ぷれいす	래플스 플레이스			Downtown Core	sgmrt-NS25	0.70	sgmrt-NS27	1.10												
+sgmrt-NS27		NS27	濱海灣	Marina Bay	マリーナ・ベイ	まりーな・べい	마리나 베이			Marina South	sgmrt-NS26	1.10	sgmrt-NS28	0.90												
+sgmrt-NS28		NS28	濱海南碼頭	Marina South Pier	マリーナ・サウス・ピア	まりーな・さうす・ぴあ	마리나 사우스 피어			Marina South	sgmrt-NS27	0.90														
+route	#009645		東西線	East West Line	東西線																					
+sgmrt-EW1		EW1	巴西立	Pasir Ris	パシール・リス	ぱしーる・りす	파시르 리스			Pasir Ris			sgmrt-EW2	1.20												
+sgmrt-EW2		EW2	淡濱尼	Tampines	タンピネス	たんぴねす	탐피니스			Tampines	sgmrt-EW1	1.20	sgmrt-EW3	1.10												
+sgmrt-EW3		EW3	四美	Simei	シメイ	しめい	시메이			Tampines	sgmrt-EW2	1.10	sgmrt-EW4	1.30												
+sgmrt-EW4		EW4	丹那美拉	Tanah Merah	タナ・メラ	たな・めら	타나 메라			Bedok	sgmrt-EW3	1.30	sgmrt-EW5	1.40												
+sgmrt-EW5		EW5	勿洛	Bedok	ベドック	べどっく	베독			Bedok	sgmrt-EW4	1.40	sgmrt-EW6	1.10												
+sgmrt-EW6		EW6	景萬岸	Kembangan	ケンバンガン	けんばんがん	켐방안			Bedok	sgmrt-EW5	1.10	sgmrt-EW7	1.30												
+sgmrt-EW7		EW7	友諾士	Eunos	ユノス	ゆのす	유노스			Geylang	sgmrt-EW6	1.30	sgmrt-EW8	1.20												
+sgmrt-EW8		EW8	巴耶利峇	Paya Lebar	パヤ・レバ	ぱや・れば	파야 레바			Geylang	sgmrt-EW7	1.20	sgmrt-EW9	0.90												
+sgmrt-EW9		EW9	阿裕尼	Aljunied	アジュニード	あじゅにーど	알주니드			Geylang	sgmrt-EW8	0.90	sgmrt-EW10	1.10												
+sgmrt-EW10		EW10	加冷	Kallang	カラン	からん	칼랑			Kallang	sgmrt-EW9	1.10	sgmrt-EW11	1.10												
+sgmrt-EW11		EW11	勞明達	Lavender	ラベンダー	らべんだー	라벤더			Kallang	sgmrt-EW10	1.10	sgmrt-EW12	1.00												
+sgmrt-EW12		EW12	武吉士	Bugis	ブギス	ぶぎす	부기스			Rochor	sgmrt-EW11	1.00	sgmrt-EW13	1.00												
+sgmrt-EW13		EW13	政府大廈	City Hall	シティ・ホール	してぃ・ほーる	시티 홀			Downtown Core	sgmrt-EW12	1.00	sgmrt-EW14	0.70												
+sgmrt-EW14		EW14	萊佛士坊	Raffles Place	ラッフルズ・プレイス	らっふるず・ぷれいす	래플스 플레이스			Downtown Core	sgmrt-EW13	0.70	sgmrt-EW15	1.10												
+sgmrt-EW15		EW15	丹戎巴葛	Tanjong Pagar	タンジョン・パガー	たんじょん・ぱがー	탄종 파가르			Downtown Core	sgmrt-EW14	1.10	sgmrt-EW16	0.90												
+sgmrt-EW16		EW16	歐南園	Outram Park	アウトラム・パーク	あうとらむ・ぱーく	아우트람 파크			Outram	sgmrt-EW15	0.90	sgmrt-EW17	1.30												
+sgmrt-EW17		EW17	中峇魯	Tiong Bahru	チョン・バル	ちょん・ばる	티옹 바루			Bukit Merah	sgmrt-EW16	1.30	sgmrt-EW18	1.10												
+sgmrt-EW18		EW18	紅山	Redhill	レッドヒル	れっどひる	레드힐			Bukit Merah	sgmrt-EW17	1.10	sgmrt-EW19	1.10												
+sgmrt-EW19		EW19	女皇鎮	Queenstown	クイーンズタウン	くいーんずたうん	퀸스타운			Queenstown	sgmrt-EW18	1.10	sgmrt-EW20	1.00												
+sgmrt-EW20		EW20	聯邦	Commonwealth	コモンウェルス	こもんうぇるす	커먼웰스			Queenstown	sgmrt-EW19	1.00	sgmrt-EW21	1.10												
+sgmrt-EW21		EW21	波那維斯達	Buona Vista	ブオナ・ヴィスタ	ぶおな・びすた	부오나 비스타			Queenstown	sgmrt-EW20	1.10	sgmrt-EW22	1.20												
+sgmrt-EW22		EW22	杜佛	Dover	ドーヴァー	どーゔぁー	도버			Queenstown	sgmrt-EW21	1.20	sgmrt-EW23	1.00												
+sgmrt-EW23		EW23	金文泰	Clementi	クレメンティ	くれめんてぃ	클레멘티			Clementi	sgmrt-EW22	1.00	sgmrt-EW24	1.10												
+sgmrt-EW24		EW24	裕廊東	Jurong East	ジュロン・イースト	じゅろん・いーすと	주롱 이스트			Jurong East	sgmrt-EW23	1.10	sgmrt-EW25	1.20												
+sgmrt-EW25		EW25	裕華園	Chinese Garden	チャイニーズ・ガーデン	ちゃいにーず・がーでん	차이니즈 가든			Jurong East	sgmrt-EW24	1.20	sgmrt-EW26	1.30												
+sgmrt-EW26		EW26	湖畔	Lakeside	レイクサイド	れいくさいど	레이크사이드			Jurong West	sgmrt-EW25	1.30	sgmrt-EW27	1.20												
+sgmrt-EW27		EW27	文禮	Boon Lay	ブーン・レイ	ぶーん・れい	분 레이			Jurong West	sgmrt-EW26	1.20	sgmrt-EW28	1.10												
+sgmrt-EW28		EW28	先驅	Pioneer	パイオニア	ぱいおにあ	파이오니어			Jurong West	sgmrt-EW27	1.10	sgmrt-EW29	1.20												
+sgmrt-EW29		EW29	裕群	Joo Koon	ジョー・クーン	じょー・くーん	주 쿤			Tuas	sgmrt-EW28	1.20	sgmrt-EW30	1.30												
+sgmrt-EW30		EW30	卡爾圈	Gul Circle	ガル・サークル	がる・さーくる	굴 서클			Tuas	sgmrt-EW29	1.30	sgmrt-EW31	1.10												
+sgmrt-EW31		EW31	大士三月台	Tuas Crescent	トゥアス・クレセント	とぅあす・くれせんと	투아스 크레센트			Tuas	sgmrt-EW30	1.10	sgmrt-EW32	1.20												
+sgmrt-EW32		EW32	大士西路	Tuas West Road	トゥアス・ウェスト・ロード	とぅあす・うぇすと・ろーど	투아스 웨스트 로드			Tuas	sgmrt-EW31	1.20	sgmrt-EW33	1.00												
+sgmrt-EW33		EW33	大士連路	Tuas Link	トゥアス・リンク	とぅあす・りんく	투아스 링크			Tuas	sgmrt-EW32	1.00														
+route	#FA9E0D		環線	Circle Line	環状線																					
+sgmrt-CC1		CC1	多美歌	Dhoby Ghaut	ドビー・ゴート	どびー・ごーと	도비 고트			Museum			sgmrt-CC2	1.10												
+sgmrt-CC2		CC2	百勝	Bras Basah	ブラス・バサ	ぶらす・ばさ	브라스 바사			Museum	sgmrt-CC1	1.10	sgmrt-CC3	0.90												
+sgmrt-CC3		CC3	濱海中心	Esplanade	エスプラネード	えすぷらねーど	에스플러네이드			Downtown Core	sgmrt-CC2	0.90	sgmrt-CC4	0.80												
+sgmrt-CC4		CC4	寶門廊	Promenade	プロムナード	ぷろむなーど	프로메나드			Downtown Core	sgmrt-CC3	0.80	sgmrt-CC5	1.10												
+sgmrt-CC5		CC5	尼誥大道	Nicoll Highway	ニコル・ハイウェイ	にこる・はいうぇい	니콜 하이웨이			Kallang	sgmrt-CC4	1.10	sgmrt-CC6	0.90												
+sgmrt-CC6		CC6	體育場	Stadium	スタジアム	すたじあむ	스테이디엄			Kallang	sgmrt-CC5	0.90	sgmrt-CC7	1.00												
+sgmrt-CC7		CC7	蒙巴登	Mountbatten	マウントバッテン	まうんとばってん	마운트배튼			Kallang	sgmrt-CC6	1.00	sgmrt-CC8	1.00												
+sgmrt-CC8		CC8	達科達	Dakota	ダコタ	だこた	다코타			Geylang	sgmrt-CC7	1.00	sgmrt-CC9	1.10												
+sgmrt-CC9		CC9	巴耶利峇	Paya Lebar	パヤ・レバ	ぱや・れば	파야 레바			Geylang	sgmrt-CC8	1.10	sgmrt-CC10	1.20												
+sgmrt-CC10		CC10	麥波申	MacPherson	マクファーソン	まくふぁーそん	맥퍼슨			Geylang	sgmrt-CC9	1.20	sgmrt-CC11	1.10												
+sgmrt-CC11		CC11	大成	Tai Seng	タイ・セン	たい・せん	타이 셍			Toa Payoh	sgmrt-CC10	1.10	sgmrt-CC12	1.40												
+sgmrt-CC12		CC12	巴特禮	Bartley	バートレイ	ばーとれい	바틀리			Serangoon	sgmrt-CC11	1.40	sgmrt-CC13	1.20												
+sgmrt-CC13		CC13	實龍崗	Serangoon	セラグーン	せらぐーん	세랑군			Serangoon	sgmrt-CC12	1.20	sgmrt-CC14	1.10												
+sgmrt-CC14		CC14	羅弄泉	Lorong Chuan	ロロン・チュアン	ろろん・ちゅあん	로롱 촨			Serangoon	sgmrt-CC13	1.10	sgmrt-CC15	1.20												
+sgmrt-CC15		CC15	碧山	Bishan	ビシャン	びしゃん	비샨			Bishan	sgmrt-CC14	1.20	sgmrt-CC16	1.40												
+sgmrt-CC16		CC16	瑪麗蒙	Marymount	マリーマウント	まりーまうんと	메리마운트			Bishan	sgmrt-CC15	1.40	sgmrt-CC17	1.30												
+sgmrt-CC17		CC17	加利谷	Caldecott	カルデコット	かるでこっと	칼데콧			Toa Payoh	sgmrt-CC16	1.30	sgmrt-CC19	1.50												
+sgmrt-CC19		CC19	植物園	Botanic Gardens	ボタニック・ガーデン	ぼたにっく・がーでん	보타닉 가든			Tanglin	sgmrt-CC17	1.50	sgmrt-CC20	1.10												
+sgmrt-CC20		CC20	花拉路	Farrer Road	ファラー・ロード	ふぁらー・ろーど	파러 로드			Tanglin	sgmrt-CC19	1.10	sgmrt-CC21	1.20												
+sgmrt-CC21		CC21	荷蘭村	Holland Village	ホーランド・ヴィレッジ	ほーらんど・ゔぃれっじ	홀랜드 빌리지			Bukit Timah	sgmrt-CC20	1.20	sgmrt-CC22	1.10												
+sgmrt-CC22		CC22	波那維斯達	Buona Vista	ブオナ・ヴィスタ	ぶおな・びすた	부오나 비스타			Queenstown	sgmrt-CC21	1.10	sgmrt-CC23	1.00												
+sgmrt-CC23		CC23	一緯路	one-north	ワン・ノース	わん・のーす	원노스			Queenstown	sgmrt-CC22	1.00	sgmrt-CC24	1.10												
+sgmrt-CC24		CC24	肯特崗	Kent Ridge	ケント・リッジ	けんと・りっじ	켄트 리지			Queenstown	sgmrt-CC23	1.10	sgmrt-CC25	1.20												
+sgmrt-CC25		CC25	虎豹別墅	Haw Par Villa	ハウパーヴィラ	はうぱーゔぃら	하우 파 빌라			Queenstown	sgmrt-CC24	1.20	sgmrt-CC26	1.10												
+sgmrt-CC26		CC26	巴西班讓	Pasir Panjang	パシール・パンジャン	ぱしーる・ぱんじゃん	파시르 판장			Queenstown	sgmrt-CC25	1.10	sgmrt-CC27	1.30												
+sgmrt-CC27		CC27	拉柏多公園	Labrador Park	ラブラドール・パーク	らぶらどーる・ぱーく	래브라도 공원			Bukit Merah	sgmrt-CC26	1.30	sgmrt-CC28	1.10												
+sgmrt-CC28		CC28	直落布蘭雅	Telok Blangah	テロック・ブランガ	てろっく・ぶらんが	텔록 블랑가			Bukit Merah	sgmrt-CC27	1.10	sgmrt-CC29	1.10												
+sgmrt-CC29		CC29	港灣	HarbourFront	ハーバーフロント	はーばーふろんと	하버프런트			Bukit Merah	sgmrt-CC28	1.10														
+route	#9D5B25		湯申東海岸線	Thomson-East Coast Line	トムソン・イーストコート線																					
+sgmrt-TE1		TE1	兀蘭北	Woodlands North	ウッドランズ・ノース	うっどらんず・のーす	우들랜즈 노스			Woodlands			sgmrt-TE2	1.30												
+sgmrt-TE2		TE2	兀蘭	Woodlands	ウッドランズ	うっどらんず	우들랜즈			Woodlands	sgmrt-TE1	1.30	sgmrt-TE3	1.20												
+sgmrt-TE3		TE3	兀蘭南	Woodlands South	ウッドランズ・サウス	うっどらんず・さうす	우들랜즈 사우스			Woodlands	sgmrt-TE2	1.20	sgmrt-TE4	4.10												
+sgmrt-TE4		TE4	春葉	Springleaf	スプリングリーフ	すぷりんぐりーふ	스프링리프			Yishun	sgmrt-TE3	4.10	sgmrt-TE5	3.20												
+sgmrt-TE5		TE5	蘭多	Lentor	レントール	れんとーる	렌토르			Ang Mo Kio	sgmrt-TE4	3.20	sgmrt-TE6	1.20												
+sgmrt-TE6		TE6	美華	Mayflower	メイフラワー	めいふらわー	메이플라워			Ang Mo Kio	sgmrt-TE5	1.20	sgmrt-TE7	1.30												
+sgmrt-TE7		TE7	光明山	Bright Hill	ブライト・ヒル	ぶらいと・ひる	브라이트 힐			Bishan	sgmrt-TE6	1.30	sgmrt-TE8	1.50												
+sgmrt-TE8		TE8	湯申上段	Upper Thomson	アッパー・トムソン	あっぱー・とむそん	어퍼 톰슨			Bishan	sgmrt-TE7	1.50	sgmrt-TE9	1.70												
+sgmrt-TE9		TE9	加利谷	Caldecott	カルデコット	かるでこっと	칼데콧			Toa Payoh	sgmrt-TE8	1.70	sgmrt-TE11	1.40												
+sgmrt-TE11		TE11	史蒂芬	Stevens	スティーブンス	すてぃーぶんす	스티븐스			Tanglin	sgmrt-TE9	1.40	sgmrt-TE12	1.20												
+sgmrt-TE12		TE12	納比雅	Napier	ナピア	なぴあ	네이피어			Tanglin	sgmrt-TE11	1.20	sgmrt-TE13	1.00												
+sgmrt-TE13		TE13	烏節林蔭道	Orchard Boulevard	オーチャード・ブールバード	おーちゃーど・ぶーるばーど	오차드 불러바드			Orchard	sgmrt-TE12	1.00	sgmrt-TE14	0.90												
+sgmrt-TE14		TE14	烏節	Orchard	オーチャード	おーちゃーど	오차드			Orchard	sgmrt-TE13	0.90	sgmrt-TE15	1.10												
+sgmrt-TE15		TE15	大世界	Great World	グレート・ワールド	ぐれーと・わーるど	그레이트 월드			River Valley	sgmrt-TE14	1.10	sgmrt-TE16	1.10												
+sgmrt-TE16		TE16	合樂	Havelock	ハブロック	はぶろっく	해블록			Bukit Merah	sgmrt-TE15	1.10	sgmrt-TE17	1.00												
+sgmrt-TE17		TE17	歐南園	Outram Park	アウトラム・パーク	あうとらむ・ぱーく	아우트람 파크			Outram	sgmrt-TE16	1.00	sgmrt-TE18	1.20												
+sgmrt-TE18		TE18	麥士威	Maxwell	マックスウェル	まっくすうぇる	맥스웰			Downtown Core	sgmrt-TE17	1.20	sgmrt-TE19	0.80												
+sgmrt-TE19		TE19	珊頓道	Shenton Way	シェントン・ウェイ	しぇんとん・うぇい	셴톤 웨이			Downtown Core	sgmrt-TE18	0.80	sgmrt-TE20	0.90												
+sgmrt-TE20		TE20	濱海灣	Marina Bay	マリーナ・ベイ	まりーな・べい	마리나 베이			Downtown Core	sgmrt-TE19	0.90	sgmrt-TE22	1.50												
+sgmrt-TE22		TE22	濱海灣花園	Gardens by the Bay	ガーデンズ・バイ・ザ・ベイ	がーでんず・ばい・ざ・べい	가든스 바이 더 베이			Marina South	sgmrt-TE20	1.50	sgmrt-TE23	2.40												
+sgmrt-TE23		TE23	丹戎禺	Tanjong Rhu	タンジョン・ルー	たんじょん・るー	탄종 루			Kallang	sgmrt-TE22	2.40	sgmrt-TE24	1.10												
+sgmrt-TE24		TE24	加東公園	Katong Park	カトン・パーク	かとん・ぱーく	카통 파크			Marine Parade	sgmrt-TE23	1.10	sgmrt-TE25	1.20												
+sgmrt-TE25		TE25	丹戎加東	Tanjong Katong	タンジョン・カトン	たんじょん・かとん	탄종 카통			Marine Parade	sgmrt-TE24	1.20	sgmrt-TE26	1.10												
+sgmrt-TE26		TE26	馬林百列	Marine Parade	マリン・パレード	まりん・ぱれーど	마린 퍼레이드			Marine Parade	sgmrt-TE25	1.10	sgmrt-TE27	1.40												
+sgmrt-TE27		TE27	馬林台	Marine Terrace	マリン・テラス	まりん・てらす	마린 테라스			Marine Parade	sgmrt-TE26	1.40	sgmrt-TE28	1.20												
+sgmrt-TE28		TE28	實乞納	Siglap	シグラップ	しぐらっぷ	시글랩			Marine Parade	sgmrt-TE27	1.20	sgmrt-TE29	1.30												
+sgmrt-TE29		TE29	碧灣	Bayshore	ベイショア	べいしょあ	베이쇼어			Bedok	sgmrt-TE28	1.30	sgmrt-TE30	1.50												
+sgmrt-TE30		TE30	勿洛南	Bedok South	ベドック・サウス	べどっく・さうす	베독 사우스			Bedok	sgmrt-TE29	1.50	sgmrt-TE31	1.20												
+sgmrt-TE31		TE31	雙溪路	Sungei Bedok	スンゲイ・ベドック	すんげい・べどっく	スンゲイ 베독			Bedok	sgmrt-TE30	1.20														
+																										
+sys			新加坡SBS	Singapore SBS	シンガポールSBS																					
+route	#9900AA		東北線	North East Line	東北線																					
+sgmrt-NE1		NE1	港灣	HarbourFront	ハーバーフロント	はーばーふろんと	하버프런트			Bukit Merah			sgmrt-NE3	1.20												
+sgmrt-NE3		NE3	歐南園	Outram Park	アウトラム・パーク	あうとらむ・ぱーく	아우트람 파크			Outram	sgmrt-NE1	1.20	sgmrt-NE4	1.10												
+sgmrt-NE4		NE4	牛車水	Chinatown	チャイナタウン	ちゃいなたうん	차이나타운			Outram	sgmrt-NE3	1.10	sgmrt-NE5	0.80												
+sgmrt-NE5		NE5	克拉碼頭	Clarke Quay	クラーク・キー	くらーく・きー	클락 키			Singapore River	sgmrt-NE4	0.80	sgmrt-NE6	0.90												
+sgmrt-NE6		NE6	多美歌	Dhoby Ghaut	ドビー・ゴート	どびー・ごーと	도비 고트			Museum	sgmrt-NE5	0.90	sgmrt-NE7	1.10												
+sgmrt-NE7		NE7	小印度	Little India	リトル・インディア	りとる・いんでぃあ	리틀 인디아			Rochor	sgmrt-NE6	1.10	sgmrt-NE8	0.80												
+sgmrt-NE8		NE8	花拉公園	Farrer Park	ファラー・パーク	ふぁらー・ぱーく	파러 파크			Rochor	sgmrt-NE7	0.80	sgmrt-NE9	1.10												
+sgmrt-NE9		NE9	文慶	Boon Keng	ブーン・ケン	ぶーん・けん	분 켕			Kallang	sgmrt-NE8	1.10	sgmrt-NE10	1.20												
+sgmrt-NE10		NE10	波東巴西	Potong Pasir	ポトン・パシール	ぽとん・ぱしーる	포통 파시르			Toa Payoh	sgmrt-NE9	1.20	sgmrt-NE11	1.00												
+sgmrt-NE11		NE11	兀里	Woodleigh	ウッドレイ	うっどれい	우들레이			Toa Payoh	sgmrt-NE10	1.00	sgmrt-NE12	1.10												
+sgmrt-NE12		NE12	實龍崗	Serangoon	セラグーン	せらぐーん	세랑군			Serangoon	sgmrt-NE11	1.10	sgmrt-NE13	1.30												
+sgmrt-NE13		NE13	高文	Kovan	コヴァン	こゔぁん	코반			Hougang	sgmrt-NE12	1.30	sgmrt-NE14	1.10												
+sgmrt-NE14		NE14	後港	Hougang	ホウガン	ほうがん	후강			Hougang	sgmrt-NE13	1.10	sgmrt-NE15	1.20												
+sgmrt-NE15		NE15	萬國	Buangkok	ブアンコック	ぶあんこっく	부앙콕			Sengkang	sgmrt-NE14	1.20	sgmrt-NE16	1.10												
+sgmrt-NE16		NE16	盛港	Sengkang	センカン	せんかん	셍캉			Sengkang	sgmrt-NE15	1.10	sgmrt-NE17	1.20												
+sgmrt-NE17		NE17	榜鵝	Punggol	ポンゴル	ぽんごる	풍골			Punggol	sgmrt-NE16	1.20	sgmrt-NE18	1.40												
+sgmrt-NE18		NE18	榜鵝海岸	Punggol Coast	ポンゴル・コースト	ぽんごる・こーすと	풍골 코스트			Punggol	sgmrt-NE17	1.40														
+route	#005BA4		濱海市區線	Downtown Line	ダウンタウン線																					
+sgmrt-DT1		DT1	武吉班讓	Bukit Panjang	ブキ・パンジャン	ぶき・ぱんじゃん	부킷 판장			Bukit Panjang			sgmrt-DT2	1.10												
+sgmrt-DT2		DT2	凱秀	Cashew	カシュー	かしゅー	캐슈			Bukit Panjang	sgmrt-DT1	1.10	sgmrt-DT3	1.00												
+sgmrt-DT3		DT3	山景	Hillview	ヒルビュー	ひるびゅー	힐뷰			Bukit Batok	sgmrt-DT2	1.00	sgmrt-DT5	1.50												
+sgmrt-DT5		DT5	美世界	Beauty World	ビューティー・ワールド	びゅーてぃー・わーるど	뷰티 월드			Bukit Timah	sgmrt-DT3	1.50	sgmrt-DT6	1.20												
+sgmrt-DT6		DT6	阿爾柏王園	King Albert Park	キング・アルバート・パーク	きんぐ・あるばーと・ぱーく	킹 앨버트 파크			Bukit Timah	sgmrt-DT5	1.20	sgmrt-DT7	1.10												
+sgmrt-DT7		DT7	第六道	Sixth Avenue	シックス・アベニュー	しっくす・あべにゅー	식스 애비뉴			Bukit Timah	sgmrt-DT6	1.10	sgmrt-DT8	1.30												
+sgmrt-DT8		DT8	陳嘉庚	Tan Kah Kee	タン・カ・キー	たん・か・きー	탄카키			Bukit Timah	sgmrt-DT7	1.30	sgmrt-DT9	1.00												
+sgmrt-DT9		DT9	植物園	Botanic Gardens	ボタニック・ガーデン	ぼたにっく・がーでん	보타닉 가든			Tanglin	sgmrt-DT8	1.00	sgmrt-DT10	1.20												
+sgmrt-DT10		DT10	史蒂芬	Stevens	スティーブンス	すてぃーぶんす	스티븐스			Tanglin	sgmrt-DT9	1.20	sgmrt-DT11	1.30												
+sgmrt-DT11		DT11	紐頓	Newton	ニュートン	にゅーとん	뉴턴			Newton	sgmrt-DT10	1.30	sgmrt-DT12	1.10												
+sgmrt-DT12		DT12	小印度	Little India	リトル・インディア	りとる・いんでぃあ	리틀 인디아			Rochor	sgmrt-DT11	1.10	sgmrt-DT13	1.00												
+sgmrt-DT13		DT13	梧槽	Rochor	ロチョー	ろちょー	로초			Rochor	sgmrt-DT12	1.00	sgmrt-DT14	0.90												
+sgmrt-DT14		DT14	武吉士	Bugis	ブギス	ぶぎす	부기스			Rochor	sgmrt-DT13	0.90	sgmrt-DT15	0.90												
+sgmrt-DT15		DT15	寶門廊	Promenade	プロムナード	ぷろむなーど	프로메나드			Downtown Core	sgmrt-DT14	0.90	sgmrt-DT16	0.80												
+sgmrt-DT16		DT16	海灣舫	Bayfront	ベイフロント	べいふろんと	베이프런트			Downtown Core	sgmrt-DT15	0.80	sgmrt-DT17	0.90												
+sgmrt-DT17		DT17	市中心	Downtown	ダウンタウン	だうんたうん	다운타운			Downtown Core	sgmrt-DT16	0.90	sgmrt-DT18	1.00												
+sgmrt-DT18		DT18	直落亞逸	Telok Ayer	テロック・アイヤー	てろっく・あいやー	텔록 에이어			Downtown Core	sgmrt-DT17	1.00	sgmrt-DT19	0.90												
+sgmrt-DT19		DT19	牛車水	Chinatown	チャイナタウン	ちゃいなたうん	차이나타운			Outram	sgmrt-DT18	0.90	sgmrt-DT20	1.10												
+sgmrt-DT20		DT20	福康寧	Fort Canning	フォート・カニング	ふぉーと・かにんぐ	포트 캐닝			Museum	sgmrt-DT19	1.10	sgmrt-DT21	1.20												
+sgmrt-DT21		DT21	明古連	Bencoolen	ベンクーレン	べんくーれん	벤쿨렌			Museum	sgmrt-DT20	1.20	sgmrt-DT22	0.90												
+sgmrt-DT22		DT22	惹蘭勿剎	Jalan Besar	ジャラン・ベサール	じゃらん・べさーる	잘란 베사르			Rochor	sgmrt-DT21	0.90	sgmrt-DT23	1.10												
+sgmrt-DT23		DT23	明地迷亞	Bendemeer	ベンデミール	べんでみーる	벤데미어			Kallang	sgmrt-DT22	1.10	sgmrt-DT24	1.20												
+sgmrt-DT24		DT24	芽籠峇魯	Geylang Bahru	ゲイラン・バル	げいらん・ばる	게이랑 바루			Kallang	sgmrt-DT23	1.20	sgmrt-DT25	1.10												
+sgmrt-DT25		DT25	瑪達	Mattar	マッター	まったー	마타			Geylang	sgmrt-DT24	1.10	sgmrt-DT26	0.90												
+sgmrt-DT26		DT26	麥波申	MacPherson	マクファーソン	まくふぁーそん	맥퍼슨			Geylang	sgmrt-DT25	0.90	sgmrt-DT27	1.10												
+sgmrt-DT27		DT27	烏美	Ubi	ウビ	うび	우비			Geylang	sgmrt-DT26	1.10	sgmrt-DT28	1.20												
+sgmrt-DT28		DT28	加基武吉	Kaki Bukit	カキ・ブキット	かき・ぶきっと	카키 부킷			Bedok	sgmrt-DT27	1.20	sgmrt-DT29	1.10												
+sgmrt-DT29		DT29	勿洛北	Bedok North	ベドック・ノース	べどっく・のーす	베독 노스			Bedok	sgmrt-DT28	1.10	sgmrt-DT30	1.30												
+sgmrt-DT30		DT30	勿洛蓄水池	Bedok Reservoir	ベドック・レザボア	べどっく・れざぼあ	베독 레저보어			Bedok	sgmrt-DT29	1.30	sgmrt-DT31	1.40												
+sgmrt-DT31		DT31	淡濱尼西	Tampines West	タンピネス・ウェスト	たんぴねす・うえすと	탐피니스 웨스트			Tampines	sgmrt-DT30	1.40	sgmrt-DT32	1.20												
+sgmrt-DT32		DT32	淡濱尼	Tampines	タンピネス	たんぴねす	탐피니스			Tampines	sgmrt-DT31	1.20	sgmrt-DT33	1.10												
+sgmrt-DT33		DT33	淡濱尼東	Tampines East	タンピネス・イースト	たんぴねす・いーすと	탐피니스 이스트			Tampines	sgmrt-DT32	1.10	sgmrt-DT34	1.40												
+sgmrt-DT34		DT34	樟宜上段	Upper Changi	アッパー・チャンギ	あっぱー・ちゃんぎ	어퍼 창이			Tampines	sgmrt-DT33	1.40	sgmrt-DT35	1.10												
+sgmrt-DT35		DT35	博覽	Expo	エキスポ	えきすぽ	엑스포			Tampines	sgmrt-DT34	1.10	sgmrt-DT36	1.30												
+sgmrt-DT36		DT36	錫林	Xilin	シーリン	しーりん	시린			Tampines	sgmrt-DT35	1.30	sgmrt-DT37	1.20												
+sgmrt-DT37		DT37	雙溪路	Sungei Bedok	スンゲイ・ベドック	すんげい・べどっく	スンゲイ 베독			Bedok	sgmrt-DT36	1.20														
+																										
+																										
+																										
+																										
+sys			越南鐵路	Vietnam Railway	ベトナム鉄道																					
+route	#920209		南北鐵路	Đường sắt Bắc Nam	南北線																					
+vn-NS001			河內	Hà Nội	ハノイ	はのい	하노이			Thành phố Hà Nội			vn-NS002	5.30												
+vn-NS002			甲八	Giáp Bát	ザップバット	ざっぷばっと	잡빳			Thành phố Hà Nội	vn-NS001	5.30	vn-NS003	3.40												
+vn-NS003			文典	Văn Điển	ヴァンディエン	ゔぁんでぃえん	반디엔			Thành phố Hà Nội	vn-NS002	3.40	vn-NS004	8.70												
+vn-NS004			常信	Thường Tín	トゥオンティン	とぅおんてぃん	트엉띤			Thành phố Hà Nội	vn-NS003	8.70	vn-NS005	5.10												
+vn-NS005			富川	Phú Xuyên	プースエン	ぷーすえん	푸쑤옌			Thành phố Hà Nội	vn-NS004	5.10	vn-NS006	11.30												
+vn-NS006			府里	Phủ Lý	フーリー	ふーりー	푸리			Tỉnh Hà Nam	vn-NS005	11.30	vn-NS007	17.50												
+vn-NS007			南定	Nam Định	ナムディン	なむでぃん	남딘			Tỉnh Nam Định	vn-NS006	17.50	vn-NS008	27.90												
+vn-NS008			寧平	Ninh Bình	ニンビン	にんびん	닌빈			Tỉnh Ninh Bình	vn-NS007	27.90	vn-NS009	3.40												
+vn-NS009			比山	Bỉm Sơn	ビムソン	びむそん	빔선			Tỉnh Thanh Hóa	vn-NS008	3.40	vn-NS010	34.80												
+vn-NS010			清化	Thanh Hóa	タインホア	たいんほあ	탄호아			Tỉnh Thanh Hóa	vn-NS009	34.80	vn-NS011	143.20												
+vn-NS011			榮	Vinh	ヴィン	ゔぃん	빈			Tỉnh Nghệ An	vn-NS010	143.20	vn-NS012	202.60												
+vn-NS012			洞海	Đồng Hới	ドンホイ	どんほい	동허이			Tỉnh Quảng Bình	vn-NS011	202.60	vn-NS013	99.70												
+vn-NS013			東河	Đông Hà	ドンハ	どんは	동하			Tỉnh Quảng Trị	vn-NS012	99.70	vn-NS014	66.00												
+vn-NS014			順化	Huế	フエ	ふえ	훼			Tỉnh Thừa Thiên Huế	vn-NS013	66.00	vn-NS015	103.10												
+vn-NS015			峴港	Đà Nẵng	ダナン	だなん	다낭			Thành phố Đà Nẵng	vn-NS014	103.10	vn-NS016	69.50												
+vn-NS016			三岐	Tam Kỳ	タムキー	たむきー	탐끼			Tỉnh Quảng Nam	vn-NS015	69.50	vn-NS017	62.50												
+vn-NS017			廣義	Quảng Ngãi	クアンガイ	くあんがい	꽝응아이			Tỉnh Quảng Ngãi	vn-NS016	62.50	vn-NS018	108.30												
+vn-NS018			饒池	Diêu Trì	デューチ	でゅーち	디에우찌			Tỉnh Bình Định	vn-NS017	108.30	vn-NS019	101.90												
+vn-NS019			綏和	Tuy Hòa	トゥイホア	とぅいほあ	뚜이호아			Tỉnh Phú Yên	vn-NS018	101.90	vn-NS020	117.10												
+vn-NS020			芽莊	Nha Trang	ニャチャン	にゃちゃん	냐짱			Tỉnh Khánh Hòa	vn-NS019	117.10	vn-NS021	92.70												
+vn-NS021			塔占	Tháp Chàm	タップチャム	たっぷちゃむ	탑참			Tỉnh Ninh Thuận	vn-NS020	92.70	vn-NS022	146.40												
+vn-NS022			平順	Bình Thuận	ビントゥアン	びんとぅあん	빈투언			Tỉnh Bình Thuận	vn-NS021	146.40	vn-NS023	139.10												
+vn-NS023			隆慶	Long Khánh	ロンカイン	ろんかいん	롱카인			Tỉnh Đồng Nai	vn-NS022	139.10	vn-NS024	47.50												
+vn-NS024			邊和	Biên Hòa	ビエンホア	びえんほあ	비엔호아			Tỉnh Đồng Nai	vn-NS023	47.50	vn-NS025	28.90												
+vn-NS025			西貢	Sài Gòn	サイゴン	さいごん	사이공			Thành phố Hồ Chí Minh	vn-NS024	28.90														
+route	#920209		河內-海防鐵路	Hà Nội - Hải Phòng	ハノイ・ハイフォン線																					
+vn-HP001			龍編	Long Biên	ロンビエン	ろんびえん	롱비엔			Thành phố Hà Nội			vn-HP002	3.10												
+vn-HP002			嘉林	Gia Lâm	ザラム	ざらむ	자람			Thành phố Hà Nội	vn-HP001	3.10	vn-HP003	50.90												
+vn-HP003			海陽	Hải Dương	ハイズオン	はいずおん	하이즈엉			Tỉnh Hải Dương	vn-HP002	50.90	vn-HP004	48.00												
+vn-HP004			海防	Hải Phòng	ハイフォン	はいふぉん	하이퐁			Thành phố Hải Phòng	vn-HP003	48.00														
+route	#920209		河內-老街鐵路	Hà Nội - Lào Cai	ハノイ・ラオカイ線																					
+vn-LC001			河內	Hà Nội	ハノイ	はのい	하노이			Thành phố Hà Nội			vn-LC002	10.10												
+vn-LC002			東英	Đông Anh	ドンアイン	どんあいん	동아인			Thành phố Hà Nội	vn-LC001	10.10	vn-LC003	62.90												
+vn-LC003			越池	Việt Trì	ヴィエッチ	ゔぃえっち	비엣찌			Tỉnh Phú Thọ	vn-LC002	62.90	vn-LC004	81.80												
+vn-LC004			安沛	Yên Bái	イエンバイ	いえんばい	옌바이			Tỉnh Yên Bái	vn-LC003	81.80	vn-LC005	135.20												
+vn-LC005			老街	Lào Cai	ラオカイ	らおかい	라오카이			Tỉnh Lào Cai	vn-LC004	135.20														
+																										
+sys			上海地鐵	Shanghai Subway	上海地下鉄																					
+route	76C95B		2號線	Line 2	2号線																					
+sh-201			徐涇東	East Xujing	徐涇東	じょけいとう	쉬징동			上海市青浦區			sh-202	2.28												
+sh-202			虹橋火車站	Hongqiao Railway Station	虹橋駅	こうきょうえき	홍챠오역			上海市虹橋樞紐	sh-201	2.28	sh-203	3.29												
+sh-203			虹橋2號航站樓	Hongqiao Airport Terminal 2	虹橋第2ターミナル	こうきょうだい2たーみなる	홍챠오제2터미널			上海市虹橋樞紐	sh-202	3.29	sh-204	9.10												
+sh-204			淞虹路	Songhong Road	淞虹路	しょうこうろ	송홍루			上海市長寧區	sh-203	9.10	sh-205	10.45												
+sh-205			北新涇	Beixinjing	北新涇	きたじょけい	베이신징			上海市長寧區	sh-204	10.45	sh-206	11.70												
+sh-206			威寧路	Weining Road	威寧路	いねんろ	웨이닝루			上海市長寧區	sh-205	11.70	sh-207	13.42												
+sh-207			婁山關路	Loushanguan Road	婁山関路	ろうさんかんろ	루샨관루			上海市長寧區	sh-206	13.42	sh-208	14.82												
+sh-208			中山公園	Zhongshan Park	中山公園	ちゅうざんこうえん	중산꽁위엔			上海市長寧區	sh-207	14.82	sh-209	16.31												
+sh-209			江蘇路	Jiangsu Road	江蘇路	こうそろ	장쑤루			上海市長寧區	sh-208	16.31	sh-210	17.80												
+sh-210			靜安寺	Jing'an Temple	静安寺	せいあんじ	징안사			上海市靜安區	sh-209	17.80	sh-211	19.27												
+sh-211			南京西路	West Nanjing Road	南京西路	なんきんせいろ	난징시루			上海市靜安區	sh-210	19.27	sh-212	20.77												
+sh-212			人民廣場	People's Square	人民広場	じんみんひろば	런민광창			上海市黃浦區	sh-211	20.77	sh-213	21.72												
+sh-213			南京東路	East Nanjing Road	南京東路	なんきんとうろ	난징둥루			上海市黃浦區	sh-212	21.72	sh-214	23.40												
+sh-214			陸家嘴	Lujiazui	陸家嘴	りくかすい	뤼자주이			上海市浦東新區	sh-213	23.40	sh-215	24.82												
+sh-215			東昌路	Dongchang Road	東昌路	とうしょうろ	둥창루			上海市浦東新區	sh-214	24.82	sh-216	25.99												
+sh-216			世紀大道	Century Avenue	世紀大道	せいきだいどう	스지따다오			上海市浦東新區	sh-215	25.99	sh-217	27.89												
+sh-217			上海科技館	Shanghai Science & Technology Museum	上海科技館	しゃんはいかぎかん	상하이커지관			上海市浦東新區	sh-216	27.89	sh-218	29.20												
+sh-218			世紀公園	Century Park	世紀公園	せいきこうえん	스지 공원			上海市浦東新區	sh-217	29.20	sh-219	30.19												
+sh-219			龍陽路	Longyang Road	龍陽路	りゅうようろ	롱양루			上海市浦東新區	sh-218	30.19	sh-220	32.79												
+sh-220			張江高科	Zhangjiang Hi-Tech Park	張江高科	ちょうこうこうか	장쟝가오커			上海市浦東新區	sh-219	32.79	sh-221	34.40												
+sh-221			金科路	Jinke Road	金科路	きんかろ	징커루			上海市浦東新區	sh-220	34.40	sh-222	36.04												
+sh-222			廣蘭路	Guanglan Road	広蘭路	こうらんろ	광란루			上海市浦東新區	sh-221	36.04	sh-223													
+sh-223			唐鎮	Tangzhen	唐鎮	とうちん	당전			上海市浦東新區	sh-222		sh-224													
+sh-224			創新中路	Middle Chuangxin Road	創新中路	そうしんちゅうろ	촹신종루			上海市浦東新區	sh-223		sh-225													
+sh-225			華夏東路	East Huaxia Road	華夏東路	かかとうろ	화샤동루			上海市浦東新區	sh-224		sh-226													
+sh-226			川沙	Chuansha	川沙	せんしゃ	추안샤			上海市浦東新區	sh-225		sh-227													
+sh-227			凌空路	Lingkong Road	凌空路	りょうくうろ	린공루			上海市浦東新區	sh-226		sh-228													
+sh-228			遠東大道	Yuandong Avenue	遠東大道	えんとうだいどう	위엔동다다오			上海市浦東新區	sh-227		sh-229													
+sh-229			海天三路	Haitiansan Road	海天三路	かいてんさんろ	하이디넨산루			上海市浦東新區	sh-228		sh-230													
+sh-230			浦東國際機場	Pudong International Airport	浦東国際空港	ほとうこくさいくうこう	푸동 국제공항			上海市浦東新區	sh-229															
+																										
+sys			馬來西亞KTMB	Malaysia KTMB	マレーシアKTMB																					
+route	#5a5a63	WC01	西海岸線	West Coast Line	西海岸線																					
+ktm-WC01			巴東勿剎	Padang Besar	パダン・ブサール	ぱだん・ぶさーる	파당베사르			Perlis			ktm-WC02	23.50												
+ktm-WC02			亞婁	Arau	アラウ	あらう	아라우			Perlis	ktm-WC01	23.50	ktm-WC03	25.00												
+ktm-WC03			亞羅士打	Alor Setar	アロースター	あろーすたー	알로르세타르			Kedah	ktm-WC02	25.00	ktm-WC04	35.50												
+ktm-WC04			峨崙	Gurun	グルン	ぐるん	구룬			Kedah	ktm-WC03	35.50	ktm-WC05	21.00												
+ktm-WC05			雙溪大年	Sungai Petani	スンガイ・プタニ	すんがい・ぷたに	숭아이 프타니			Kedah	ktm-WC04	21.00	ktm-WC06	16.50												
+ktm-WC06			打西汝咯	Tasek Gelugor	タセッ・グルゴール	たせっ・ぐるごーる	타섹 글루고르			Pulau Pinang	ktm-WC05	16.50	ktm-WC07	14.50												
+ktm-WC07			大山腳	Bukit Mertajam	ブキ・メルタジャム	ぶき・めるたじゃむ	부킷 메르타잠			Pulau Pinang	ktm-WC06	14.50	ktm-WC08	11.00												
+ktm-WC08			北海	Butterworth	バターワース	ばたーわーす	버터워스			Pulau Pinang	ktm-WC07	11.00	ktm-WC09	42.00												
+ktm-WC09			巴里文打	Parit Buntar	パリッ・ブンター	ぱりっ・ぶんたー	파릿 분타르			Perak	ktm-WC08	42.00	ktm-WC10	40.00												
+ktm-WC10			太平	Taiping	タイピン	たいぴん	타이핑			Perak	ktm-WC09	40.00	ktm-WC11	28.00												
+ktm-WC11			江沙	Kuala Kangsar	クアラ・カンサー	くあら・かんさー	쿠알라 캉사르			Perak	ktm-WC10	28.00	ktm-WC12	35.00												
+ktm-WC12			怡保	Ipoh	イポー	いぽー	이포			Perak	ktm-WC11	35.00	ktm-WC13	18.50												
+ktm-WC13			華都牙惹	Batu Gajah	バトゥ・ガジャ	ばとぅ・がじゃ	바투 가자			Perak	ktm-WC12	18.50	ktm-WC14	32.00												
+ktm-WC14			金寶	Kampar	カンパー	かんぱー	캄파르			Perak	ktm-WC13	32.00	ktm-WC15	55.00												
+ktm-WC15			仕林河	Slim River	スリム・リバー	すりむ・りばー	슬림 리버			Perak	ktm-WC14	55.00	ktm-WC16	24.00												
+ktm-WC16			丹絨馬林	Tanjung Malim	タンジュン・マリム	たんじゅん・まりむ	탄중 말림			Perak	ktm-WC15	24.00	ktm-WC17	58.00												
+ktm-WC17			萬撓	Rawang	ラワン	らわん	라왕			Selangor	ktm-WC16	58.00	ktm-WC18	16.50												
+ktm-WC18			雙溪毛糯	Sungai Buloh	スンガイ・ブロー	すんがい・ぶろー	숭아이 불로			Selangor	ktm-WC17	16.50	ktm-WC19	13.00												
+ktm-WC19			吉隆坡	Kuala Lumpur	クアラ・ルンプール	くあら・るんぷーる	쿠알라룸푸르			Kuala Lumpur	ktm-WC18	13.00	ktm-WC20	1.50												
+ktm-WC20			吉隆坡中央車站	KL Sentral	KLセントラル	けーえる・せんとらる	KL 센트럴			Kuala Lumpur	ktm-WC19	1.50	ktm-WC21	10.50												
+ktm-WC21			南湖鎮	Bandar Tasik Selatan	バンダル・タシッ・スラタン	ばんだる・たしっ・すらたん	반다르 타식 셀라탄			Kuala Lumpur	ktm-WC20	10.50	ktm-WC22	15.00												
+ktm-WC22			加影	Kajang	カジャン	かじゃん	카장			Selangor	ktm-WC21	15.00	ktm-WC23	34.50												
+ktm-WC23			芙蓉	Seremban	セレンバン	せれんばん	세렘반			Negeri Sembilan	ktm-WC22	34.50	ktm-WC24	38.50												
+ktm-WC24			普羅士邦/淡邊	Pulau Sebang / Tampin	プラウ・セバン/タンピン	ぷらう・せばん/たんぴん	풀라우 세방 / 탐핀			Melaka	ktm-WC23	38.50	ktm-WC25	30.00												
+ktm-WC25			金馬士	Gemas	グマス	ぐます	게마스			Negeri Sembilan	ktm-WC24	30.00	ktm-WC26	28.50												
+ktm-WC26			昔加末	Segamat	セガマッ	せがまっ	세가마트			Johor	ktm-WC25	28.50	ktm-WC27	33.00												
+ktm-WC27			拉美士	Labis	ラビス	らびす	라비스			Johor	ktm-WC26	33.00	ktm-WC28	52.00												
+ktm-WC28			居鑾	Kluang	クルアン	くるあん	클루앙			Johor	ktm-WC27	52.00	ktm-WC29	45.00												
+ktm-WC29			古來	Kulai	クライ	くらい	쿨라이			Johor	ktm-WC28	45.00	ktm-WC30	25.50												
+ktm-WC30			新山中央車站	JB Sentral	ジョホールバル・セントラル	じょほーるばる・せんとらる	조호르바루 센트럴			Johor	ktm-WC29	25.50														
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
+																										
