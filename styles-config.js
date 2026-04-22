@@ -15,17 +15,19 @@ export const FONT_MAPPING = {
   "Font_HelveticaBold": "Inter_24pt-Bold.ttf",
   "Font_FrutigerMedium": "Hind-Medium.ttf",
   "Font_FrutigerBold": "Hind-Bold.ttf",
-  "Font_FuturaBold": "LeagueSpartan-Bold.otf",
+  "Font_FuturaBold": "LeagueSpartan-Bold.ttf",
   "Font_Optima": "Marcellus-Regular.ttf",
   "Font_CondensedDigit": "AntonSC-Regular.ttf",
 
   "Font_GothicJP_M": "GenYoGothic2JP-M.otf",
+  "Font_GothicJP_B": "GenYoGothic2JP-B.otf",
   "Font_OldGothicJP_R": "GenSekiGothic2PJP-M.otf",
   "Font_OldMaruGothicJP_M": "rounded-mgenplus-1cp-medium.ttf",
   "Font_NewMaruGothicJP_M": "GenSenRounded2JP-M.otf",
   "Font_GothicTW_R": "GenYoGothic2TW-R.otf",
   "Font_GothicTW_M": "GenYoGothic2TW-M.otf",
   "Font_MinchoTW_M": "GenRyuMin2TW-SB.otf",
+  "Font_MinchoHK_SB": "GenYoMin2TC-SB.otf",
   "Font_GothicKR_M": "SourceHanSansKR-Medium.otf",
   "Font_GothicCN_R": "FangZhengHeiTi_GBK.ttf",
 
@@ -41,8 +43,24 @@ export const FONT_MAPPING = {
   "Font_KORAIL": "KORAIL.ttf"
 };
 
+const STYLE_TYPE_SUFFIX_RE = /^(.*?)(?:__t(\d+))?$/;
+
+export function parseStyleValue(styleValue) {
+  const raw = String(styleValue || "");
+  const m = raw.match(STYLE_TYPE_SUFFIX_RE);
+  const styleId = (m?.[1] || raw) || "";
+  const type = Math.max(1, Math.floor(Number(m?.[2]) || 1));
+  return { styleId, type };
+}
+
+export function toStyleValue(styleId, type = 1) {
+  const safeType = Math.max(1, Math.floor(Number(type) || 1));
+  return safeType === 1 ? String(styleId || "") : `${String(styleId || "")}__t${safeType}`;
+}
+
 export function getStyleMetadata(styleId) {
-  return STYLE_ROSTER.find((s) => s.id === styleId) || STYLE_ROSTER[0];
+  const { styleId: baseStyleId } = parseStyleValue(styleId);
+  return STYLE_ROSTER.find((s) => s.id === baseStyleId) || STYLE_ROSTER[0];
 }
 
 export function getFieldsForStyle(styleId) {

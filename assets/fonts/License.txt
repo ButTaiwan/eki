@@ -27,7 +27,7 @@ FONTS LICENSE INFORMATION
    授權: OFL 1.1
    網址: https://rsms.me/inter/
 
-5. LeagueSpartan-Bold.otf
+5. LeagueSpartan-Bold.ttf
    來源: Google Fonts
    授權: OFL 1.1
    網址: https://fonts.google.com/specimen/League+Spartan
@@ -68,13 +68,19 @@ FONTS LICENSE INFORMATION
     網址: https://github.com/ButTaiwan/gensen/
 
 13. GenYoGothic2JP-M.otf
+    GenYoGothic2JP-B.otf
     GenYoGothic2TW-M.otf
     GenYoGothic2TW-R.otf
     改造: ButTaiwan
     授權: OFL 1.1
     網址: https://github.com/ButTaiwan/genyog/
 
-14. fude-goshirae.otf
+14. GenYoMin2TC-SB.otf
+    改造: ButTaiwan
+    授權: OFL 1.1
+    網址: https://github.com/ButTaiwan/genyo/
+
+15. fude-goshirae.otf
 		作者: 絵に描いた虹
     來源: https://infiniterainbow.booth.pm/items/7797956
     授權: OFL 1.1

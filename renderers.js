@@ -17,12 +17,76 @@ function initCanvas(canvas, width, height, bgColor) {
 }
 
 function hexToRgb(hex) {
-  const raw = (hex || "").replace(/[^0-9a-f]/gi, "").padStart(6, "0").slice(0, 6);
+  const raw = (hex || "000000").replace(/[^0-9a-f]/gi, "").padStart(6, "0").slice(0, 6);
   return {
     r: parseInt(raw.slice(0, 2), 16),
     g: parseInt(raw.slice(2, 4), 16),
     b: parseInt(raw.slice(4, 6), 16)
   };
+}
+
+function brightenRgb(rgb, amount) {
+  const clamp01 = (v) => Math.max(0, Math.min(1, v));
+  const clamp255 = (v) => Math.max(0, Math.min(255, Math.round(v)));
+
+  const r = clamp01((Number(rgb?.r) || 0) / 255);
+  const g = clamp01((Number(rgb?.g) || 0) / 255);
+  const b = clamp01((Number(rgb?.b) || 0) / 255);
+
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  const d = max - min;
+
+  // RGB -> HSL
+  let h = 0;
+  let s = 0;
+  let l = (max + min) / 2;
+
+  if (d !== 0) {
+    s = d / (1 - Math.abs(2 * l - 1));
+    switch (max) {
+      case r:
+        h = ((g - b) / d + (g < b ? 6 : 0)) / 6;
+        break;
+      case g:
+        h = ((b - r) / d + 2) / 6;
+        break;
+      default:
+        h = ((r - g) / d + 4) / 6;
+        break;
+    }
+  }
+
+  // 增加亮度（amount 以百分點為單位，例如 40 => +0.40）
+  const delta = (Number(amount) || 0) / 100;
+  l = clamp01(l + delta);
+
+  // HSL -> RGB
+  const hue2rgb = (p, q, t) => {
+    let tt = t;
+    if (tt < 0) tt += 1;
+    if (tt > 1) tt -= 1;
+    if (tt < 1 / 6) return p + (q - p) * 6 * tt;
+    if (tt < 1 / 2) return q;
+    if (tt < 2 / 3) return p + (q - p) * (2 / 3 - tt) * 6;
+    return p;
+  };
+
+  let rr, gg, bb;
+  if (s === 0) {
+    rr = gg = bb = l;
+  } else {
+    const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+    const p = 2 * l - q;
+    rr = hue2rgb(p, q, h + 1 / 3);
+    gg = hue2rgb(p, q, h);
+    bb = hue2rgb(p, q, h - 1 / 3);
+  }
+
+  rgb.r = clamp255(rr * 255);
+  rgb.g = clamp255(gg * 255);
+  rgb.b = clamp255(bb * 255);
+  //return rgb;
 }
 
 function fgOnBg({ r, g, b }) {
@@ -46,7 +110,8 @@ function normalizeFontFamily(family) {
 
 function setFont(ctx, size, family, weight = "400") {
   const stack = normalizeFontFamily(family);
-  ctx.font = `${weight} ${size}pt ${stack}, sans-serif`;
+  const px = size * 96 / 72; // convert pt to px
+  ctx.font = `${weight} ${px}px ${stack}, sans-serif`;
 }
 
 function textWidth(ctx, size, family, text, weight = "400") {
@@ -54,21 +119,20 @@ function textWidth(ctx, size, family, text, weight = "400") {
   return Math.round(ctx.measureText(text || "").width);
 }
 
-function drawText(ctx, { size, family, text, x, y, align = "left", color = "#000", weight = "400", maxWidth = null, measuredWidth = null }) {
+function drawText(ctx, { size, family, text, x, y, align = "left", color = "#000", weight = "400", maxWidth = null, measuredWidth = null, scale = 1 }) {
   setFont(ctx, size, family, weight);
   ctx.textAlign = align;
   ctx.textBaseline = "top";
   ctx.fillStyle = color;
   //ctx.fillText(text || "", x, y);
 
-  if (maxWidth && measuredWidth && measuredWidth > maxWidth) {
-    // 將字體橫向縮小以適應圓形（高度維持不變）
-    const scale = maxWidth / measuredWidth;
+  if (maxWidth && measuredWidth && measuredWidth > maxWidth) scale = maxWidth / measuredWidth;
+
+  if (scale != 1) {
     ctx.save();
     ctx.translate(x, y);
     ctx.scale(scale, 1);
     ctx.fillText(text || "", 0, 0);
-    //drawText(ctx, { size: 48, family: "Font_Jihacheol", text: input.kname, x: 0, y: 0, align: "center", color: "#000" });
     ctx.restore();
   } else {
     ctx.fillText(text || "", x, y);
@@ -79,6 +143,13 @@ function drawFilledCircle(ctx, centerX, centerY, radius, color) {
   ctx.beginPath();
   ctx.fillStyle = color;
   ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+  ctx.fill();
+}
+
+function drawFilledEllipse(ctx, centerX, centerY, radiusX, radiusY, color) {
+  ctx.beginPath();
+  ctx.fillStyle = color;
+  ctx.ellipse(centerX, centerY, radiusX, radiusY, 0, 0, Math.PI * 2);
   ctx.fill();
 }
 
@@ -152,9 +223,10 @@ function normalizeInput(rawInput) {
 
 const STYLE_GUARD = true;
 
-function defineStyle({ id, label_zh, label_ja, fields, fonts, render }) {
+function defineStyle({ id, label_zh, label_ja, fields, fonts, types = 1, render }) {
   const fieldSet = new Set(fields);
   const renderImpl = render;
+  const safeTypes = Math.max(1, Math.floor(Number(types) || 1));
   
   function isAllowedField(prop) {
     if (fieldSet.has(prop)) return true;
@@ -171,9 +243,10 @@ function defineStyle({ id, label_zh, label_ja, fields, fonts, render }) {
     label_ja,
     fields,
     fonts,
-    render(rawInput) {
+    types: safeTypes,
+    render(rawInput, type = 1) {
       const normalized = normalizeInput(rawInput);
-      if (!STYLE_GUARD) return renderImpl(normalized);
+      if (!STYLE_GUARD) return renderImpl(normalized, type);
       
       const guarded = new Proxy(normalized, {
         get(target, prop) {
@@ -185,19 +258,608 @@ function defineStyle({ id, label_zh, label_ja, fields, fonts, render }) {
         }
       });
       
-      return renderImpl(guarded);
+      return renderImpl(guarded, type);
     }
   };
 }
 
 const STYLES = [
   defineStyle({
+    id: "jreast",
+    label_zh: "日本 | JR東日本",
+    label_ja: "日本 | JR東日本",
+    fields: ["jname", "ename", "kana", "rgb", "p_jname", "p_ename", "n_jname", "n_ename"],
+    fonts: ["Font_GothicJP_M", "Font_FrutigerMedium", "Font_HelveticaBold"],
+    render(input) {
+      const rgb = hexToRgb(input.rgb || "30A030");
+      
+      const tmp = getMeasureCtx();
+      const eWidth = textWidth(tmp, 20, "Font_FrutigerMedium", input.ename);
+      const mainW = Math.max(textWidth(tmp, 40, "Font_GothicJP_M", input.jname), textWidth(tmp, 18, "Font_GothicJP_M", input.kana));
+      const npCW = Math.max(textWidth(tmp, 24, "Font_GothicJP_M", input.n_jname), textWidth(tmp, 18, "Font_GothicJP_M", input.p_jname));
+      const npEW = Math.max(textWidth(tmp, 14, "Font_FrutigerMedium", input.n_ename), textWidth(tmp, 14, "Font_FrutigerMedium", input.p_ename));
+      const width = calWidth(600, 20, [eWidth + npEW * 2 + 80, mainW, npCW * 2 + 80]);
+      const height = 240;
+      
+      const canvas = document.createElement("canvas");
+      const ctx = initCanvas(canvas, width, height, "#fff");
+      
+      const green = "rgb(30,120,0)";
+      const hasPrev = Boolean(input.p_jname || input.p_ename);
+      const hasNext = Boolean(input.n_jname || input.n_ename);
+      if (hasNext) {
+        drawFilledPolygon(ctx, [[0, 140], [width - 30, 140], [width - 10, 160], [width - 30, 180], [0, 180]], green);
+      } else if (hasPrev) {
+        drawFilledPolygon(ctx, [[width, 140], [30, 140], [10, 160], [30, 180], [width, 180]], green);
+      } else {
+        ctx.fillStyle = green;
+        ctx.fillRect(0, 140, width, 40);
+      }
+      
+      ctx.fillStyle = `rgb(${rgb.r},${rgb.g},${rgb.b})`;
+      ctx.fillRect(width / 2 - 20, 140, 40, 40);
+      
+      drawText(ctx, { size: 18, family: "Font_GothicJP_M", text: input.kana, x: width / 2, y: 100, align: "center", color: "#000" });
+      drawText(ctx, { size: 40, family: "Font_GothicJP_M", text: input.jname, x: width / 2, y: 40, align: "center", color: "#000" });
+      drawText(ctx, { size: 20, family: "Font_HelveticaBold", text: input.ename, x: width / 2, y: 190, align: "center", color: "#000" });
+      
+      drawText(ctx, { size: 18, family: "Font_GothicJP_M", text: input.p_jname, x: hasNext ? 20 : 40, y: 146, align: "left", color: "#fff" });
+      drawText(ctx, { size: 24, family: "Font_GothicJP_M", text: input.n_jname, x: width - 40, y: 144, align: "right", color: "#fff" });
+      
+      drawText(ctx, { size: 14, family: "Font_HelveticaBold", text: input.p_ename, x: hasNext ? 20 : 40, y: 195, align: "left", color: "#000" });
+      drawText(ctx, { size: 14, family: "Font_HelveticaBold", text: input.n_ename, x: width - 40, y: 195, align: "right", color: "#000" });
+      
+      return canvas;
+    }
+  }),
+  defineStyle({
+    id: "jrtokai",
+    label_zh: "日本 | JR東海",
+    label_ja: "日本 | JR東海",
+    fields: ["jname", "ename", "kana", "area", "p_kana", "p_ename", "n_kana", "n_ename"],
+    fonts: ["Font_JNR_Kana", "Font_JNR_Kanji", "Font_FrutigerMedium", "Font_Helvetica"],
+    render(input) {
+      const area = input.area ? `（${input.area}）` : "";
+      
+      const tmp = getMeasureCtx();
+      const pWidth = Math.max(textWidth(tmp, 18, "Font_JNR_Kana", input.p_kana), textWidth(tmp, 14, "Font_Helvetica", input.p_ename));
+      const nWidth = Math.max(textWidth(tmp, 18, "Font_JNR_Kana", input.n_kana), textWidth(tmp, 14, "Font_Helvetica", input.n_ename));
+      const mainW = Math.max(textWidth(tmp, 44, "Font_JNR_Kana", input.kana), textWidth(tmp, 24, "Font_JNR_Kanji", input.jname) + textWidth(tmp, 22, "Font_FrutigerMedium", input.ename) + 20);
+      const areaW = textWidth(tmp, 19, "Font_JNR_Kanji", area);
+      const width = calWidth(600, 20, [mainW, areaW + pWidth + nWidth + 80]);
+      const height = 240;
+      
+      const canvas = document.createElement("canvas");
+      const ctx = initCanvas(canvas, width, height, "#fff");
+      ctx.fillStyle = "rgb(240,100,0)";
+      ctx.fillRect(0, 126, width, 34);
+      
+      drawText(ctx, { size: 44, family: "Font_JNR_Kana", text: input.kana, x: width / 2, y: 20, align: "center", color: "#000" });
+      drawText(ctx, { size: 24, family: "Font_JNR_Kanji", text: input.jname, x: width / 2, y: 83, align: "center", color: "#000" });
+      drawText(ctx, { size: 22, family: "Font_FrutigerMedium", text: input.ename, x: width / 2, y: 132, align: "center", color: "#fff" });
+      drawText(ctx, { size: 19, family: "Font_JNR_Kanji", text: area, x: width / 2, y: 178, align: "center", color: "#000" });
+      
+      drawText(ctx, { size: 18, family: "Font_JNR_Kana", text: input.p_kana, x: 18, y: 170, align: "left", color: "#000" });
+      drawText(ctx, { size: 14, family: "Font_Helvetica", text: input.p_ename, x: 18, y: 202, align: "left", color: "#000" });
+      drawText(ctx, { size: 18, family: "Font_JNR_Kana", text: input.n_kana, x: width - 18, y: 170, align: "right", color: "#000" });
+      drawText(ctx, { size: 14, family: "Font_Helvetica", text: input.n_ename, x: width - 18, y: 202, align: "right", color: "#000" });
+      
+      return canvas;
+    }
+  }),
+  defineStyle({
+    id: "jnr",
+    label_zh: "日本 | 日本國有鐵道",
+    label_ja: "日本 | 日本国有鉄道",
+    fields: ["jname", "ename", "kana", "area", "p_kana", "p_ename", "n_kana", "n_ename"],
+    fonts: ["Font_JNR_Kana", "Font_JNR_Kanji", "Font_OldBlack"],
+    render(input) {
+      const area = input.area ? `（${input.area}）` : "";
+      
+      const tmp = getMeasureCtx();
+      const pWidth = Math.max(textWidth(tmp, 22, "Font_JNR_Kana", input.p_kana), textWidth(tmp, 20, "Font_OldBlack", input.p_ename_U));
+      const nWidth = Math.max(textWidth(tmp, 22, "Font_JNR_Kana", input.n_kana), textWidth(tmp, 20, "Font_OldBlack", input.n_ename_U));
+      const width = calWidth(300, 40, [
+        textWidth(tmp, 48, "Font_JNR_Kana", input.kana),
+        textWidth(tmp, 24, "Font_JNR_Kanji", input.jname),
+        textWidth(tmp, 34, "Font_OldBlack", input.ename_U),
+        textWidth(tmp, 19, "Font_JNR_Kanji", area),
+        pWidth + nWidth + 16
+      ], 10);
+      const height = 270;
+      
+      const canvas = document.createElement("canvas");
+      const ctx = initCanvas(canvas, width, height, "rgb(240,240,240)");
+      ctx.fillStyle = "#111";
+      
+      const cpos = (width + pWidth - nWidth) / 2;
+      const ppos = cpos / 2 - 5;
+      const npos = (width + cpos) / 2 + 5;
+      
+      ctx.fillRect(12, 189.5, width - 24, 3);
+      ctx.fillRect(cpos - 1.5, 190, 3, 70);
+      drawFilledPolygon(ctx, [[10, 191], [20, 185], [16, 191], [20, 197]], "#111");
+      drawFilledPolygon(ctx, [[width - 10, 191], [width - 20, 185], [width - 16, 191], [width - 20, 197]], "#111");
+      
+      drawText(ctx, { size: 48, family: "Font_JNR_Kana", text: input.kana, x: width / 2, y: 10, align: "center", color: "#000" });
+      drawText(ctx, { size: 24, family: "Font_JNR_Kanji", text: input.jname, x: width / 2, y: 75, align: "center", color: "#000" });
+      drawText(ctx, { size: 34, family: "Font_OldBlack", text: input.ename_U, x: width / 2, y: 110, align: "center", color: "#000" });
+      drawText(ctx, { size: 19, family: "Font_JNR_Kanji", text: area, x: width / 2, y: 155, align: "center", color: "#000" });
+      
+      drawText(ctx, { size: 22, family: "Font_JNR_Kana", text: input.p_kana, x: ppos, y: 200, align: "center", color: "#000" });
+      drawText(ctx, { size: 20, family: "Font_OldBlack", text: input.p_ename_U, x: ppos, y: 232, align: "center", color: "#000" });
+      drawText(ctx, { size: 22, family: "Font_JNR_Kana", text: input.n_kana, x: npos, y: 200, align: "center", color: "#000" });
+      drawText(ctx, { size: 20, family: "Font_OldBlack", text: input.n_ename_U, x: npos, y: 232, align: "center", color: "#000" });
+      
+      return canvas;
+    }
+  }),
+  defineStyle({
+    id: "jnr2",
+    label_zh: "日本 | 鐵道省國有鐵道",
+    label_ja: "日本 | 鐵道省国有鉄道",
+    fields: ["jname", "ename", "kana", "p_kana", "p_ename", "n_kana", "n_ename"],
+    fonts: ["Font_Fude_Eki", "Font_Fude_Kanji", "Font_OldBlack", "Font_GothicJP_M"],
+    render(input) {
+      const kana = [...input.kana].reverse().join("");
+      const jname = [...input.jname].reverse().join("");
+      const pKana = [...input.p_kana].reverse().join("");
+      const nKana = [...input.n_kana].reverse().join("");
+      
+      const tmp = getMeasureCtx();
+      const pWidth = Math.max(textWidth(tmp, 22, "Font_Fude_Eki", pKana), textWidth(tmp, 20, "Font_OldBlack", input.p_ename_U));
+      const nWidth = Math.max(textWidth(tmp, 22, "Font_Fude_Eki", nKana), textWidth(tmp, 20, "Font_OldBlack", input.n_ename_U));
+      const handW = textWidth(tmp, 50, "Font_GothicJP_M", '☜');
+      const width = calWidth(300, 40, [
+        textWidth(tmp, 48, "Font_Fude_Eki", kana),
+        textWidth(tmp, 26, "Font_Fude_Kanji", jname),
+        textWidth(tmp, 34, "Font_OldBlack", input.ename_U),
+        pWidth + nWidth + 16 + handW * 2
+      ], 10);
+      const height = 240;
+      
+      const canvas = document.createElement("canvas");
+      const ctx = initCanvas(canvas, width, height, "rgb(240,240,240)");
+      ctx.fillStyle = "#111";
+      
+      const cpos = (width + pWidth - nWidth) / 2;
+      const ppos = pWidth / 2 + 40;
+      const npos = width - (nWidth / 2) - 40;
+      
+      ctx.fillRect(12, 159.5, width - 24, 3);
+      ctx.fillRect(cpos - 1.5, 160, 3, 70);
+      
+      drawText(ctx, { size: 48, family: "Font_Fude_Eki", text: kana, x: width / 2, y: 10, align: "center", color: "#000" });
+      drawText(ctx, { size: 26, family: "Font_Fude_Kanji", text: jname, x: width / 2, y: 75, align: "center", color: "#000" });
+      drawText(ctx, { size: 34, family: "Font_OldBlack", text: input.ename_U, x: width / 2, y: 112, align: "center", color: "#000" });
+      
+      if (pKana || input.p_ename_U) {
+        drawText(ctx, { size: 50, family: "Font_GothicJP_M", text: '☜', x: cpos+2, y: 152, align: "right", color: "#000" });
+      }
+      if (nKana || input.n_ename_U) {
+        drawText(ctx, { size: 50, family: "Font_GothicJP_M", text: '☞', x: cpos-2, y: 152, align: "left", color: "#000" });
+      }
+      
+      drawText(ctx, { size: 22, family: "Font_Fude_Eki", text: pKana, x: ppos, y: 170, align: "center", color: "#000" });
+      drawText(ctx, { size: 20, family: "Font_OldBlack", text: input.p_ename_U, x: ppos, y: 204, align: "center", color: "#000" });
+      drawText(ctx, { size: 22, family: "Font_Fude_Eki", text: nKana, x: npos, y: 170, align: "center", color: "#000" });
+      drawText(ctx, { size: 20, family: "Font_OldBlack", text: input.n_ename_U, x: npos, y: 204, align: "center", color: "#000" });
+      
+      return canvas;
+    }
+  }),
+  defineStyle({
+    id: "tokyometro",
+    label_zh: "日本 | 東京Metro",
+    label_ja: "日本 | 東京メトロ",
+    fields: ["jname", "ename", "kana", "no", "p_jname", "p_kana", "p_ename", "n_no", "n_jname", "n_kana", "n_ename"],
+    fonts: ["Font_GothicJP_M", "Font_FrutigerMedium", "Font_FuturaBold"],
+    render(input) {
+      const tmp = getMeasureCtx();
+      const mWidth = Math.max(
+        textWidth(tmp, 42, "Font_GothicJP_M", input.jname),
+        textWidth(tmp, 20, "Font_GothicJP_M", input.kana),
+        textWidth(tmp, 20, "Font_FrutigerMedium", input.ename)
+      );
+      const npWidth = Math.max(
+        textWidth(tmp, 20, "Font_GothicJP_M", input.p_jname),
+        textWidth(tmp, 14, "Font_GothicJP_M", input.p_kana),
+        textWidth(tmp, 14, "Font_FrutigerMedium", input.p_ename),
+        textWidth(tmp, 20, "Font_GothicJP_M", input.n_jname),
+        textWidth(tmp, 14, "Font_GothicJP_M", input.n_kana),
+        textWidth(tmp, 14, "Font_FrutigerMedium", input.n_ename)
+      );
+      const width = calWidth(600, 20, [npWidth * 2 + mWidth + 60]);
+      const height = 240;
+      
+      const canvas = document.createElement("canvas");
+      const ctx = initCanvas(canvas, width, height, "#fafafa");
+      
+      ctx.fillStyle = input.rgb;
+      ctx.fillRect(0, 160, width, 80);
+      
+      if (input.no) {
+        drawFilledCircle(ctx, width / 2, 200, 35, "#fafafa");
+        drawFilledCircle(ctx, width / 2, 200, 33.5, input.rgb);
+        drawFilledCircle(ctx, width / 2, 200, 30, "#fafafa");
+        const sp = splitStationNo(input.no);
+        if (sp.alpha && sp.num) {
+          drawText(ctx, { size: 20, family: "Font_FuturaBold", text: sp.alpha, x: width / 2, y: 174, align: "center", color: "#000" });
+          drawText(ctx, { size: 20, family: "Font_FuturaBold", text: sp.num, x: width / 2, y: 198, align: "center", color: "#000" });
+        } else {
+          drawText(ctx, { size: 20, family: "Font_FuturaBold", text: input.no, x: width / 2, y: 187, align: "center", color: "#000" });
+        }
+      }
+      
+      if (input.n_jname && input.n_no) {
+        drawFilledCircle(ctx, width - 40, 200, 29, "#fafafa");
+        drawFilledCircle(ctx, width - 40, 200, 27.5, input.rgb);
+        drawFilledCircle(ctx, width - 40, 200, 24.5, "#fafafa");
+        const nsp = splitStationNo(input.n_no);
+        if (nsp.alpha && nsp.num) {
+          drawText(ctx, { size: 16, family: "Font_FuturaBold", text: nsp.alpha, x: width - 40, y: 179, align: "center", color: "#000" });
+          drawText(ctx, { size: 16, family: "Font_FuturaBold", text: nsp.num, x: width - 40, y: 199, align: "center", color: "#000" });
+        } else {
+          drawText(ctx, { size: 16, family: "Font_FuturaBold", text: input.n_no, x: width - 40, y: 190, align: "center", color: "#000" });
+        }
+      }
+      
+      if (input.n_jname || input.n_no) {
+        drawFilledPolygon(ctx, [
+          [width - 20, 40], [width - 40, 20], [width - 48, 20], [width - 31, 37], [width - 65, 37], [width - 65, 43], [width - 31, 43], [width - 48, 60], [width - 40, 60],
+        ], "#000");
+      }
+      
+      drawText(ctx, { size: 42, family: "Font_GothicJP_M", text: input.jname, x: width / 2, y: 20, align: "center", color: "#000" });
+      drawText(ctx, { size: 20, family: "Font_GothicJP_M", text: input.kana, x: width / 2, y: 88, align: "center", color: "#000" });
+      drawText(ctx, { size: 20, family: "Font_FrutigerMedium", text: input.ename, x: width / 2, y: 125, align: "center", color: "#000" });
+      
+      drawText(ctx, { size: 20, family: "Font_GothicJP_M", text: input.p_jname, x: 20, y: 74, align: "left", color: "#000" });
+      drawText(ctx, { size: 14, family: "Font_GothicJP_M", text: input.p_kana, x: 20, y: 106, align: "left", color: "#000" });
+      drawText(ctx, { size: 14, family: "Font_FrutigerMedium", text: input.p_ename, x: 20, y: 130, align: "left", color: "#000" });
+      
+      drawText(ctx, { size: 20, family: "Font_GothicJP_M", text: input.n_jname, x: width - 20, y: 74, align: "right", color: "#000" });
+      drawText(ctx, { size: 14, family: "Font_GothicJP_M", text: input.n_kana, x: width - 20, y: 106, align: "right", color: "#000" });
+      drawText(ctx, { size: 14, family: "Font_FrutigerMedium", text: input.n_ename, x: width - 20, y: 130, align: "right", color: "#000" });
+      
+      return canvas;
+    }
+  }),
+  defineStyle({
+    id: "toei",
+    label_zh: "日本 | 都營地下鐵",
+    label_ja: "日本 | 都営地下鉄",
+    fields: ["jname", "ename", "kana", "no", "rgb", "p_jname", "p_ename", "n_no", "n_jname", "n_ename"],
+    fonts: ["Font_GothicJP_M", "Font_FrutigerMedium", "Font_FuturaBold"],
+    render(input) {
+      const tmp = getMeasureCtx();
+      const mWidth = Math.max(
+        textWidth(tmp, 40, "Font_GothicJP_M", input.jname)*1.06,
+        textWidth(tmp, 16, "Font_GothicJP_M", input.kana),
+        textWidth(tmp, 16, "Font_FrutigerMedium", input.ename)
+      );
+      const npWidth = Math.max(
+        textWidth(tmp, 20, "Font_GothicJP_M", input.p_jname)*1.06,
+        textWidth(tmp, 12, "Font_FrutigerMedium", input.p_ename),
+        textWidth(tmp, 20, "Font_GothicJP_M", input.n_jname)*1.06,
+        textWidth(tmp, 12, "Font_FrutigerMedium", input.n_ename)
+      );
+      const width = calWidth(500, 10, [npWidth * 2 + mWidth + 40]);
+      const height = 220;
+      
+      const canvas = document.createElement("canvas");
+      const ctx = initCanvas(canvas, width, height, "#fafafa");
+
+      drawFilledRect(ctx, 0, 0, width, 30, input.rgb);
+      drawFilledRect(ctx, 0, height-20, width, 20, input.rgb);
+
+      if (input.no) {
+        const nox = (width - mWidth) / 2 - 40;
+        drawFilledCircle(ctx, nox, 90, 33.5, input.rgb);
+        drawFilledCircle(ctx, nox, 90, 30, "#fafafa");
+        const sp = splitStationNo(input.no);
+        if (sp.alpha && sp.num) {
+          drawText(ctx, { size: 20, family: "Font_FuturaBold", text: sp.alpha, x: nox, y: 64, align: "center", color: "#000" });
+          drawText(ctx, { size: 20, family: "Font_FuturaBold", text: sp.num, x: nox, y: 88, align: "center", color: "#000" });
+        } else {
+          drawText(ctx, { size: 20, family: "Font_FuturaBold", text: input.no, x: nox, y: 78, align: "center", color: "#000" });
+        }
+      }
+      
+      if (input.n_jname && input.n_no) {
+        drawFilledCircle(ctx, width - 90, 125, 23.5, input.rgb);
+        drawFilledCircle(ctx, width - 90, 125, 20.5, "#fafafa");
+        const nsp = splitStationNo(input.n_no);
+        if (nsp.alpha && nsp.num) {
+          drawText(ctx, { size: 13, family: "Font_FuturaBold", text: nsp.alpha, x: width - 90, y: 107, align: "center", color: "#000" });
+          drawText(ctx, { size: 14, family: "Font_FuturaBold", text: nsp.num, x: width - 90, y: 122, align: "center", color: "#000" });
+        } else {
+          drawText(ctx, { size: 14, family: "Font_FuturaBold", text: input.n_no, x: width - 90, y: 117, align: "center", color: "#000" });
+        }
+      }
+      
+      if (input.n_jname || input.n_no) {
+        drawFilledPolygon(ctx, [
+          [width - 10, 125], [width - 30, 105], [width - 38, 105], [width - 21, 122], [width - 55, 122], [width - 55, 128], [width - 21, 128], [width - 38, 145], [width - 30, 145],
+        ], "#000");
+      }
+      
+      drawText(ctx, { size: 40, family: "Font_GothicJP_M", text: input.jname, x: width / 2, y: 40, align: "center", color: "#000", scale: 1.06 });
+      drawText(ctx, { size: 16, family: "Font_GothicJP_M", text: input.kana, x: width / 2, y: 96, align: "center", color: "#000" });
+      drawText(ctx, { size: 16, family: "Font_FrutigerMedium", text: input.ename, x: width / 2, y: 122, align: "center", color: "#000" });
+      
+      drawText(ctx, { size: 20, family: "Font_GothicJP_M", text: input.p_jname, x: 10, y: 148, align: "left", color: "#999", scale: 1.06 });
+      drawText(ctx, { size: 12, family: "Font_FrutigerMedium", text: input.p_ename, x: 10, y: 180, align: "left", color: "#999" });
+      
+      drawText(ctx, { size: 20, family: "Font_GothicJP_M", text: input.n_jname, x: width - 10, y: 148, align: "right", color: "#000", scale: 1.06 });
+      drawText(ctx, { size: 12, family: "Font_FrutigerMedium", text: input.n_ename, x: width - 10, y: 180, align: "right", color: "#000" });
+      
+      return canvas;
+    }
+  }),
+  defineStyle({
+    id: "hankyu",
+    label_zh: "日本 | 阪急電鐵",
+    label_ja: "日本 | 阪急電鉄",
+    fields: ["jname", "ename", "kana", "s_cname", "p_kana", "p_ename", "n_kana", "n_ename"],
+    fonts: ["Font_OldMaruGothicJP_M", "Font_NewMaruGothicJP_M"],
+    render(input) {
+      const sCname = input.s_cname ? `（${input.s_cname}）` : "";
+      const tmp = getMeasureCtx();
+      const pWidth = Math.max(textWidth(tmp, 18, "Font_OldMaruGothicJP_M", input.p_kana), textWidth(tmp, 14, "Font_NewMaruGothicJP_M", input.p_ename_U));
+      const nWidth = Math.max(textWidth(tmp, 18, "Font_OldMaruGothicJP_M", input.n_kana), textWidth(tmp, 14, "Font_NewMaruGothicJP_M", input.n_ename_U));
+      
+      const width = calWidth(520, 25, [
+        textWidth(tmp, 44, "Font_OldMaruGothicJP_M", input.kana),
+        textWidth(tmp, 24, "Font_NewMaruGothicJP_M", input.jname),
+        textWidth(tmp, 22, "Font_NewMaruGothicJP_M", input.ename_U),
+        textWidth(tmp, 22, "Font_NewMaruGothicJP_M", sCname),
+        pWidth + nWidth + 180
+      ]);
+      const height = 360;
+      
+      const canvas = document.createElement("canvas");
+      const ctx = initCanvas(canvas, width, height);
+      
+      drawRoundRect(ctx, 0, 0, width, height, 30, "rgb(25,0,80)");
+      ctx.fillStyle = "#fff";
+      ctx.fillRect(25, 250, width - 50, 2);
+      
+      if (input.p_kana || input.p_ename_U) {
+        drawFilledPolygon(ctx, [[25, 300], [70, 275], [55, 300], [70, 325]], "#fff");
+        drawFilledPolygon(ctx, [[27, 300], [68, 277], [53, 300], [68, 323]], "rgb(200,20,20)");
+      }
+      if (input.n_kana || input.n_ename_U) {
+        drawFilledPolygon(ctx, [[width - 25, 300], [width - 70, 275], [width - 55, 300], [width - 70, 325]], "#fff");
+        drawFilledPolygon(ctx, [[width - 27, 300], [width - 68, 277], [width - 53, 300], [width - 68, 323]], "rgb(200,20,20)");
+      }
+      
+      drawText(ctx, { size: 44, family: "Font_OldMaruGothicJP_M", text: input.kana, x: width / 2, y: 48, align: "center", color: "#fff" });
+      drawText(ctx, { size: 24, family: "Font_NewMaruGothicJP_M", text: input.jname, x: width / 2, y: sCname ? 115 : 130, align: "center", color: "#fff" });
+      if (sCname) drawText(ctx, { size: 22, family: "Font_NewMaruGothicJP_M", text: sCname, x: width / 2, y: 158, align: "center", color: "#fff" });
+      drawText(ctx, { size: 22, family: "Font_NewMaruGothicJP_M", text: input.ename_U, x: width / 2, y: 198, align: "center", color: "#fff" });
+      
+      drawText(ctx, { size: 18, family: "Font_OldMaruGothicJP_M", text: input.p_kana, x: 82, y: 275, align: "left", color: "#fff" });
+      drawText(ctx, { size: 14, family: "Font_NewMaruGothicJP_M", text: input.p_ename_U, x: 82, y: 308, align: "left", color: "#fff" });
+      drawText(ctx, { size: 18, family: "Font_OldMaruGothicJP_M", text: input.n_kana, x: width - 82, y: 275, align: "right", color: "#fff" });
+      drawText(ctx, { size: 14, family: "Font_NewMaruGothicJP_M", text: input.n_ename_U, x: width - 82, y: 308, align: "right", color: "#fff" });
+      
+      return canvas;
+    }
+  }),
+  defineStyle({
+    id: "keihan",
+    label_zh: "日本 | 京阪電鐵",
+    label_ja: "日本 | 京阪電鉄",
+    fields: ["jname", "ename", "kana", "no", "p_jname", "p_ename", "n_no", "n_jname", "n_ename"],
+    fonts: ["Font_GothicJP_M", "Font_FrutigerBold"],
+    render(input) {
+      const tmp = getMeasureCtx();
+      const mWidth = Math.max(
+        textWidth(tmp, 38, "Font_GothicJP_M", input.jname),
+        textWidth(tmp, 16, "Font_GothicJP_M", input.kana)
+      );
+      const eWidth = textWidth(tmp, 13, "Font_FrutigerBold", input.ename);
+      const npWidth = Math.max(
+        textWidth(tmp, 14, "Font_GothicJP_M", input.p_jname),
+        textWidth(tmp, 8, "Font_FrutigerBold", input.p_ename),
+        textWidth(tmp, 14, "Font_GothicJP_M", input.n_jname),
+        textWidth(tmp, 8, "Font_FrutigerBold", input.n_ename)
+      );
+      const width = calWidth(500, 10, [mWidth + 200, eWidth + 300, npWidth * 2 + 60]);
+      const height = 220;
+      
+      const canvas = document.createElement("canvas");
+      const bg = '#03033f';
+      const bg2 = '#082490';
+      const fg = '#fff';
+      const ctx = initCanvas(canvas, width, height, bg);
+
+      for (let i = 0; i < 11; i++) drawFilledRect(ctx, 0, 28 + i * 8, width, 2, bg2);
+      drawFilledRect(ctx, 0, 132, width, 24, fg);
+
+      if (input.n_jname || input.n_no) {
+        drawFilledPolygon(ctx, [[100, 132], [88, 144], [100, 156], [110, 156], [98, 144], [110, 132]], bg);
+      }
+
+      if (input.p_jname || input.p_ename) {
+        drawFilledPolygon(ctx, [[width - 100, 132], [width - 112, 144], [width - 100, 156], [width - 110, 156], [width - 122, 144], [width - 110, 132]], bg);
+        drawFilledCircle(ctx, width-30, 144, 8, bg);
+      }
+
+      if (input.no) {
+        const nox = width/2 + mWidth/2 + 10;
+        const sp = splitStationNo(input.no);
+        if (sp.alpha && sp.num) {
+          drawFilledRect(ctx, nox, 49, 60, 24, bg);
+          drawFilledRect(ctx, nox+23, 49, 35, 24, fg);
+          drawText(ctx, { size: 9, family: "Font_FrutigerBold", text: sp.alpha, x: nox+21, y: 61, align: "right", color: fg });
+          drawText(ctx, { size: 20, family: "Font_FrutigerBold", text: sp.num, x: nox+40, y: 52, align: "center", color: bg });
+        } else {
+          drawFilledRect(ctx, nox, 49, 60, 24, bg);
+          drawFilledRect(ctx, nox+3, 49, 54, 24, fg);
+          drawText(ctx, { size: 20, family: "Font_FrutigerBold", text: input.no, x: nox+30, y: 52, align: "center", color: bg });
+        }
+      }
+      
+      if (input.n_jname && input.n_no) {
+        const nsp = splitStationNo(input.n_no);
+        if (nsp.alpha && nsp.num) {
+          drawFilledRect(ctx, 22, 135, 24, 18, bg);
+          drawText(ctx, { size: 7, family: "Font_FrutigerBold", text: nsp.alpha, x: 20, y: 144, align: "right", color: bg });
+          drawText(ctx, { size: 14, family: "Font_FrutigerBold", text: nsp.num, x: 34, y: 138, align: "center", color: fg });
+        } else {
+          drawFilledRect(ctx, 20, 135, 36, 18, bg);
+          drawText(ctx, { size: 14, family: "Font_FrutigerBold", text: input.n_no, x: 38, y: 138, align: "center", color: fg });
+        }
+      }
+      
+      drawText(ctx, { size: 38, family: "Font_GothicJP_M", text: input.jname, x: width / 2, y: 30, align: "center", color: fg });
+      drawText(ctx, { size: 16, family: "Font_GothicJP_M", text: input.kana, x: width / 2, y: 86, align: "center", color: fg });
+      drawText(ctx, { size: 13, family: "Font_FrutigerBold", text: input.ename, x: width / 2, y: 138, align: "center", color: bg });
+      
+      drawText(ctx, { size: 14, family: "Font_GothicJP_M", text: input.n_jname, x: 20, y: 166, align: "left", color: fg });
+      drawText(ctx, { size: 8, family: "Font_FrutigerBold", text: input.n_ename, x: 20, y: 190, align: "left", color: fg });
+      
+      drawText(ctx, { size: 14, family: "Font_GothicJP_M", text: input.p_jname, x: width - 20, y: 166, align: "right", color: fg });
+      drawText(ctx, { size: 8, family: "Font_FrutigerBold", text: input.p_ename, x: width - 20, y: 190, align: "right", color: fg });
+      
+      return canvas;
+    }
+  }),
+  // defineStyle({
+  //   id: "keisei",
+  //   label: "京成電鉄",
+  //   fields: ["jname", "ename", "p_jname", "p_ename", "n_jname", "n_ename", "rgb"],
+  //   fonts: ["Font_NewMaruGothicJP_M", "Font_Helvetica"],
+  //   render(input) {
+  //     const tmp = getMeasureCtx();
+  //     const mW = Math.max(
+  //       textWidth(tmp, 58, "Font_OldMaruGothicJP_M",  input.jname),
+  //       textWidth(tmp, 18, "Font_Helvetica", input.ename)
+  //     );
+  //     const width = calWidth(500, 40, [mW + 220], 50);
+  //     const height = 200;
+      
+  //     const canvas = document.createElement("canvas");
+  //     const ctx = initCanvas(canvas, width, height, "#fff");
+      
+  //     const blue = "rgb(0,85,180)";
+      
+  //     const pW = Math.max(45, textWidth(tmp, 14, "Font_MaruGothicJP_M", input.p_jname) + 20);
+  //     ctx.fillStyle = blue;
+  //     ctx.fillRect(0, 80, 65 + pW, 40);
+      
+  //     const nPos = width - 95;
+  //     drawFilledPolygon(ctx, [[width - 4, 120], [width - 44, 80], [nPos + 20, 80], [nPos + 20, 120]], blue);
+  //     drawRoundRect(ctx, nPos - 14, 80, 28, 40, 5, blue);
+      
+  //     const centerX = width / 2;
+  //     drawText(ctx, { size: 58, family: "Font_OldMaruGothicJP_M", text: input.jname, x: centerX, y: 20, align: "center", color: "#000" });
+  //     drawText(ctx, { size: 18, family: "Font_Helvetica", text: input.ename, x: centerX, y: 130, align: "center", color: "#000" });
+  //     drawText(ctx, { size: 14, family: "Font_OldMaruGothicJP_M", text: input.p_jname, x: 12, y: 86, align: "left", color: "#fff" });
+  //     drawText(ctx, { size: 14, family: "Font_Helvetica", text: input.p_ename, x: 12, y: 102, align: "left", color: "#fff" });
+  //     drawText(ctx, { size: 14, family: "Font_OldMaruGothicJP_M", text: input.n_jname, x: width - 48, y: 86, align: "center", color: "#fff" });
+  //     drawText(ctx, { size: 14, family: "Font_Helvetica", text: input.n_ename, x: width - 48, y: 102, align: "center", color: "#fff" });
+      
+  //     return canvas;
+  //   }
+  // }),
+  defineStyle({
+    id: "izukyu",
+    label_zh: "日本 | 伊豆急行",
+    label_ja: "日本 | 伊豆急行",
+    fields: ["jname", "ename", "kana", "kname", "p_jname", "p_ename", "p_kname", "n_jname", "n_ename", "n_kname"],
+    fonts: ["Font_GothicJP_M", "Font_GothicKR_M", "Font_HelveticaBold"],
+    render(input) {
+      const p_ekname = `${input.p_ename}  ${input.p_kname}`.trim();
+      const n_ekname = `${input.n_kname}  ${input.n_ename}`.trim();
+
+      const tmp = getMeasureCtx();
+      const eW = textWidth(tmp, 20, "Font_HelveticaBold", input.ename);
+      const npJW = Math.max( textWidth(tmp, 20, "Font_GothicJP_M", input.p_jname), textWidth(tmp, 20, "Font_GothicJP_M", input.n_jname) );
+      const npEW = Math.max(
+        textWidth(tmp, 14, ["Font_HelveticaBold", "Font_GothicKR_M"], p_ekname),
+        textWidth(tmp, 14, ["Font_HelveticaBold", "Font_GothicKR_M"], n_ekname)
+      );
+
+      const width = calWidth(600, 40, [
+        textWidth(tmp, 44, "Font_GothicJP_M", input.jname),
+        textWidth(tmp, 23, "Font_GothicJP_M", input.kana),
+        eW + 140,
+        npJW * 2 + textWidth(tmp, 18, "Font_GothicKR_M", input.kname) + 40,
+        npEW * 2
+      ]);
+      const height = 240;
+      
+      const canvas = document.createElement("canvas");
+      const ctx = initCanvas(canvas, width, height, "#fff");
+      
+      drawFilledPolygon(ctx, [[0, 130], [(width - eW) / 2 - 10, 130], [(width - eW) / 2 - 38, 158], [0, 158]], "rgb(200,20,0)");
+      drawFilledPolygon(ctx, [[width, 130], [(width + eW) / 2 + 38, 130], [(width + eW) / 2 + 10, 158], [width, 158]], "rgb(0,20,200)");
+      
+      drawText(ctx, { size: 44, family: "Font_GothicJP_M", text: input.jname, x: width / 2, y: 30, align: "center", color: "#000" });
+      drawText(ctx, { size: 23, family: "Font_GothicJP_M", text: input.kana, x: width / 2, y: 95, align: "center", color: "#000" });
+      drawText(ctx, { size: 20, family: "Font_HelveticaBold", text: input.ename, x: width / 2, y: 132, align: "center", color: "#000" });
+      drawText(ctx, { size: 16, family: "Font_GothicKR_M", text: input.kname, x: width / 2, y: 163, align: "center", color: "#000" });
+      
+      drawText(ctx, { size: 20, family: "Font_GothicJP_M", text: input.p_jname, x: 20, y: 164, align: "left", color: "#000" });
+      drawText(ctx, { size: 14, family: ["Font_HelveticaBold", "Font_GothicKR_M"], text: p_ekname, x: 20, y: 196, align: "left", color: "#000" });
+      drawText(ctx, { size: 20, family: "Font_GothicJP_M", text: input.n_jname, x: width - 20, y: 164, align: "right", color: "#000" });
+      drawText(ctx, { size: 14, family: ["Font_HelveticaBold", "Font_GothicKR_M"], text: n_ekname, x: width - 20, y: 196, align: "right", color: "#000" });
+
+      return canvas;
+    }
+  }),
+  defineStyle({
+    id: "kotoden",
+    label_zh: "日本 | 高松琴平電鐵",
+    label_ja: "日本 | 高松琴平電鉄",
+    fields: ["jname", "ename", "kana", "rgb", "p_kana", "n_kana"],
+    fonts: ["Font_GothicJP_M", "Font_OldGothicJP_R", "Font_Helvetica"],
+    render(input) {
+      const rgb = hexToRgb(input.rgb || "009944");
+      
+      const tmp = getMeasureCtx();
+      const width = calWidth(480, 40, [
+        textWidth(tmp, 56, "Font_GothicJP_M", input.jname),
+        textWidth(tmp, 14, "Font_OldGothicJP_R", input.kana),
+        textWidth(tmp, 22, "Font_Helvetica", input.ename),
+        textWidth(tmp, 18, "Font_OldGothicJP_R", input.p_kana) + textWidth(tmp, 18, "Font_OldGothicJP_R", input.n_kana) + 80
+      ], 20);
+      const height = 320;
+      
+      const canvas = document.createElement("canvas");
+      const ctx = initCanvas(canvas, width, height, "#fff");
+      
+      const lineColor = `rgb(${rgb.r},${rgb.g},${rgb.b})`;
+      ctx.fillStyle = lineColor;
+      ctx.fillRect(0, 240, width, 80);
+      
+      drawFilledPolygon(ctx, [[20, 200], [53, 180], [53, 220]], lineColor);
+      drawFilledPolygon(ctx, [[width - 20, 200], [width - 53, 180], [width - 53, 220]], lineColor);
+
+      const num = Math.floor((width - 120) / 36);
+      const offx = ((width - 120) % (num * 36)) / 2 + 78;
+      for (let x = 0; x < num; x++) drawFilledCircle(ctx, offx + x * 36, 200, 9, lineColor);
+      
+      drawText(ctx, { size: 14, family: "Font_OldGothicJP_R", text: input.kana, x: width / 2, y: 30, align: "center", color: "#000" });
+      drawText(ctx, { size: 56, family: "Font_GothicJP_M", text: input.jname, x: width / 2, y: 56, align: "center", color: "#000" });
+      drawText(ctx, { size: 22, family: "Font_Helvetica", text: input.ename, x: width / 2, y: 140, align: "center", color: "#000" });
+      drawText(ctx, { size: 21, family: "Font_OldGothicJP_R", text: input.p_kana, x: 18, y: 266, align: "left", color: "#fff" });
+      drawText(ctx, { size: 21, family: "Font_OldGothicJP_R", text: input.n_kana, x: width - 18, y: 266, align: "right", color: "#fff" });
+      
+      return canvas;
+    }
+  }),
+  defineStyle({
     id: "trtc2",
-    label_zh: "台北捷運 (新)",
-    label_ja: "台北MRT（新）",
+    types: 3,
+    label_zh: "台灣 | 台北捷運 (新)",
+    label_ja: "台湾 | 台北MRT（新）",
     fields: ["cname", "ename", "jname", "kname", "s_cname", "s_ename", "n_no", "rgb"],
     fonts: ["Font_GothicTW_M", "Font_GothicJP_M", "Font_GothicKR_M", "Font_Helvetica"],
-    render(input) {
+    render(input, type) {
       const tmp = getMeasureCtx();
       const cW = textWidth(tmp, 54, "Font_GothicTW_M", input.cname);
       const jW = textWidth(tmp, 18, "Font_GothicJP_M", input.jname);
@@ -213,29 +875,37 @@ const STYLES = [
         textWidth(tmp, 14, "Font_Helvetica", input.s_ename_U)
       ) + 30 : 0;
 
-      const width = calWidth(400, 40, [noW + cW + sW, noW + ejkW]);
+      const width = calWidth(400, 40, [noW + cW + sW, noW + ejkW]) + 50;
       const height = 200;
-      console.log({c: cW, ejk: ejkW, s: sW, no: noW, w: width});
+      const bg = type == 1 ? input.rgb : '#f5ede6';
+      const fg = type == 1 ? fgOnBg(hexToRgb(input.rgb)) : '#444';
+      const fgno = type == 3 ? fgOnBg(hexToRgb(input.rgb)) : fg;
       
       const canvas = document.createElement("canvas");
-      const ctx = initCanvas(canvas, width, height, '#f5ede6');
+      const ctx = initCanvas(canvas, width, height, bg);
 
       if (nsp) {
-        drawRoundRect(ctx, 40, 35, 100, 130, 10, input.rgb || "c80000");
-        drawText(ctx, { size: 32, family: "Font_Helvetica", text: nsp.alpha, x: 90, y: 57, align: "center", color: "#fff" });
-        drawText(ctx, { size: 32, family: "Font_Helvetica", text: nsp.num, x: 90, y: 103, align: "center", color: "#fff" });
+        if (type == 3) {
+          drawRoundRect(ctx, 40, 35, 100, 130, 10, input.rgb);
+        } else {
+          drawRoundRect(ctx, 40, 35, 100, 130, 10, fg);
+          drawRoundRect(ctx, 44, 39, 92, 122, 6, bg);
+        }
+
+        drawText(ctx, { size: 32, family: "Font_Helvetica", text: nsp.alpha, x: 90, y: 57, align: "center", color: fgno });
+        drawText(ctx, { size: 32, family: "Font_Helvetica", text: nsp.num, x: 90, y: 103, align: "center", color: fgno });
       }
 
-      ctx.fillStyle = "#444";
-      drawText(ctx, { size: 54, family: "Font_GothicTW_M", text: input.cname, x: 39 + noW, y: 30, align: "left", color: '#444' });
-      drawText(ctx, { size: 20, family: "Font_Helvetica", text: input.ename_U, x: 41 + noW, y: 110, align: "left", color: '#444' });
-      drawText(ctx, { size: 18, family: "Font_GothicJP_M", text: input.jname, x: 40 + noW, y: 142, align: "left", color: '#444' });
-      drawText(ctx, { size: 18, family: "Font_GothicKR_M", text: input.kname, x: 55 + noW + jW, y: 142, align: "left", color: '#444' });
-
+      //ctx.fillStyle = fg;
+      drawText(ctx, { size: 54, family: "Font_GothicTW_M", text: input.cname, x: 39 + noW, y: 30, align: "left", color: fg });
+      drawText(ctx, { size: 20, family: "Font_Helvetica", text: input.ename_U, x: 41 + noW, y: 110, align: "left", color: fg });
+      drawText(ctx, { size: 18, family: "Font_GothicJP_M", text: input.jname, x: 40 + noW, y: 142, align: "left", color: fg });
+      drawText(ctx, { size: 18, family: "Font_GothicKR_M", text: input.kname, x: 55 + noW + jW, y: 142, align: "left", color: fg });
       if (sW > 0) {
-        ctx.fillRect(56 + noW + cW, 30, 1.5, 70);
-        drawText(ctx, { size: 28, family: "Font_GothicTW_M", text: input.s_cname, x: 70 + noW + cW, y: 31, align: "left", color: '#444' });
-        drawText(ctx, { size: 14, family: "Font_Helvetica", text: input.s_ename_U, x: 71 + noW + cW, y: 76, align: "left", color: '#444' });
+        drawFilledRect(ctx, 50 + noW + cW, 30, 1.5, 70, fg);
+        //ctx.fillRect(56 + noW + cW, 30, 1.5, 70);
+        drawText(ctx, { size: 28, family: "Font_GothicTW_M", text: input.s_cname, x: 70 + noW + cW, y: 31, align: "left", color: fg });
+        drawText(ctx, { size: 14, family: "Font_Helvetica", text: input.s_ename_U, x: 71 + noW + cW, y: 76, align: "left", color: fg });
       }
       
       return canvas;
@@ -243,8 +913,8 @@ const STYLES = [
   }),
   defineStyle({
     id: "trtc",
-    label_zh: "台北捷運 (原)",
-    label_ja: "台北MRT（旧）",
+    label_zh: "台灣 | 台北捷運 (原)",
+    label_ja: "台湾 | 台北MRT（旧）",
     fields: ["cname", "ename", "s_cname", "s_ename", "rgb"],
     fonts: ["Font_MinchoTW_M", "Font_Optima"],
     render(input) {
@@ -289,8 +959,8 @@ const STYLES = [
   }),
   defineStyle({
     id: "thsr",
-    label_zh: "台灣高鐵",
-    label_ja: "台湾高速鉄道",
+    label_zh: "台灣 | 台灣高鐵",
+    label_ja: "台湾 | 台湾高速鉄道",
     fields: ["cname", "ename"],
     fonts: ["Font_GothicTW_R", "Font_Helvetica"],
     render(input) {
@@ -312,8 +982,8 @@ const STYLES = [
   }),
   defineStyle({
     id: "tti",
-    label_zh: "桃園機場捷運 (出入口)",
-    label_ja: "桃園空港MRT (出入口)",
+    label_zh: "台灣 | 桃園機場捷運 (出入口)",
+    label_ja: "台湾 | 桃園空港MRT (出入口)",
     fields: ["cname", "ename", "no", "rgb"],
     fonts: ["Font_GothicTW_M", "Font_HelveticaBold"],
     render(input) {
@@ -345,8 +1015,8 @@ const STYLES = [
   }),
   defineStyle({
     id: "khmrt",
-    label_zh: "高雄捷運",
-    label_ja: "高雄MRT",
+    label_zh: "台灣 | 高雄捷運",
+    label_ja: "台湾 | 高雄MRT",
     fields: ["cname", "ename", "no", "s_cname", "s_ename", "rgb"],
     fonts: ["Font_MinchoTW_M", "Font_FrutigerBold", "Font_HelveticaBold"],
     render(input) {
@@ -421,8 +1091,8 @@ const STYLES = [
   // }),
   defineStyle({
     id: "tairail2",
-    label_zh: "台鐵 (新)",
-    label_ja: "台湾鉄路（新）",
+    label_zh: "台灣 | 台鐵 (新)",
+    label_ja: "台湾 | 台湾鉄路（新）",
     fields: ["cname", "ename", "area", "p_cname", "p_ename", "p_dis", "n_cname", "n_ename", "n_dis"],
     fonts: ["Font_GothicTW_M", "Font_Helvetica"],
     render(input) {
@@ -493,448 +1163,56 @@ const STYLES = [
     }
   }),
   defineStyle({
-    id: "jreast",
-    label_zh: "JR東日本",
-    label_ja: "JR東日本",
-    fields: ["jname", "ename", "kana", "rgb", "p_jname", "p_ename", "n_jname", "n_ename"],
-    fonts: ["Font_GothicJP_M", "Font_FrutigerMedium", "Font_HelveticaBold"],
-    render(input) {
-      const rgb = hexToRgb(input.rgb || "30A030");
+    id: "hkmtr",
+    types: 3,
+    label_zh: "香港 | 港鐵",
+    label_ja: "香港 | 港鉄MTR",
+    fields: ["cname", "ename", "rgb"],
+    fonts: ["Font_MinchoHK_SB", "Font_HelveticaBold"],
+    render(input, type) {
+      //const rgb = hexToRgb(input.rgb || "c80000");
+      const bg = hexToRgb(input.rgb);
+      if (type > 1) brightenRgb(bg, 40);
+      const fg = type == 1 ? "#fff" : fgOnBg(bg);
+
+      const chars = Array.from(input.cname);
       
       const tmp = getMeasureCtx();
-      const eWidth = textWidth(tmp, 20, "Font_FrutigerMedium", input.ename);
-      const mainW = Math.max(textWidth(tmp, 40, "Font_GothicJP_M", input.jname), textWidth(tmp, 18, "Font_GothicJP_M", input.kana));
-      const npCW = Math.max(textWidth(tmp, 24, "Font_GothicJP_M", input.n_jname), textWidth(tmp, 18, "Font_GothicJP_M", input.p_jname));
-      const npEW = Math.max(textWidth(tmp, 14, "Font_FrutigerMedium", input.n_ename), textWidth(tmp, 14, "Font_FrutigerMedium", input.p_ename));
-      const width = calWidth(600, 20, [eWidth + npEW * 2 + 80, mainW, npCW * 2 + 80]);
-      const height = 240;
+      const cwidth = textWidth(tmp, 48, "Font_MinchoHK_SB", input.cname);
+      const ewidth = textWidth(tmp, 26, "Font_HelveticaBold", input.ename);
+      
+      const width = calWidth(400, 30, [type == 3 ? 64 : cwidth*1.03, ewidth]);
+      const height = type == 3 ? 120 + (chars.length * 64) : 200;
       
       const canvas = document.createElement("canvas");
-      const ctx = initCanvas(canvas, width, height, "#fff");
+      const ctx = initCanvas(canvas, width, height, `rgb(${bg.r},${bg.g},${bg.b})`);
+
+      if (type == 1) {
+        for (let i=5; i<width; i+=20) {
+          drawFilledRect(ctx, i, 0, 2, height, `rgba(50, 50, 50, 0.5)`);
+        }
+        for (let y=5; y<height; y+=20) {
+          drawFilledRect(ctx, 0, y, width, 2, `rgba(50, 50, 50, 0.5)`);
+        }
+      }
       
-      const green = "rgb(30,120,0)";
-      const hasPrev = Boolean(input.p_jname || input.p_ename);
-      const hasNext = Boolean(input.n_jname || input.n_ename);
-      if (hasNext) {
-        drawFilledPolygon(ctx, [[0, 140], [width - 30, 140], [width - 10, 160], [width - 30, 180], [0, 180]], green);
-      } else if (hasPrev) {
-        drawFilledPolygon(ctx, [[width, 140], [30, 140], [10, 160], [30, 180], [width, 180]], green);
+      if (type == 3) {
+        chars.forEach((char, i) => {
+          drawText(ctx, { size: 48, family: "Font_MinchoHK_SB", text: char, x: width / 2, y: 38 + i * 64, align: "center", color: fg, scale: 1.03 });
+        });
+        drawText(ctx, { size: 26, family: "Font_HelveticaBold", text: input.ename, x: width / 2, y: height-70, align: "center", color: fg });
       } else {
-        ctx.fillStyle = green;
-        ctx.fillRect(0, 140, width, 40);
+        drawText(ctx, { size: 48, family: "Font_MinchoHK_SB", text: input.cname, x: width / 2, y: 44, align: "center", color: fg, scale: 1.03 });
+        drawText(ctx, { size: 26, family: "Font_HelveticaBold", text: input.ename, x: width / 2, y: 120, align: "center", color: fg });
       }
-      
-      ctx.fillStyle = `rgb(${rgb.r},${rgb.g},${rgb.b})`;
-      ctx.fillRect(width / 2 - 20, 140, 40, 40);
-      
-      drawText(ctx, { size: 18, family: "Font_GothicJP_M", text: input.kana, x: width / 2, y: 100, align: "center", color: "#000" });
-      drawText(ctx, { size: 40, family: "Font_GothicJP_M", text: input.jname, x: width / 2, y: 40, align: "center", color: "#000" });
-      drawText(ctx, { size: 20, family: "Font_HelveticaBold", text: input.ename, x: width / 2, y: 190, align: "center", color: "#000" });
-      
-      drawText(ctx, { size: 18, family: "Font_GothicJP_M", text: input.p_jname, x: hasNext ? 20 : 40, y: 146, align: "left", color: "#fff" });
-      drawText(ctx, { size: 24, family: "Font_GothicJP_M", text: input.n_jname, x: width - 40, y: 144, align: "right", color: "#fff" });
-      
-      drawText(ctx, { size: 14, family: "Font_HelveticaBold", text: input.p_ename, x: hasNext ? 20 : 40, y: 195, align: "left", color: "#000" });
-      drawText(ctx, { size: 14, family: "Font_HelveticaBold", text: input.n_ename, x: width - 40, y: 195, align: "right", color: "#000" });
-      
-      return canvas;
-    }
-  }),
-  defineStyle({
-    id: "jrtokai",
-    label_zh: "JR東海",
-    label_ja: "JR東海",
-    fields: ["jname", "ename", "kana", "area", "p_kana", "p_ename", "n_kana", "n_ename"],
-    fonts: ["Font_JNR_Kana", "Font_JNR_Kanji", "Font_FrutigerMedium", "Font_Helvetica"],
-    render(input) {
-      const area = input.area ? `（${input.area}）` : "";
-      
-      const tmp = getMeasureCtx();
-      const pWidth = Math.max(textWidth(tmp, 18, "Font_JNR_Kana", input.p_kana), textWidth(tmp, 14, "Font_Helvetica", input.p_ename));
-      const nWidth = Math.max(textWidth(tmp, 18, "Font_JNR_Kana", input.n_kana), textWidth(tmp, 14, "Font_Helvetica", input.n_ename));
-      const mainW = Math.max(textWidth(tmp, 44, "Font_JNR_Kana", input.kana), textWidth(tmp, 24, "Font_JNR_Kanji", input.jname) + textWidth(tmp, 22, "Font_FrutigerMedium", input.ename) + 20);
-      const areaW = textWidth(tmp, 19, "Font_JNR_Kanji", area);
-      const width = calWidth(600, 20, [mainW, areaW + pWidth + nWidth + 80]);
-      const height = 240;
-      
-      const canvas = document.createElement("canvas");
-      const ctx = initCanvas(canvas, width, height, "#fff");
-      ctx.fillStyle = "rgb(240,100,0)";
-      ctx.fillRect(0, 126, width, 34);
-      
-      drawText(ctx, { size: 44, family: "Font_JNR_Kana", text: input.kana, x: width / 2, y: 20, align: "center", color: "#000" });
-      drawText(ctx, { size: 24, family: "Font_JNR_Kanji", text: input.jname, x: width / 2, y: 83, align: "center", color: "#000" });
-      drawText(ctx, { size: 22, family: "Font_FrutigerMedium", text: input.ename, x: width / 2, y: 132, align: "center", color: "#fff" });
-      drawText(ctx, { size: 19, family: "Font_JNR_Kanji", text: area, x: width / 2, y: 178, align: "center", color: "#000" });
-      
-      drawText(ctx, { size: 18, family: "Font_JNR_Kana", text: input.p_kana, x: 18, y: 170, align: "left", color: "#000" });
-      drawText(ctx, { size: 14, family: "Font_Helvetica", text: input.p_ename, x: 18, y: 202, align: "left", color: "#000" });
-      drawText(ctx, { size: 18, family: "Font_JNR_Kana", text: input.n_kana, x: width - 18, y: 170, align: "right", color: "#000" });
-      drawText(ctx, { size: 14, family: "Font_Helvetica", text: input.n_ename, x: width - 18, y: 202, align: "right", color: "#000" });
-      
-      return canvas;
-    }
-  }),
-  defineStyle({
-    id: "jnr",
-    label_zh: "日本國有鐵道",
-    label_ja: "日本国有鉄道",
-    fields: ["jname", "ename", "kana", "area", "p_kana", "p_ename", "n_kana", "n_ename"],
-    fonts: ["Font_JNR_Kana", "Font_JNR_Kanji", "Font_OldBlack"],
-    render(input) {
-      const area = input.area ? `（${input.area}）` : "";
-      
-      const tmp = getMeasureCtx();
-      const pWidth = Math.max(textWidth(tmp, 22, "Font_JNR_Kana", input.p_kana), textWidth(tmp, 20, "Font_OldBlack", input.p_ename_U));
-      const nWidth = Math.max(textWidth(tmp, 22, "Font_JNR_Kana", input.n_kana), textWidth(tmp, 20, "Font_OldBlack", input.n_ename_U));
-      const width = calWidth(300, 40, [
-        textWidth(tmp, 48, "Font_JNR_Kana", input.kana),
-        textWidth(tmp, 24, "Font_JNR_Kanji", input.jname),
-        textWidth(tmp, 34, "Font_OldBlack", input.ename_U),
-        textWidth(tmp, 19, "Font_JNR_Kanji", area),
-        pWidth + nWidth + 16
-      ], 10);
-      const height = 270;
-      
-      const canvas = document.createElement("canvas");
-      const ctx = initCanvas(canvas, width, height, "rgb(240,240,240)");
-      ctx.fillStyle = "#111";
-      
-      const cpos = (width + pWidth - nWidth) / 2;
-      const ppos = cpos / 2 - 5;
-      const npos = (width + cpos) / 2 + 5;
-      
-      ctx.fillRect(12, 189.5, width - 24, 3);
-      ctx.fillRect(cpos - 1.5, 190, 3, 70);
-      drawFilledPolygon(ctx, [[10, 191], [20, 185], [16, 191], [20, 197]], "#111");
-      drawFilledPolygon(ctx, [[width - 10, 191], [width - 20, 185], [width - 16, 191], [width - 20, 197]], "#111");
-      
-      drawText(ctx, { size: 48, family: "Font_JNR_Kana", text: input.kana, x: width / 2, y: 10, align: "center", color: "#000" });
-      drawText(ctx, { size: 24, family: "Font_JNR_Kanji", text: input.jname, x: width / 2, y: 75, align: "center", color: "#000" });
-      drawText(ctx, { size: 34, family: "Font_OldBlack", text: input.ename_U, x: width / 2, y: 110, align: "center", color: "#000" });
-      drawText(ctx, { size: 19, family: "Font_JNR_Kanji", text: area, x: width / 2, y: 155, align: "center", color: "#000" });
-      
-      drawText(ctx, { size: 22, family: "Font_JNR_Kana", text: input.p_kana, x: ppos, y: 200, align: "center", color: "#000" });
-      drawText(ctx, { size: 20, family: "Font_OldBlack", text: input.p_ename_U, x: ppos, y: 232, align: "center", color: "#000" });
-      drawText(ctx, { size: 22, family: "Font_JNR_Kana", text: input.n_kana, x: npos, y: 200, align: "center", color: "#000" });
-      drawText(ctx, { size: 20, family: "Font_OldBlack", text: input.n_ename_U, x: npos, y: 232, align: "center", color: "#000" });
-      
-      return canvas;
-    }
-  }),
-  defineStyle({
-    id: "jnr2",
-    label_zh: "鐵道省國有鐵道",
-    label_ja: "鉄道省国有鉄道",
-    fields: ["jname", "ename", "kana", "p_kana", "p_ename", "n_kana", "n_ename"],
-    fonts: ["Font_Fude_Eki", "Font_Fude_Kanji", "Font_OldBlack", "Font_GothicJP_M"],
-    render(input) {
-      const kana = [...input.kana].reverse().join("");
-      const jname = [...input.jname].reverse().join("");
-      const pKana = [...input.p_kana].reverse().join("");
-      const nKana = [...input.n_kana].reverse().join("");
-      
-      const tmp = getMeasureCtx();
-      const pWidth = Math.max(textWidth(tmp, 22, "Font_Fude_Eki", pKana), textWidth(tmp, 20, "Font_OldBlack", input.p_ename_U));
-      const nWidth = Math.max(textWidth(tmp, 22, "Font_Fude_Eki", nKana), textWidth(tmp, 20, "Font_OldBlack", input.n_ename_U));
-      const handW = textWidth(tmp, 50, "Font_GothicJP_M", '☜');
-      const width = calWidth(300, 40, [
-        textWidth(tmp, 48, "Font_Fude_Eki", kana),
-        textWidth(tmp, 26, "Font_Fude_Kanji", jname),
-        textWidth(tmp, 34, "Font_OldBlack", input.ename_U),
-        pWidth + nWidth + 16 + handW * 2
-      ], 10);
-      const height = 240;
-      
-      const canvas = document.createElement("canvas");
-      const ctx = initCanvas(canvas, width, height, "rgb(240,240,240)");
-      ctx.fillStyle = "#111";
-      
-      const cpos = (width + pWidth - nWidth) / 2;
-      const ppos = pWidth / 2 + 40;
-      const npos = width - (nWidth / 2) - 40;
-      
-      ctx.fillRect(12, 159.5, width - 24, 3);
-      ctx.fillRect(cpos - 1.5, 160, 3, 70);
-      
-      drawText(ctx, { size: 48, family: "Font_Fude_Eki", text: kana, x: width / 2, y: 10, align: "center", color: "#000" });
-      drawText(ctx, { size: 26, family: "Font_Fude_Kanji", text: jname, x: width / 2, y: 75, align: "center", color: "#000" });
-      drawText(ctx, { size: 34, family: "Font_OldBlack", text: input.ename_U, x: width / 2, y: 112, align: "center", color: "#000" });
-      
-      if (pKana || input.p_ename_U) {
-        drawText(ctx, { size: 50, family: "Font_GothicJP_M", text: '☜', x: cpos+2, y: 152, align: "right", color: "#000" });
-      }
-      if (nKana || input.n_ename_U) {
-        drawText(ctx, { size: 50, family: "Font_GothicJP_M", text: '☞', x: cpos-2, y: 152, align: "left", color: "#000" });
-      }
-      
-      drawText(ctx, { size: 22, family: "Font_Fude_Eki", text: pKana, x: ppos, y: 170, align: "center", color: "#000" });
-      drawText(ctx, { size: 20, family: "Font_OldBlack", text: input.p_ename_U, x: ppos, y: 204, align: "center", color: "#000" });
-      drawText(ctx, { size: 22, family: "Font_Fude_Eki", text: nKana, x: npos, y: 170, align: "center", color: "#000" });
-      drawText(ctx, { size: 20, family: "Font_OldBlack", text: input.n_ename_U, x: npos, y: 204, align: "center", color: "#000" });
-      
-      return canvas;
-    }
-  }),
-  defineStyle({
-    id: "tokyometro",
-    label_zh: "東京Metro",
-    label_ja: "東京メトロ",
-    fields: ["jname", "ename", "kana", "no", "n_no", "rgb", "p_jname", "p_kana", "p_ename", "n_jname", "n_kana", "n_ename"],
-    fonts: ["Font_GothicJP_M", "Font_FrutigerMedium", "Font_FuturaBold"],
-    render(input) {
-      const rgb = hexToRgb(input.rgb || "009944");
-      
-      const tmp = getMeasureCtx();
-      const mWidth = Math.max(
-        textWidth(tmp, 42, "Font_GothicJP_M", input.jname),
-        textWidth(tmp, 20, "Font_GothicJP_M", input.kana),
-        textWidth(tmp, 20, "Font_FrutigerMedium", input.ename)
-      );
-      const npWidth = Math.max(
-        textWidth(tmp, 20, "Font_GothicJP_M", input.p_jname),
-        textWidth(tmp, 14, "Font_GothicJP_M", input.p_kana),
-        textWidth(tmp, 14, "Font_FrutigerMedium", input.p_ename),
-        textWidth(tmp, 20, "Font_GothicJP_M", input.n_jname),
-        textWidth(tmp, 14, "Font_GothicJP_M", input.n_kana),
-        textWidth(tmp, 14, "Font_FrutigerMedium", input.n_ename)
-      );
-      const width = calWidth(600, 20, [npWidth * 2 + mWidth + 60]);
-      const height = 240;
-      
-      const canvas = document.createElement("canvas");
-      const ctx = initCanvas(canvas, width, height, "#fafafa");
-      
-      const lineColor = `rgb(${rgb.r},${rgb.g},${rgb.b})`;
-      ctx.fillStyle = lineColor;
-      ctx.fillRect(0, 160, width, 80);
-      
-      if (input.no) {
-        drawFilledCircle(ctx, width / 2, 200, 35, "#fafafa");
-        drawFilledCircle(ctx, width / 2, 200, 33.5, lineColor);
-        drawFilledCircle(ctx, width / 2, 200, 30, "#fafafa");
-        const sp = splitStationNo(input.no);
-        if (sp.alpha && sp.num) {
-          drawText(ctx, { size: 20, family: "Font_FuturaBold", text: sp.alpha, x: width / 2, y: 179, align: "center", color: "#000" });
-          drawText(ctx, { size: 20, family: "Font_FuturaBold", text: sp.num, x: width / 2, y: 203, align: "center", color: "#000" });
-        } else {
-          drawText(ctx, { size: 20, family: "Font_FuturaBold", text: input.no, x: width / 2, y: 190, align: "center", color: "#000" });
-        }
-      }
-      
-      if (input.n_jname && input.n_no) {
-        drawFilledCircle(ctx, width - 40, 200, 29, "#fafafa");
-        drawFilledCircle(ctx, width - 40, 200, 27.5, lineColor);
-        drawFilledCircle(ctx, width - 40, 200, 24.5, "#fafafa");
-        const nsp = splitStationNo(input.n_no);
-        if (nsp.alpha && nsp.num) {
-          drawText(ctx, { size: 16, family: "Font_FuturaBold", text: nsp.alpha, x: width - 40, y: 183, align: "center", color: "#000" });
-          drawText(ctx, { size: 16, family: "Font_FuturaBold", text: nsp.num, x: width - 40, y: 203, align: "center", color: "#000" });
-        } else {
-          drawText(ctx, { size: 16, family: "Font_FuturaBold", text: input.n_no, x: width - 40, y: 193, align: "center", color: "#000" });
-        }
-      }
-      
-      if (input.n_jname || input.n_no) {
-        drawFilledPolygon(ctx, [
-          [width - 20, 40], [width - 40, 20], [width - 48, 20], [width - 31, 37], [width - 65, 37], [width - 65, 43], [width - 31, 43], [width - 48, 60], [width - 40, 60],
-        ], "#000");
-      }
-      
-      drawText(ctx, { size: 42, family: "Font_GothicJP_M", text: input.jname, x: width / 2, y: 20, align: "center", color: "#000" });
-      drawText(ctx, { size: 20, family: "Font_GothicJP_M", text: input.kana, x: width / 2, y: 88, align: "center", color: "#000" });
-      drawText(ctx, { size: 20, family: "Font_FrutigerMedium", text: input.ename, x: width / 2, y: 125, align: "center", color: "#000" });
-      
-      drawText(ctx, { size: 20, family: "Font_GothicJP_M", text: input.p_jname, x: 20, y: 74, align: "left", color: "#000" });
-      drawText(ctx, { size: 14, family: "Font_GothicJP_M", text: input.p_kana, x: 20, y: 106, align: "left", color: "#000" });
-      drawText(ctx, { size: 14, family: "Font_FrutigerMedium", text: input.p_ename, x: 20, y: 130, align: "left", color: "#000" });
-      
-      drawText(ctx, { size: 20, family: "Font_GothicJP_M", text: input.n_jname, x: width - 20, y: 74, align: "right", color: "#000" });
-      drawText(ctx, { size: 14, family: "Font_GothicJP_M", text: input.n_kana, x: width - 20, y: 106, align: "right", color: "#000" });
-      drawText(ctx, { size: 14, family: "Font_FrutigerMedium", text: input.n_ename, x: width - 20, y: 130, align: "right", color: "#000" });
-      
-      return canvas;
-    }
-  }),
-  defineStyle({
-    id: "hankyu",
-    label_zh: "阪急電鐵",
-    label_ja: "阪急電鉄",
-    fields: ["jname", "ename", "kana", "s_cname", "p_kana", "p_ename", "n_kana", "n_ename"],
-    fonts: ["Font_OldMaruGothicJP_M", "Font_NewMaruGothicJP_M"],
-    render(input) {
-      const sCname = input.s_cname ? `（${input.s_cname}）` : "";
-      const tmp = getMeasureCtx();
-      const pWidth = Math.max(textWidth(tmp, 18, "Font_OldMaruGothicJP_M", input.p_kana), textWidth(tmp, 14, "Font_NewMaruGothicJP_M", input.p_ename_U));
-      const nWidth = Math.max(textWidth(tmp, 18, "Font_OldMaruGothicJP_M", input.n_kana), textWidth(tmp, 14, "Font_NewMaruGothicJP_M", input.n_ename_U));
-      
-      const width = calWidth(520, 25, [
-        textWidth(tmp, 44, "Font_OldMaruGothicJP_M", input.kana),
-        textWidth(tmp, 24, "Font_NewMaruGothicJP_M", input.jname),
-        textWidth(tmp, 22, "Font_NewMaruGothicJP_M", input.ename_U),
-        textWidth(tmp, 22, "Font_NewMaruGothicJP_M", sCname),
-        pWidth + nWidth + 180
-      ]);
-      const height = 360;
-      
-      const canvas = document.createElement("canvas");
-      const ctx = initCanvas(canvas, width, height);
-      
-      drawRoundRect(ctx, 0, 0, width, height, 30, "rgb(25,0,80)");
-      ctx.fillStyle = "#fff";
-      ctx.fillRect(25, 250, width - 50, 2);
-      
-      if (input.p_kana || input.p_ename_U) {
-        drawFilledPolygon(ctx, [[25, 300], [70, 275], [55, 300], [70, 325]], "#fff");
-        drawFilledPolygon(ctx, [[27, 300], [68, 277], [53, 300], [68, 323]], "rgb(200,20,20)");
-      }
-      if (input.n_kana || input.n_ename_U) {
-        drawFilledPolygon(ctx, [[width - 25, 300], [width - 70, 275], [width - 55, 300], [width - 70, 325]], "#fff");
-        drawFilledPolygon(ctx, [[width - 27, 300], [width - 68, 277], [width - 53, 300], [width - 68, 323]], "rgb(200,20,20)");
-      }
-      
-      drawText(ctx, { size: 44, family: "Font_OldMaruGothicJP_M", text: input.kana, x: width / 2, y: 48, align: "center", color: "#fff" });
-      drawText(ctx, { size: 24, family: "Font_NewMaruGothicJP_M", text: input.jname, x: width / 2, y: 115, align: "center", color: "#fff" });
-      drawText(ctx, { size: 22, family: "Font_NewMaruGothicJP_M", text: sCname, x: width / 2, y: 150, align: "center", color: "#fff" });
-      drawText(ctx, { size: 22, family: "Font_NewMaruGothicJP_M", text: input.ename_U, x: width / 2, y: 200, align: "center", color: "#fff" });
-      
-      drawText(ctx, { size: 18, family: "Font_OldMaruGothicJP_M", text: input.p_kana, x: 82, y: 275, align: "left", color: "#fff" });
-      drawText(ctx, { size: 14, family: "Font_NewMaruGothicJP_M", text: input.p_ename_U, x: 82, y: 308, align: "left", color: "#fff" });
-      drawText(ctx, { size: 18, family: "Font_OldMaruGothicJP_M", text: input.n_kana, x: width - 82, y: 275, align: "right", color: "#fff" });
-      drawText(ctx, { size: 14, family: "Font_NewMaruGothicJP_M", text: input.n_ename_U, x: width - 82, y: 308, align: "right", color: "#fff" });
-      
-      return canvas;
-    }
-  }),
-  // defineStyle({
-  //   id: "keisei",
-  //   label: "京成電鉄",
-  //   fields: ["jname", "ename", "p_jname", "p_ename", "n_jname", "n_ename", "rgb"],
-  //   fonts: ["Font_NewMaruGothicJP_M", "Font_Helvetica"],
-  //   render(input) {
-  //     const tmp = getMeasureCtx();
-  //     const mW = Math.max(
-  //       textWidth(tmp, 58, "Font_OldMaruGothicJP_M",  input.jname),
-  //       textWidth(tmp, 18, "Font_Helvetica", input.ename)
-  //     );
-  //     const width = calWidth(500, 40, [mW + 220], 50);
-  //     const height = 200;
-      
-  //     const canvas = document.createElement("canvas");
-  //     const ctx = initCanvas(canvas, width, height, "#fff");
-      
-  //     const blue = "rgb(0,85,180)";
-      
-  //     const pW = Math.max(45, textWidth(tmp, 14, "Font_MaruGothicJP_M", input.p_jname) + 20);
-  //     ctx.fillStyle = blue;
-  //     ctx.fillRect(0, 80, 65 + pW, 40);
-      
-  //     const nPos = width - 95;
-  //     drawFilledPolygon(ctx, [[width - 4, 120], [width - 44, 80], [nPos + 20, 80], [nPos + 20, 120]], blue);
-  //     drawRoundRect(ctx, nPos - 14, 80, 28, 40, 5, blue);
-      
-  //     const centerX = width / 2;
-  //     drawText(ctx, { size: 58, family: "Font_OldMaruGothicJP_M", text: input.jname, x: centerX, y: 20, align: "center", color: "#000" });
-  //     drawText(ctx, { size: 18, family: "Font_Helvetica", text: input.ename, x: centerX, y: 130, align: "center", color: "#000" });
-  //     drawText(ctx, { size: 14, family: "Font_OldMaruGothicJP_M", text: input.p_jname, x: 12, y: 86, align: "left", color: "#fff" });
-  //     drawText(ctx, { size: 14, family: "Font_Helvetica", text: input.p_ename, x: 12, y: 102, align: "left", color: "#fff" });
-  //     drawText(ctx, { size: 14, family: "Font_OldMaruGothicJP_M", text: input.n_jname, x: width - 48, y: 86, align: "center", color: "#fff" });
-  //     drawText(ctx, { size: 14, family: "Font_Helvetica", text: input.n_ename, x: width - 48, y: 102, align: "center", color: "#fff" });
-      
-  //     return canvas;
-  //   }
-  // }),
-  defineStyle({
-    id: "izukyu",
-    label_zh: "伊豆急行",
-    label_ja: "伊豆急行",
-    fields: ["jname", "ename", "kana", "kname", "p_jname", "p_ename", "p_kname", "n_jname", "n_ename", "n_kname"],
-    fonts: ["Font_GothicJP_M", "Font_GothicKR_M", "Font_HelveticaBold"],
-    render(input) {
-      const p_ekname = `${input.p_ename}  ${input.p_kname}`.trim();
-      const n_ekname = `${input.n_kname}  ${input.n_ename}`.trim();
-
-      const tmp = getMeasureCtx();
-      const eW = textWidth(tmp, 20, "Font_HelveticaBold", input.ename);
-      const npJW = Math.max( textWidth(tmp, 20, "Font_GothicJP_M", input.p_jname), textWidth(tmp, 20, "Font_GothicJP_M", input.n_jname) );
-      const npEW = Math.max(
-        textWidth(tmp, 14, ["Font_HelveticaBold", "Font_GothicKR_M"], p_ekname),
-        textWidth(tmp, 14, ["Font_HelveticaBold", "Font_GothicKR_M"], n_ekname)
-      );
-
-      const width = calWidth(600, 40, [
-        textWidth(tmp, 44, "Font_GothicJP_M", input.jname),
-        textWidth(tmp, 23, "Font_GothicJP_M", input.kana),
-        eW + 140,
-        npJW * 2 + textWidth(tmp, 18, "Font_GothicKR_M", input.kname) + 40,
-        npEW * 2
-      ]);
-      const height = 240;
-      
-      const canvas = document.createElement("canvas");
-      const ctx = initCanvas(canvas, width, height, "#fff");
-      
-      drawFilledPolygon(ctx, [[0, 130], [(width - eW) / 2 - 10, 130], [(width - eW) / 2 - 38, 158], [0, 158]], "rgb(200,20,0)");
-      drawFilledPolygon(ctx, [[width, 130], [(width + eW) / 2 + 38, 130], [(width + eW) / 2 + 10, 158], [width, 158]], "rgb(0,20,200)");
-      
-      drawText(ctx, { size: 44, family: "Font_GothicJP_M", text: input.jname, x: width / 2, y: 30, align: "center", color: "#000" });
-      drawText(ctx, { size: 23, family: "Font_GothicJP_M", text: input.kana, x: width / 2, y: 95, align: "center", color: "#000" });
-      drawText(ctx, { size: 20, family: "Font_HelveticaBold", text: input.ename, x: width / 2, y: 132, align: "center", color: "#000" });
-      drawText(ctx, { size: 16, family: "Font_GothicKR_M", text: input.kname, x: width / 2, y: 163, align: "center", color: "#000" });
-      
-      drawText(ctx, { size: 20, family: "Font_GothicJP_M", text: input.p_jname, x: 20, y: 164, align: "left", color: "#000" });
-      drawText(ctx, { size: 14, family: ["Font_HelveticaBold", "Font_GothicKR_M"], text: p_ekname, x: 20, y: 196, align: "left", color: "#000" });
-      drawText(ctx, { size: 20, family: "Font_GothicJP_M", text: input.n_jname, x: width - 20, y: 164, align: "right", color: "#000" });
-      drawText(ctx, { size: 14, family: ["Font_HelveticaBold", "Font_GothicKR_M"], text: n_ekname, x: width - 20, y: 196, align: "right", color: "#000" });
-
-      return canvas;
-    }
-  }),
-  defineStyle({
-    id: "kotoden",
-    label_zh: "高松琴平電鐵",
-    label_ja: "高松琴平電鉄",
-    fields: ["jname", "ename", "kana", "rgb", "p_kana", "n_kana"],
-    fonts: ["Font_GothicJP_M", "Font_OldGothicJP_R", "Font_Helvetica"],
-    render(input) {
-      const rgb = hexToRgb(input.rgb || "009944");
-      
-      const tmp = getMeasureCtx();
-      const width = calWidth(480, 40, [
-        textWidth(tmp, 56, "Font_GothicJP_M", input.jname),
-        textWidth(tmp, 14, "Font_OldGothicJP_R", input.kana),
-        textWidth(tmp, 22, "Font_Helvetica", input.ename),
-        textWidth(tmp, 18, "Font_OldGothicJP_R", input.p_kana) + textWidth(tmp, 18, "Font_OldGothicJP_R", input.n_kana) + 80
-      ], 20);
-      const height = 320;
-      
-      const canvas = document.createElement("canvas");
-      const ctx = initCanvas(canvas, width, height, "#fff");
-      
-      const lineColor = `rgb(${rgb.r},${rgb.g},${rgb.b})`;
-      ctx.fillStyle = lineColor;
-      ctx.fillRect(0, 240, width, 80);
-      
-      drawFilledPolygon(ctx, [[20, 200], [53, 180], [53, 220]], lineColor);
-      drawFilledPolygon(ctx, [[width - 20, 200], [width - 53, 180], [width - 53, 220]], lineColor);
-
-      const num = Math.floor((width - 120) / 36);
-      const offx = ((width - 120) % (num * 36)) / 2 + 78;
-      for (let x = 0; x < num; x++) drawFilledCircle(ctx, offx + x * 36, 200, 9, lineColor);
-      
-      drawText(ctx, { size: 14, family: "Font_OldGothicJP_R", text: input.kana, x: width / 2, y: 30, align: "center", color: "#000" });
-      drawText(ctx, { size: 56, family: "Font_GothicJP_M", text: input.jname, x: width / 2, y: 56, align: "center", color: "#000" });
-      drawText(ctx, { size: 22, family: "Font_Helvetica", text: input.ename, x: width / 2, y: 140, align: "center", color: "#000" });
-      drawText(ctx, { size: 21, family: "Font_OldGothicJP_R", text: input.p_kana, x: 18, y: 266, align: "left", color: "#fff" });
-      drawText(ctx, { size: 21, family: "Font_OldGothicJP_R", text: input.n_kana, x: width - 18, y: 266, align: "right", color: "#fff" });
       
       return canvas;
     }
   }),
   defineStyle({
     id: "korail",
-    label_zh: "KORAIL韓國鐵道",
-    label_ja: "KORAIL韓国鉄道",
+    label_zh: "韓國 | KORAIL韓國鐵道",
+    label_ja: "韓国 | KORAIL韓国鉄道",
     fields: ["cname", "ename", "kname", "p_cname", "p_ename", "p_kname", "n_cname", "n_ename", "n_kname"],
     fonts: ["Font_KORAIL", "Font_GothicKR_M"],
     render(input) {
@@ -986,8 +1264,8 @@ const STYLES = [
   }),
   defineStyle({
     id: "seoul",
-    label_zh: "首爾地下鐵",
-    label_ja: "ソウル地下鉄",
+    label_zh: "韓國 | 首爾地下鐵",
+    label_ja: "韓国 | ソウル地下鉄",
     fields: ["kname", "ename", "cname", "jname", "no", "rgb"],
     fonts: ["Font_SeoulNamsan", "Font_GothicKR_M", "Font_GothicJP_M", "Font_FrutigerBold"],
     render(input) {
@@ -1027,8 +1305,8 @@ const STYLES = [
   }),
   defineStyle({
     id: "busan",
-    label_zh: "釜山地下鐵",
-    label_ja: "釜山地下鉄",
+    label_zh: "韓國 | 釜山地下鐵",
+    label_ja: "韓国 | 釜山地下鉄",
     fields: ["kname", "ename", "cname", "no", "rgb", "p_kname", "p_ename", "p_cname", "p_jname", "n_kname", "n_ename", "n_cname", "n_jname"],
     fonts: ["Font_Jihacheol", "Font_GothicKR_M", "Font_GothicJP_M", "Font_HelveticaBold", "Font_CondensedDigit"],
     render(input) {
@@ -1086,8 +1364,8 @@ const STYLES = [
   }),
   defineStyle({
     id: "sgmrt",
-    label_zh: "新加坡地鐵",
-    label_ja: "シンガポールMRT",
+    label_zh: "新加坡 | 新加坡地鐵",
+    label_ja: "シンガポール | シンガポールMRT",
     fields: ["cname", "ename", "no", "rgb"],
     fonts: ["Font_GothicCN_R", "Font_LTAIdentity"],
     render(input) {
@@ -1104,8 +1382,14 @@ const STYLES = [
 
       const fg = fgOnBg(hexToRgb(input.rgb || "009944"));
       if (noW) {
-        drawFilledRect(ctx, 40, 60, noW + 60, 80, input.rgb);
-        drawText(ctx, { size: 36, family: "Font_LTAIdentity", text: input.no, x: 70, y: 80, align: "left", color: fg });
+        drawFilledEllipse(ctx, 70, 100, 28, 43, fg);
+        drawFilledEllipse(ctx, 70 + noW, 100, 28, 43, fg);
+        drawFilledRect(ctx, 67, 57, noW + 6, 86, fg);
+        
+        drawFilledEllipse(ctx, 70, 100, 25, 40, input.rgb);
+        drawFilledEllipse(ctx, 70 + noW, 100, 25, 40, input.rgb);
+        drawFilledRect(ctx, 70, 60, noW, 80, input.rgb);
+        drawText(ctx, { size: 36, family: "Font_LTAIdentity", text: input.no, x: 70, y: 78, align: "left", color: fg });
       }
       drawText(ctx, { size: 46, family: "Font_LTAIdentity", text: input.ename, x: 140 + noW, y: 36, align: "left", color: "#000" });
       drawText(ctx, { size: 42, family: "Font_GothicCN_R", text: input.cname, x: 140 + noW, y: 114, align: "left", color: "#000" });
@@ -1115,8 +1399,8 @@ const STYLES = [
   }),
   defineStyle({
     id: "shanghai",
-    label_zh: "上海地鐵",
-    label_ja: "上海地下鉄",
+    label_zh: "中國 | 上海地鐵",
+    label_ja: "中国 | 上海地下鉄",
     fields: ["cname", "ename", "n_cname", "n_ename", "rgb"],
     fonts: ["Font_GothicCN_R", "Font_HelveticaBold"],
     render(input) {
@@ -1162,8 +1446,8 @@ const STYLES = [
   }),
   defineStyle({
     id: "beijing",
-    label_zh: "北京地鐵",
-    label_ja: "北京地下鉄",
+    label_zh: "中國 | 北京地鐵",
+    label_ja: "中国 | 北京地下鉄",
     fields: ["cname", "ename", "no", "p_cname", "p_ename", "n_cname", "n_ename", "rgb"],
     fonts: ["Font_GothicCN_R", "Font_Helvetica"],
     render(input) {
@@ -1239,8 +1523,8 @@ const STYLES = [
   }),
   defineStyle({
     id: "london",
-    label_zh: "倫敦地鐵",
-    label_ja: "ロンドン地下鉄",
+    label_zh: "英國 | 倫敦地鐵",
+    label_ja: "イギリス | ロンドン地下鉄",
     fields: ["ename"],
     fonts: ["Font_Johnston"],
     render(input) {
@@ -1264,6 +1548,6 @@ const STYLES = [
   })
 ];
 
-export const STYLE_ROSTER = STYLES.map(({ id, label_zh, label_ja, fields, fonts }) => ({ id, label_zh, label_ja, fields, fonts }));
+export const STYLE_ROSTER = STYLES.map(({ id, label_zh, label_ja, fields, fonts, types }) => ({ id, label_zh, label_ja, fields, fonts, types }));
 
 export const RENDERERS = Object.fromEntries(STYLES.map((style) => [style.id, style.render]));

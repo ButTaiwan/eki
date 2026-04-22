@@ -4,7 +4,7 @@ stations = {}
 
 require 'json'
 
-f = File.open("stations_20260419.tsv", "r:utf-8")
+f = File.open("stations_20260422.tsv", "r:utf-8")
 now_sys = nil
 now_route = nil
 now_color = nil

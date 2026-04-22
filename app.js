@@ -1,6 +1,6 @@
 import { ensureFonts } from "./fonts.js";
 import { RENDERERS } from "./renderers.js";
-import { FIELD_IDS, STYLE_ROSTER, getFieldsForStyle, getFontsForStyle } from "./styles-config.js";
+import { FIELD_IDS, STYLE_ROSTER, getFieldsForStyle, getFontsForStyle, parseStyleValue, toStyleValue } from "./styles-config.js";
 
 // 所有系統資料從單一 JSON 載入
 let ALL_STATIONS_DATA = null; // { [sysName]: { routes, stations } }
@@ -9,7 +9,7 @@ const $ = (id) => document.getElementById(id);
 const ui = {
   sys: $("sys"), route: $("route"), station: $("station"),
   type: $("type"),
-  useStation: $("use-station"), render: $("render"), download: $("download"),
+  useStation: $("use-station"), render: $("render"), download: $("download"), copy: $("copy"),
   convertT2S: $("convert-t2s"), convertS2T: $("convert-s2t"),
   clearFields: $("clear-fields"),
   sizeButtons: Array.from(document.querySelectorAll(".size-btn")),
@@ -21,6 +21,7 @@ let currentData = null;
 let currentRouteEntries = [];
 let currentStationLookup = {};
 let downloadSize = 3;
+let lastRendered = null;
 const fieldInputs = Object.fromEntries(FIELD_IDS.map((id) => [id, $(id)]));
 const STORAGE_CONTENT_KEY = "eki.content.v1";
 const STORAGE_SIZE_KEY = "eki.downloadSize.v1";
@@ -72,18 +73,31 @@ function loadDownloadSizeState() {
   try {
     const raw = localStorage.getItem(STORAGE_SIZE_KEY);
     const v = Number(raw);
-    if (v === 1 || v === 2 || v === 3) return v;
+    if (v >= 0.5 && v <= 5) return v;
   } catch {
     // ignore storage errors
   }
   return 3;
 }
 
-function updatePreviewCssSize() {
-  if (!ui.preview.width) return;
-  const scale = downloadSize / 3;
-  ui.preview.style.width = Math.round(ui.preview.width * scale) + "px";
-  ui.preview.style.height = Math.round(ui.preview.height * scale) + "px";
+function applyPreviewCanvas() {
+  if (!lastRendered) return;
+  const dpr = window.devicePixelRatio || 1;
+  const factor = downloadSize / 3;
+  const lw = Math.max(1, Math.round(lastRendered.width * factor));
+  const lh = Math.max(1, Math.round(lastRendered.height * factor));
+  const pw = Math.max(1, Math.round(lw * dpr));
+  const ph = Math.max(1, Math.round(lh * dpr));
+  ui.preview.width = pw;
+  ui.preview.height = ph;
+  const ctx = ui.preview.getContext("2d");
+  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingQuality = "high";
+  ctx.clearRect(0, 0, pw, ph);
+  ctx.drawImage(lastRendered, 0, 0, pw, ph);
+  ui.preview.style.width = `${Math.max(1, Math.round(lw / dpr))}px`;
+  ui.preview.style.height = `${Math.max(1, Math.round(lh / dpr))}px`;
+
 }
 
 function setActiveSize(size) {
@@ -91,7 +105,7 @@ function setActiveSize(size) {
   for (const btn of ui.sizeButtons) {
     btn.classList.toggle("active", Number(btn.dataset.size) === size);
   }
-  updatePreviewCssSize();
+  applyPreviewCanvas();
   saveDownloadSizeState();
 }
 
@@ -414,45 +428,73 @@ function readInput() {
 }
 
 async function render() {
-  const type = ui.type.value;
-  const renderer = RENDERERS[type];
+  const selected = ui.type.value;
+  const { styleId, type } = parseStyleValue(selected);
+  const renderer = RENDERERS[styleId];
   if (!renderer) {
-    setStatus(`尚未實作樣式：${type}`);
+    setStatus(`尚未實作樣式：${styleId}`);
     return;
   }
 
-  await ensureFonts(getFontsForStyle(type));
+  await ensureFonts(getFontsForStyle(selected));
 
-  const out = renderer(readInput());
-  ui.preview.width = out.width;
-  ui.preview.height = out.height;
-  const ctx = ui.preview.getContext("2d");
-  ctx.clearRect(0, 0, out.width, out.height);
-  ctx.drawImage(out, 0, 0);
-  updatePreviewCssSize();
-  setStatus(`完成：${type} ∙ ${out.width}×${out.height}px`);
+  lastRendered = renderer(readInput(), type);
+  applyPreviewCanvas();
+  const _factor = downloadSize / 3;
+  const _lw = Math.round(lastRendered.width * _factor);
+  const _lh = Math.round(lastRendered.height * _factor);
+  setStatus(`完成：${styleId}${type > 1 ? ` 類型${type}` : ""} ∙ ${_lw}×${_lh}px`);
   //setStatus(`完成：${type} ∙ 原始 ${out.width}×${out.height}px ∙ 下載尺寸：${downloadSize === 3 ? "大（原尺寸）" : downloadSize === 2 ? "中（×⅔）" : "小（×⅓）"}`);
 }
 
 function exportCanvasForSize(size) {
-  if (size === 3) return ui.preview;
+  if (!lastRendered) return ui.preview;
   const factor = size / 3;
-  const temp = document.createElement("canvas");
-  temp.width = Math.max(1, Math.round(ui.preview.width * factor));
-  temp.height = Math.max(1, Math.round(ui.preview.height * factor));
-  const tctx = temp.getContext("2d");
-  tctx.imageSmoothingEnabled = true;
-  tctx.imageSmoothingQuality = "high";
-  tctx.drawImage(ui.preview, 0, 0, temp.width, temp.height);
-  return temp;
+  const lw = Math.max(1, Math.round(lastRendered.width * factor));
+  const lh = Math.max(1, Math.round(lastRendered.height * factor));
+  const canvas = document.createElement("canvas");
+  canvas.width = lw;
+  canvas.height = lh;
+  const ctx = canvas.getContext("2d");
+  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingQuality = "high";
+  ctx.drawImage(lastRendered, 0, 0, lw, lh);
+  return canvas;
+}
+
+async function copyCanvasForSize(size) {
+  const dpr = window.devicePixelRatio || 1;
+  const out = exportCanvasForSize(size);
+  const copyCanvas = document.createElement("canvas");
+  copyCanvas.width = Math.max(1, Math.round(out.width * dpr));
+  copyCanvas.height = Math.max(1, Math.round(out.height * dpr));
+  const cctx = copyCanvas.getContext("2d");
+  cctx.imageSmoothingEnabled = true;
+  cctx.imageSmoothingQuality = "high";
+  cctx.drawImage(out, 0, 0, copyCanvas.width, copyCanvas.height);
+  const blob = await new Promise((resolve) => copyCanvas.toBlob(resolve, "image/png"));
+  if (!blob) throw new Error("無法建立 PNG");
+  await navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
+  setStatus(`已複製 PNG：${out.width}×${out.height}px`);
 }
 
 async function init() {
-  fillSelect(ui.type, STYLE_ROSTER.map((s) => {
+  const styleOptions = STYLE_ROSTER.flatMap((s) => {
     const name = isJaUi ? (s.label_ja || s.label_zh || s.id) : (s.label_zh || s.label_ja || s.id);
-    //return { value: s.id, label: `${name}（${s.id}）` };
-    return { value: s.id, label: `${name}` };
-  }));
+    const totalTypes = Math.max(1, Math.floor(Number(s.types) || 1));
+    if (totalTypes === 1) {
+      return [{ value: toStyleValue(s.id, 1), label: `${name}` }];
+    }
+    return Array.from({ length: totalTypes }, (_, i) => {
+      const type = i + 1;
+      const suffix = isJaUi ? ` タイプ${type}` : ` 類型${type}`;
+      return {
+        value: toStyleValue(s.id, type),
+        label: `${name}${suffix}`
+      };
+    });
+  });
+  fillSelect(ui.type, styleOptions);
   loadContentState();
   applyFieldHighlight(ui.type.value);
 
@@ -555,12 +597,25 @@ async function init() {
       if (!blob) return;
       const a = document.createElement("a");
       a.href = URL.createObjectURL(blob);
-      const sz = downloadSize === 3 ? "large" : downloadSize === 2 ? "medium" : "small";
-      a.download = `eki-${ui.type.value}-${sz}.png`;
+      const sz = String(downloadSize).replace(".", "_");
+      const { styleId, type } = parseStyleValue(ui.type.value);
+      const typePart = type > 1 ? `-t${type}` : "";
+      a.download = `eki-${styleId}${typePart}-${sz}.png`;
       a.click();
       setTimeout(() => URL.revokeObjectURL(a.href), 1500);
     }, "image/png");
   });
+
+  if (ui.copy) {
+    ui.copy.addEventListener("click", async () => {
+      try {
+        await render();
+        await copyCanvasForSize(downloadSize);
+      } catch (e) {
+        setStatus(`複製失敗：${e?.message || e}`);
+      }
+    });
+  }
 
   await onSysChanged();
   setActiveSize(loadDownloadSizeState());
