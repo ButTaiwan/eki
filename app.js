@@ -574,6 +574,7 @@ async function init() {
         ["p_kana",  "n_kana"],
         ["p_kname", "n_kname"],
         ["p_dis",   "n_dis"],
+        ["p_no",    "n_no"]
       ];
       for (const [pId, nId] of SWAP_PAIRS) {
         const pInput = fieldInputs[pId];
