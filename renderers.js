@@ -452,7 +452,7 @@ const STYLES = [
     id: "tokyometro",
     label_zh: "日本 | 東京Metro",
     label_ja: "日本 | 東京メトロ",
-    fields: ["jname", "ename", "kana", "no", "p_jname", "p_kana", "p_ename", "n_no", "n_jname", "n_kana", "n_ename"],
+    fields: ["jname", "ename", "kana", "no", "rgb", "p_jname", "p_kana", "p_ename", "n_no", "n_jname", "n_kana", "n_ename"],
     fonts: ["Font_GothicJP_M", "Font_FrutigerMedium", "Font_FuturaBold"],
     render(input) {
       const tmp = getMeasureCtx();
