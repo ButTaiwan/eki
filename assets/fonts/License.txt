@@ -1,125 +1,128 @@
 ================================================================================
-FONTS LICENSE INFORMATION
+字型授權資訊 / フォントライセンス情報
 ================================================================================
 
-開源授權（OFL - Open Font License）
+開源授權（OFL - Open Font License）/ オープンソースライセンス（OFL - Open Font License）
 ================================================================================
 
 1. AntonSC-Regular.ttf
-   來源: Google Fonts
-   授權: OFL 1.1
-   網址: https://fonts.google.com/specimen/Anton
+   來源 / 出典: Google Fonts
+   授權 / ライセンス: OFL 1.1
+   網址 / URL: https://fonts.google.com/specimen/Anton
 
 2. HammersmithOne-Regular.ttf
-   來源: Google Fonts
-   授權: OFL 1.1
-   網址: https://fonts.google.com/specimen/Hammersmith+One
+   來源 / 出典: Google Fonts
+   授權 / ライセンス: OFL 1.1
+   網址 / URL: https://fonts.google.com/specimen/Hammersmith+One
 
 3. Hind-Bold.ttf
    Hind-Medium.ttf
-   來源: Google Fonts
-   授權: OFL 1.1
-   網址: https://fonts.google.com/specimen/Hind
+   來源 / 出典: Google Fonts
+   授權 / ライセンス: OFL 1.1
+   網址 / URL: https://fonts.google.com/specimen/Hind
 
 4. Inter_24pt-Bold.ttf
    Inter_24pt-Medium.ttf
-   來源: Rsalabs (Inter)
-   授權: OFL 1.1
-   網址: https://rsms.me/inter/
+   來源 / 出典: Rsalabs (Inter)
+   授權 / ライセンス: OFL 1.1
+   網址 / URL: https://rsms.me/inter/
 
 5. LeagueSpartan-Bold.ttf
-   來源: Google Fonts
-   授權: OFL 1.1
-   網址: https://fonts.google.com/specimen/League+Spartan
+   來源 / 出典: Google Fonts
+   授權 / ライセンス: OFL 1.1
+   網址 / URL: https://fonts.google.com/specimen/League+Spartan
 
 6. Marcellus-Regular.ttf
-   來源: Google Fonts
-   授權: OFL 1.1
-   網址: https://fonts.google.com/specimen/Marcellus
+   來源 / 出典: Google Fonts
+   授權 / ライセンス: OFL 1.1
+   網址 / URL: https://fonts.google.com/specimen/Marcellus
 
 7. rounded-mgenplus-1cp-medium.ttf
-   來源: M+ Fonts (M+ 1cp variant)
-   授權: OFL 1.1
-   網址: https://mplus-fonts.osdn.jp/
+   來源 / 出典: M+ Fonts (M+ 1cp variant)
+   授權 / ライセンス: OFL 1.1
+   網址 / URL: https://mplus-fonts.osdn.jp/
 
 8. SourceHanSansKR-Medium.otf
-   來源: Adobe (Source Han Sans Korean)
-   授權: OFL 1.1
-   網址: https://github.com/adobe-fonts/source-han-sans
+   來源 / 出典: Adobe (Source Han Sans Korean)
+   授權 / ライセンス: OFL 1.1
+   網址 / URL: https://github.com/adobe-fonts/source-han-sans
 
 9. Staatliches-Regular.ttf
-   來源: Google Fonts
-   授權: OFL 1.1
-   網址: https://fonts.google.com/specimen/Staatliches
+   來源 / 出典: Google Fonts
+   授權 / ライセンス: OFL 1.1
+   網址 / URL: https://fonts.google.com/specimen/Staatliches
 
 10. GenRyuMin2TW-SB.otf
-    改造: ButTaiwan
-    授權: OFL 1.1
-    網址: https://github.com/ButTaiwan/genryu/
+    改造 / 改変: ButTaiwan
+    授權 / ライセンス: OFL 1.1
+    網址 / URL: https://github.com/ButTaiwan/genryu/
 
 11. GenSekiGothic2PJP-M.otf
-    改造: ButTaiwan
-    授權: OFL 1.1
-    網址: https://github.com/ButTaiwan/genseki/
+    改造 / 改変: ButTaiwan
+    授權 / ライセンス: OFL 1.1
+    網址 / URL: https://github.com/ButTaiwan/genseki/
 
 12. GenSenRounded2JP-M.otf
-    改造: ButTaiwan
-    授權: OFL 1.1
-    網址: https://github.com/ButTaiwan/gensen/
+    改造 / 改変: ButTaiwan
+    授權 / ライセンス: OFL 1.1
+    網址 / URL: https://github.com/ButTaiwan/gensen/
 
 13. GenYoGothic2JP-M.otf
     GenYoGothic2JP-B.otf
     GenYoGothic2TW-M.otf
     GenYoGothic2TW-R.otf
-    改造: ButTaiwan
-    授權: OFL 1.1
-    網址: https://github.com/ButTaiwan/genyog/
+    改造 / 改変: ButTaiwan
+    授權 / ライセンス: OFL 1.1
+    網址 / URL: https://github.com/ButTaiwan/genyog/
 
 14. GenYoMin2TC-SB.otf
-    改造: ButTaiwan
-    授權: OFL 1.1
-    網址: https://github.com/ButTaiwan/genyo/
+    改造 / 改変: ButTaiwan
+    授權 / ライセンス: OFL 1.1
+    網址 / URL: https://github.com/ButTaiwan/genyo/
 
 15. fude-goshirae.otf
-		作者: 絵に描いた虹
-    來源: https://infiniterainbow.booth.pm/items/7797956
-    授權: OFL 1.1
+    作者 / 作者: 絵に描いた虹
+    來源 / 出典: https://infiniterainbow.booth.pm/items/7797956
+    授權 / ライセンス: OFL 1.1
 
 
-非 OFL 1.1 的免費授權
+非 OFL 1.1 的免費授權 / OFL 1.1 以外の無償ライセンス
+請注意若要商業使用，務必自行確認以下字型的授權。/ 商用利用する場合は、必ず以下フォントのライセンスを各自で確認してください。
+另外這些字型很多是仿製鐵路公司的字樣，也請自行判斷是否需要經過鐵路公司的許可。/ また、これらのフォントの多くは鉄道会社の書体を模しているため、必要に応じて鉄道会社の許諾要否を各自で判断してください。
 ================================================================================
 
 1. FangZhengHeiTi_GBK.ttf
-   來源: 方正字體
-   授權: 商業授權，但「方正黑體」屬基本免費字型（字体属性：免费字）
-   網址: https://www.foundertype.com/index.php/FontInfo/index/id/131
+   來源 / 出典: 方正字體
+   授權 / ライセンス: 商業授權，但「方正黑體」屬基本免費字型。/ 商用ライセンスだが、「方正黒体」は基本無料フォントに含まれる。
+   網址 / URL: https://www.foundertype.com/index.php/FontInfo/index/id/131
 
 2. 08SeoulNamsanEB.ttf
-   來源: 首爾市政府
-   授權: 公開提供（韓國開放政府授權（KOGL）授權）
-	      Seoul Typeface is free for anyone to download and use.
-   網址: https://english.seoul.go.kr/seoul-views/seoul-symbols/5-fonts/
+   來源 / 出典: 首爾市政府
+   授權 / ライセンス: 公開提供（韓國開放政府授權（KOGL）授權）/ 公開提供（韓国オープンガバメントライセンス（KOGL））
+   Seoul Typeface is free for anyone to download and use.
+   網址 / URL: https://english.seoul.go.kr/seoul-views/seoul-symbols/5-fonts/
 
 3. JNRfont.ttf
    JNRfont_n.ttf
-   來源: 国鉄っぽいフォント（旅と鉄の盲腸）
-   授權: http://tabi-mo.travel.coocan.jp/
-   備註: 免費可商用授權，但原網站已消失
+   來源 / 出典: 国鉄っぽいフォント（旅と鉄の盲腸）
+   授權 / ライセンス: http://travelcecum.xsrv.jp/font.htm
+   備註 / 備考: 個人利用免費，商用禁止 / 個人利用は無料、商用利用は禁止
 
 4. KORAIL.ttf
-   來源: https://www.sandollcloud.com/free-font/17909/KORAILCondensed
-   備註: 任何人都可以免費下載和使用 Korail 字體。但是，禁止出售、有償轉讓字體。
-         原為AsiaSoft公司製造，現在由Sandoll提供免費下載。
+   來源 / 出典: https://www.sandollcloud.com/free-font/17909/KORAILCondensed
+   備註 / 備考: 任何人都可以免費下載和使用 Korail 字體。但是，禁止出售、有償轉讓字體。/ 誰でも無料で Korail フォントをダウンロード・使用できますが、販売・有償譲渡は禁止です。
+         原為AsiaSoft公司製造，現在由Sandoll提供免費下載。/ もとは AsiaSoft が制作し、現在は Sandoll が無料配布しています。
 
 5. LTAIdentity-Medium.woff2
-   網址: https://github.com/jglim/IdentityFont
+   說明 / 説明: GitHub 上網友自行製作的仿新加坡 MRT 字體 / GitHub 有志によるシンガポール MRT 風フォント
+   網址 / URL: https://github.com/jglim/IdentityFont
 
 6. Jihacheol-che.ttf
    NewJihacheol-che.ttf
-   說明: 網友自行製作的仿韓國「地下鐵體」，原始作者已不可考
-   來源: https://blog.naver.com/sendei333/222195624371
+   說明 / 説明: 網友自行製作的仿韓國「地下鐵體」，原始作者已不可考 / 有志制作の韓国「地下鉄体」風フォントで、原作者は不詳
+   來源 / 出典: https://blog.naver.com/sendei333/222195624371
 
 7. Fudeekimeihyo1.2.ttf
-   說明: 模仿日本戰前站名牌毛筆書寫的文字
-   來源: https://note.com/kan3kur3chann3l/n/nee541f1a4d21
-   授權: 此為免費版本，只有平假名（授權不明）
+   說明 / 説明: 模仿日本戰前站名牌毛筆書寫的文字 / 戦前日本の駅名標に見られる毛筆表記を模した文字
+   來源 / 出典: https://note.com/kan3kur3chann3l/n/nee541f1a4d21
+   授權 / ライセンス: 此為免費版本，只有平假名 / 無料版のため、ひらがなのみ
